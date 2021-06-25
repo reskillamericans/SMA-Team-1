@@ -24,7 +24,7 @@ class Users(models.Model):
 
 class User_Followers(models.Model):
     user_id = models.ForeignKey(Users, on_delete = models.PROTECT)
-    follower_id = models.ForeignKey(Users, on_delete = models.PROTECT)
+    #follower_id = models.ForeignKey(Users, on_delete = models.PROTECT)
     is_post_notification_subscribed = models.BooleanField()
     status = models.BooleanField()
     updated_at = models.DateTimeField()
@@ -79,7 +79,7 @@ class Post_Likes(models.Model):
 
 class Messages(models.Model):
     sender_id = models.ForeignKey(Users, on_delete = models.PROTECT)
-    recipient_id = models.ForeignKey(Users, on_delete = models.PROTECT)
+    #recipient_id = models.ForeignKey(Users, on_delete = models.PROTECT)
     title = models.CharField(max_length = 255)
     content = models.TextField()
     read_at = models.DateTimeField()

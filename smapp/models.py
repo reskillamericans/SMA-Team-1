@@ -25,7 +25,7 @@ class Users(models.Model):
 class User_Followers(models.Model):
     user_id = models.ForeignKey(Users, on_delete = models.PROTECT)
     follower_id = models.ForeignKey(Users, on_delete = models.PROTECT)
-    is_post_notification_subscribed = models.BooleanField(DEFAULT = False)
+    is_post_notification_subscribed = models.BooleanField()
     status = models.BooleanField()
     updated_at = models.DateTimeField()
     created_at = models.DateTimeField()

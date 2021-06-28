@@ -39,7 +39,7 @@ class Password_Resets(models.Model):
     created_at = models.DateTimeField()
 
 class User_Socials(models.Model):
-    user_id = models.ForeignKey(Users, on_delete = models.PROTECT)
+    user_id = models.OneToOneField(Users, on_delete = models.PROTECT)
     facebook_link = models.CharField(max_length = 255)
     github_link = models.CharField(max_length = 255)
     linkedin_link = models.CharField(max_length = 255)

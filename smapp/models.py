@@ -1,4 +1,6 @@
 from django.db import models
+from django.forms import ModelForm
+
 
 # Create your models here.
 class Users(models.Model):
@@ -9,7 +11,7 @@ class Users(models.Model):
     is_email_verified = models.BooleanField()
     password = models.CharField(max_length = 255)
     status = models.CharField(max_length = 255)
-    password = models.CharField(max_length = 255, default = 'user')
+    user_type = models.CharField(max_length = 255, default = 'user')
     bio = models.CharField(max_length = 255)
     occupation = models.CharField(max_length = 255)
     location = models.CharField(max_length = 255)

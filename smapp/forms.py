@@ -1,12 +1,15 @@
 from django.contrib.auth.forms import UserCreationForm
 #from django.core.exceptions import NON_FIELD_ERRORS
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
+from .models import Users
 
-# Create the form class
+# Create the POST form class
 class RegisterForm(UserCreationForm):
     class Meta:
-        model = User
+        model = Users
         fields = ['username', 'first_name', 'last_name', 'email']
+
+# Create the GET form class
 
 # Create a form to add a user
 form = RegisterForm()

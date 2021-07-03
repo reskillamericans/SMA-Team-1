@@ -1,25 +1,29 @@
 from django.db import models
-from django.forms import ModelForm
+from django.contrib.auth.models import AbstractUser
+#from django.forms import ModelForm
 
 
 # Create your models here.
-class Users(models.Model):
+class Users(AbstractUser):
     first_name = models.CharField(max_length = 255)
     last_name = models.CharField(max_length = 255)
     username = models.CharField(max_length = 255, unique = True)
     email = models.EmailField(unique = True)
-    is_email_verified = models.BooleanField()
+    is_email_verified = models.BooleanField(default = False)
     password = models.CharField(max_length = 255)
     status = models.CharField(max_length = 255)
-    user_type = models.CharField(max_length = 255, default = 'user')
+    #user_type = models.CharField(max_length = 255, default = 'user')
+    is_superuser = models.BooleanField(default = False)
+    is_staff = models.BooleanField(default = False)
+    is_active = models.BooleanField(default = True)
     bio = models.CharField(max_length = 255)
     occupation = models.CharField(max_length = 255)
     location = models.CharField(max_length = 255)
     followers_count = models.IntegerField(default = 0, null = True)
     following_count = models.IntegerField(default = 0, null = True)
     profile_picture = models.ImageField()
-    updated_at = models.DateTimeField()
-    created_at = models.DateTimeField()
+    last_login = models.DateTimeField(auto_now_add = True)
+    date_joined = models.DateTimeField(auto_now_add = True)
 
     def _str__(self):
         return self.first_name + self.last_name

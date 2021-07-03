@@ -16,7 +16,7 @@ def register(request):
         form = RegisterForm(request.POST)
         # Check if the form is valid
         if form.is_valid():
-            post = form.save(commit = True)
+            post = form.save(commit = False)
             post.save()
             form = RegisterForm()
     # If a GET create a blank form 
@@ -26,10 +26,10 @@ def register(request):
     return render(request, 'smapp/register.html', {'form':form})
 
 def user_detail(request):
-    # try:
-    #     user = Users.objects.get(pk=id)
-    # except Users.DoesNotExist:
-    #     raise Http404('User does not exist')
+    try:
+        user = Users.id.get()
+    except Users.DoesNotExist:
+        raise Http404('User does not exist')
 
     context = {
     'username': Users.username,

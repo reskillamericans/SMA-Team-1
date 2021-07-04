@@ -11,23 +11,24 @@
 </head>
 <body>
     <!-- HEADER -->
-    <div class="container">
-        <div class="header-layout">
-            <div class="header-left" id="left">
-                <img class="logo" src="assets/logo-SMA.png"  width=170px height=72px alt="SMA-logo" />
-                <div class="title">
-                    <span>Social Media App 1</span>
-                </div>
-            </div>
-            
-            <div class="header-right" id="right">
-                <a class="links" href="#home">Home</a>
-                <a class="links" href="#login">Log in</a>
-                <a class="links" href="#signup">Sign Up</a>
-                <a class="links" href="#about-us">About Us</a>
+    
+    <div class="header-layout">
+        <div class="header-left" id="left">
+            <img class="mobile-m" src="/assets/mb-M.svg" width= 23.74 height= 21px alt="mobile-design" />
+            <img class="logo" src="assets/logo-SMA.png"  width=170px height=72px alt="SMA-logo" />
+            <div class="title">
+                <span>Social Media App 1</span>
             </div>
         </div>
+        
+        <div class="header-right" id="right">
+            <a class="links" href="#home">Home</a>
+            <a class="links" href="#login">Log in</a>
+            <a class="links" href="#signup">Sign Up</a>
+            <a class="links" href="#about-us">About Us</a>
+        </div>
     </div>
+ 
     <!-- HEADER -->
     
     <!-- BACKGROUND IMAGE -->
@@ -44,7 +45,7 @@
                 <a class="close" 
                     href="#index.html"
                     alt="">
-                    <img src="assets/X.svg" width= 15 height= 15 alt="">
+                    X
                 </a>
             </button>
         </div>
@@ -86,13 +87,14 @@
                     <!-- <small>Error message</small> -->
                 </div>
                 <!-- /Email and Password -->
+                
                 <div class="forgot">
                     <span class="forgot-pwd">Forgot Password? <a href="#forgot-password" alt="forgot password">Click here</a></span>
                 </div>
                 <div class="form-container">
                     <div class="recaptcha-body">
                         <input class="capbox" type="checkbox" checked="checked" />
-                        <label class="container" for="checkbox" for="checkbox">I'm not a robot
+                        <label class="checkit" for="checkbox">I'm not a robot
                             <span class="checkmark"></span>
                         </label>
                         <div class="right-captcha">
@@ -113,25 +115,27 @@
                 <!-- /Submit and Go to Home or Profile? -->
 
                 <!-- /Stay signed in  -->
-            
                 <div class="mark">
                     <input class="box" type="checkbox" checked="checked" />
-                    <label class="container" for="checkbox">Keep me signed in on this computer
+                    <label class="keep" for="checkbox">Keep me signed in on this computer
                         <span class="keep"></span>
                     </label> 
                 </div>
-                
                 <!-- /Stay signed in  -->
-                
-            </form>
-            <div class="form-container">
-                <p class="register">Don't have an account? <a href="register.html">Register</a></p>
-            </div>
-        </div>
-        
-    </div>
 
-    
-    
+                <!-- Don't Have An Account  for mobile design-->
+                <div class="form-container">
+                    <p class="register-mobile">Don't have an account? <a href="register.html">Register</a></p>
+                </div>
+                <!-- /Don't Have An Account  for mobile design-->
+            </form>
+                
+            <!-- Don't Have An Account  for desktop design-->
+            <div class="form-container">
+                <p class="register-desktop">Don't have an account? <a href="register.html">Register</a></p>
+            </div>
+            <!-- /Don't Have An Account  for mobile design-->
+        </div>  
+    </section> 
 </body>
 </html>

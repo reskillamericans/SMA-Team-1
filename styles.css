@@ -6,13 +6,13 @@
     --montserrat: 'Montserrat', sans-serif;
     
     /* FONT-SIZES */
-    --fs-xlarge: 1.25rem;
-    --fs-large: .9375rem;
-    --fs-medium: .8375rem;
-    --fs-default: .8125rem;
-    --fs-small:.75rem;
-    --fs-xxsmall:.6875rem;
-    --fs-xsmall: .625rem;
+    --fs-xlarge: 20px;
+    --fs-large: 15px;
+    --fs-medium: 14px;
+    --fs-default: .8125em;
+    --fs-small: 12px;
+    --fs-xsmall: 11px;
+    --fs-xxsmall: .7692rem;
 
     /* FONT WEIGHT */
     --fw-reg: 400;
@@ -52,13 +52,14 @@ body {
     font-family: var(--montserrat);
     font-size: var(--fs-default);
 }
+
 #bg {
     position: fixed; 
     top: -50%; 
     left: -50%; 
     width: 200%; 
     height: 200%;
-  }
+}
 #bg img {
     width: 1440px;
     height: 1021px;
@@ -75,11 +76,15 @@ body {
     display: flex;
     justify-content: space-between;
     padding-top: 0;
-    padding-bottom: 2rem;   
+    padding-bottom: 4rem;   
 }
+
 .header-left {
     display: flex;
     flex-direction: row;
+}
+.mobile-m {
+    visibility: hidden;
 }
 .title {
     margin: 2rem 0; 
@@ -108,7 +113,7 @@ a {
 .window {
     position: fixed;
     width: 668px;
-    height: 755px;
+    height: 728px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -125,7 +130,6 @@ a {
 }
 .closeout {
     width: 100%;
-    /* margin-top: .79px; */
     display: flex;
     justify-content: flex-end;
     align-content: flex-end;
@@ -135,31 +139,30 @@ a {
     margin-right: .68rem;
     width: 2.5rem;
     height: 2.5rem;
-    border: 1px solid #CCCCCC;
+    background-color: white;
+    border: none;
+}
+.button-close:hover {
+    border: 1px solid var(--error);
+    font-weight: var(--fw-robo-sbold);
+    background-color: var(--error);
     border-radius: 3px;
 }
+
 .close {
-    margin-top: .5rem;
-    margin-right: .6rem;
-    width: 33px;
-    height: 34px;
-    /* top: 30px;
-    right: 30px;  */
-    
-}
-.close img {
-    display: cover;
-    color: var(--dark-blue);
+    margin-top: .75rem;
+    font-size: var(--fs-xlarge);
+    border:none;
     vertical-align: middle;
     align-self: center;
-    /* padding-left: 8px; */
-    z-index: 1;
-    
+    color: var(--dark-blue); 
 }
-
-.close img:hover {
+.close:hover {
+    color: var(--white);
+}
+/* .close img:hover {
     font-weight: var(--fw-robo-sbold);
-}
+} */
 .form-layout {
     height: 100%;
     display: flex;
@@ -190,12 +193,13 @@ a.github {
     text-decoration: none;
 }
 a.google {
+    color: var(--gray);
     background: #f1f1f1;
     margin-bottom: 14px;
 }
 a.github {
     color: white;
-    background: black;
+    background-color: black;
 }
 .google img,
 .github img {
@@ -204,6 +208,14 @@ a.github {
 .google span,
 .github span {
     padding-top: .5rem;
+}
+.google:hover {
+    background-color: var(--gray);
+    color: var(--white);
+}
+.github:hover {
+    background: #f1f1f1;
+    color: #1f1f1f;
 }
 form {
     display: flex;
@@ -214,7 +226,7 @@ form {
     margin: 1rem auto;
     padding: 1.5rem 0;
     background-color: #f1f1f1;
-    border: 1px solid #cccccc;
+    border: 1px solid var(--very-lt-gray);
     border-radius: 15px;
 }
 .form-container {
@@ -234,13 +246,20 @@ label {
     text-align: left;
     margin: .75rem auto;
 }
+label[for=password]:hover,
+label[for=email]:hover {
+    color: var(--info);
+}
 input {
     width: 340px;
     height: 32px;
     border: 1px solid #CCCCCC;
     border-radius: 15px;  
 }
-
+input[type=password]:hover,
+input[type=email]:hover {
+    border: 1px solid var(--info);
+}
 .forgot {
     width: 302px;
     display: flex;
@@ -250,6 +269,9 @@ input {
     flex-direction: row;
     align-items: center;  
     font-size: 13px;
+}
+.forgot a {
+    color: var(--info);
 }
 .recaptcha-body {
     width: 302px;
@@ -262,9 +284,9 @@ input {
     line-height: .6rem;
 }
 .capbox {
-    width: 25.5px;
-    height: 24px;
-    margin-top: 1.25rem;
+    width: 26px;
+    height: 25px;
+    margin-top: 1.5rem;
     margin-left: .5rem;
     padding: 0 .5rem;
     color: #FFFFFF;
@@ -274,10 +296,11 @@ input {
 }
 .checktxt {
     width: 150px;
-    margin: 2rem 0.5rem;
-    padding-left: .45rem;
+    margin: 3rem 0;
+    padding-top: 1rem;
+    padding-left: 0;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: var(--fw-reg);
 }
 
 .right-captcha {
@@ -305,8 +328,8 @@ input {
     width: 340px;
     height: 32px; 
     border-radius: 15px;
-    background-color: #53b6E0;
-    border: 1px solid #53b6E0;  
+    background-color: var(--info);
+    border: 1px solid var(--info);  
 }
 .submit:hover {
     opacity: 80%;
@@ -317,7 +340,12 @@ input {
     font-size: 14px;
 }
 .checkit {
+    padding-left: 1rem;
+    width: 100px;
+    margin-left: 0;
+    margin-top: 27px;
     font-size: 13px;
+    font-weight:var(--fw-reg);
     font-family: var(--roboto);  
 }
 .mark {
@@ -334,84 +362,220 @@ input {
 .box {
     width: 23px;
     height: 23px;
-    padding-right: .6rem;
+    /* padding-right:rem; */
     color: #FFFFFF;
     border: 1px solid #CCCCCC;
     border-radius: 3px;
 }
-.checkit {
-    padding-left: .45rem;
-    font-size: 13px;;
-    font-weight: 400;
+.keep {
+    padding-left: 1rem;
+    font-family: var(--roboto);
 }
-.register {
+.register-desktop {
     font-size: 13px;
     text-decoration: none;
 }
-.register a {
-    text-decoration: none;
+.register-desktop a {
+    color: var(--info);
+}
+.register-mobile {
+    visibility: hidden;
+}
+
+/* MOBILE DESIGN - max-width 450px*/
+@media screen and (max-width:34.615em) {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+    #bg {
+        display: none;
+    }
+    #bg img{
+        display: none;
+    }
+    .header-layout {
+        max-width: 370px;
+        height: 37.5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 2rem auto;
+        padding-top: 0;
+        padding-bottom: 2rem;   
+    }
+    .header-left {
+        display: flex;
+        flex-direction: row;
+        margin: 1.75rem auto;
+    }
+    .mobile-m {
+        visibility: visible;
+    }
+    .logo {
+        max-width: 50px;
+        height: 21px;
+    }
+    .title {
+        display: none;
+    }
+    .header-right a {
+        padding-right: 2rem;
+        font-size: var(--fs-xsmall);
+    }
+    .window {
+        max-width: 350px;
+        height: 600px;
+        top: 385px;
+        background-color: var(--very-lt-gray);
+        filter: none;
+    }
+    .form-layout {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .form-body{
+        min-height: 100%;
+    }
+    .button-close {
+        display: none;
+    }
+    a.google,
+    a.github  {
+        max-width: 300px;
+        height: 32px;
+    }
+    form {
+        max-width: 300px;
+        height: 410px;
+        margin: 1.25rem auto;
+        padding: 1.5rem 0;
+        background-color: #f1f1f1;
+        border: 1px solid var(--very-lt-gray);
+        border-radius: 15px;
+        filter: drop-shadow(0 4px 4px rgba(2, 2, 2, 0.25));
+    }
+    label[for=email],
+    label[for=password] {
+        max-width: 255px;
+        text-align: left;
+        margin:.5rem auto;
+        font-size: var(--fs-default);
+    }
+    
+    input[type=email],
+    input[type=password],
+    button.submit {
+        width: 255px;
+        height: 32px;
+        font-size: var(--fs-default);
+    }
+    .forgot {
+        max-width: 255px;
+        font-size: var(--fs-xxsmall);
+    }
+    .recaptcha-body {
+        max-width: 225px;
+        height: 71px; 
+        margin: 2rem auto; 
+        display: flex;
+        flex-direction: row;
+        border: 1px solid var(--very-lt-gray);
+        border-radius: 5px;
+        line-height: .6rem;
+    }
+    .checkit {
+        padding-right: 0;
+        font-size: var(-fs-default);
+    }
+    .right-captcha {
+        width: 75px;
+    }
+    .mark {
+        width: 225px;
+        height: 50px;
+    }
+    .keep {
+        width: 215px;
+        margin: 1rem auto;
+        padding-left: 5px;
+        font-size: var(--fs-small);
+    }
+    .register-mobile {
+        visibility: visible;
+        font-size: var(--fs-xxsmall);
+    }
+    .register-desktop {
+        visibility: hidden;
+    }
 }
 
 
+
 /* Customize the label (the container) */
-.container {
+/* .container {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 25px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 14px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+} */
   
   /* Hide the browser's default checkbox */
-  .container input {
+  /* .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
+  } */
   
   /* Create a custom checkbox */
-  .checkmark {
+  /* .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 25px;
     width: 25px;
     background-color: #eee;
-  }
+  } */
   
   /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
+  /* .container:hover input  {
     background-color: #ccc;
-  }
+  } */
   
   /* When the checkbox is checked, add a blue background */
-  .container input:checked ~ .checkmark {
+  /* .container input:checked ~ .checkmark {
     background-image: url(/assets/checkmark.svg);
     background-color: #2196F3;
-  }
+  } */
   
   /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
+  /* .checkmark:after {
     content: "";
     position: absolute;
     display: none;
     outline: #CCCCCC;
-  }
+  } */
   
   /* Show the checkmark when checked */
-  .container input:checked ~ .checkmark:after {
+  /* .container input:checked ~ .checkmark:after {
     display: block;
-  }
+  } */
   
   /* Style the checkmark/indicator */
-  .container .checkmark:after {
+  /* .container .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -421,4 +585,4 @@ input {
     /* -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); */
-  }
+

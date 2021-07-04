@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+
+
+:root {
+    --roboto: 'Roboto', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    
+    /* FONT-SIZES */
+    --fs-xlarge: 1.25rem;
+    --fs-large: .9375rem;
+    --fs-medium: .8375rem;
+    --fs-default: .8125rem;
+    --fs-small:.75rem;
+    --fs-xxsmall:.6875rem;
+    --fs-xsmall: .625rem;
+
+    /* FONT WEIGHT */
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-robo-sbold: 600;
+    --fw-montserrat-bold: 700;
+
+    /* TEXT COLORS */
+    --dk: #1E1E1E;
+    --gray: #616161;
+    --lt-gr: #AFB1B2;
+
+    /* BACKGROUND COLORS */
+    --near-bk: #1E1E1E;
+    --very-lt-gray: #CCCCCC;
+    --white: #FFFFFF;
+    --off-white: #F8F8F8;
+
+    /* COLORS */
+    --info: #53B6E0;
+    --success: #74C080;
+    --warning: #F0B518;
+    --error: #D9534F;
+    --dark-blue: #14223D;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    font-family: var(--montserrat);
+    font-size: var(--fs-default);
+}
+#bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+  }
+#bg img {
+    width: 1440px;
+    height: 1021px;
+    position: absolute; 
+    top: 150px; 
+    left: 9px; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+}
+.header-layout{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 2rem;   
+}
+.header-left {
+    display: flex;
+    flex-direction: row;
+}
+.title {
+    margin: 2rem 0; 
+    font-size: 16px;
+    font-weight: 500;
+}
+.header-right {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+.header-right a {
+    padding-right:4rem;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+}
+.logo {
+    width: 170px;
+    height: 72px;
+}
+
+.window {
+    position: fixed;
+    width: 668px;
+    height: 755px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid #E1e1e1;
+    border-radius: 15px;
+    filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
+
+}
+.closeout {
+    width: 100%;
+    /* margin-top: .79px; */
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+.button-close {
+    margin-top: .75rem;
+    margin-right: .68rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+}
+.close {
+    margin-top: .5rem;
+    margin-right: .6rem;
+    width: 33px;
+    height: 34px;
+    /* top: 30px;
+    right: 30px;  */
+    
+}
+.close img {
+    display: cover;
+    color: var(--dark-blue);
+    vertical-align: middle;
+    align-self: center;
+    /* padding-left: 8px; */
+    z-index: 1;
+    
+}
+
+.close img:hover {
+    font-weight: var(--fw-robo-sbold);
+}
+.form-layout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.form-body{
+    min-height: 100%;
+    
+}
+.other-signin {
+    display: flex;
+    height: auto;
+    margin-top: 0;
+    flex-direction: column;
+    align-items: center;  
+}
+a.google,
+a.github {
+    width: 340px;
+    height: 32px;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 15px; 
+    font-family: var(--roboto);
+    font-size: 13px;
+    text-decoration: none;
+}
+a.google {
+    background: #f1f1f1;
+    margin-bottom: 14px;
+}
+a.github {
+    color: white;
+    background: black;
+}
+.google img,
+.github img {
+    padding-right: .6rem;
+}
+.google span,
+.github span {
+    padding-top: .5rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center; 
+    width: 440px;
+    height: 427px;
+    margin: 1rem auto;
+    padding: 1.5rem 0;
+    background-color: #f1f1f1;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+}
+.form-container {
+    display: flex;
+    height: auto;
+    margin-top: 0;
+    padding: 1rem auto;
+    flex-direction: column;
+    align-items: center;  
+    font-family: var(--roboto);
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+label {
+    width: 340px;
+    text-align: left;
+    margin: .75rem auto;
+}
+input {
+    width: 340px;
+    height: 32px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;  
+}
+
+.forgot {
+    width: 302px;
+    display: flex;
+    height: auto;
+    margin: 0.25rem auto;
+    padding: 1rem auto;
+    flex-direction: row;
+    align-items: center;  
+    font-size: 13px;
+}
+.recaptcha-body {
+    width: 302px;
+    height: 69px; 
+    margin: 2rem auto; 
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    line-height: .6rem;
+}
+.capbox {
+    width: 25.5px;
+    height: 24px;
+    margin-top: 1.25rem;
+    margin-left: .5rem;
+    padding: 0 .5rem;
+    color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+.checktxt {
+    width: 150px;
+    margin: 2rem 0.5rem;
+    padding-left: .45rem;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.right-captcha {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    
+    
+}
+.right-captcha img {
+    margin-right: 0;
+    width: auto;
+}
+.cap {
+    margin: .5rem auto;
+    font-size: 10px;
+    font-weight: 400;
+}
+.privacy {
+    font-size: 9px;
+    font-weight: 300;
+}
+.submit {
+    width: 340px;
+    height: 32px; 
+    border-radius: 15px;
+    background-color: #53b6E0;
+    border: 1px solid #53b6E0;  
+}
+.submit:hover {
+    opacity: 80%;
+}
+.submit a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+.checkit {
+    font-size: 13px;
+    font-family: var(--roboto);  
+}
+.mark {
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    height: auto;
+    margin: 0.25rem auto;
+    padding: 1rem auto;
+    font-size: 13px;
+    text-align: left;
+}
+.box {
+    width: 23px;
+    height: 23px;
+    padding-right: .6rem;
+    color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+}
+.checkit {
+    padding-left: .45rem;
+    font-size: 13px;;
+    font-weight: 400;
+}
+.register {
+    font-size: 13px;
+    text-decoration: none;
+}
+.register a {
+    text-decoration: none;
+}
+

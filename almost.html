@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"  content="Pia Torain">
+    <meta name="description"  content="The Login in page of SMA-T1 Project">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="almost.css">
+    <title>Almost</title>
+</head>
+<body>
+    <!-- HEADER -->
+    
+    <div class="header-layout">
+        <div class="header-left" id="left">
+            <img class="mobile-m" src="/assets/mb-M.svg" width= 23.74 height= 21px alt="mobile-design" />
+            <img class="logo" src="assets/logo-SMA.png"  width=170px height=72px alt="SMA-logo" />
+            <div class="title">
+                <span>Social Media App 1</span>
+            </div>
+        </div>
+        
+        <div class="header-right" id="right">
+            <a class="links" href="#home">Home</a>
+            <a class="links" href="#login">Log in</a>
+            <a class="links" href="#signup">Sign Up</a>
+            <a class="links" href="#about-us">About Us</a>
+        </div>
+    </div>
+ 
+    <!-- /HEADER -->
+
+    <!-- BACKGROUND IMAGE -->
+    <div id="bg">
+        <img src="assets/bg-SMA.png" alt="">
+    </div>
+    <!-- /BACKGROUND IMAGE -->
+
+    <section class="window-almost">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button class="button-close">
+                <a class="close" 
+                    href="#index.html"
+                    alt="">
+                    X
+                </a>
+            </button>
+        </div>
+        
+        <!-- FORM  WINDOW-->
+        <div class="form-layout">
+            <div class="left">
+                <div class="details">
+                    <div class="details-container">
+                        <div class="details-header">
+                            <p class="intro">Almost There.</p>
+                        </div>
+                        <div class="details-text">
+                            <div class="holder">
+                                <div class="bulb-holder">
+                                    <img class="bulb" src="assets/lightbulb.svg" width= 14.58 length= 20.83 />
+                                    <!-- <img class="bulb-line" src="assets/lightbulb-line.svg" width= 8.33 />  -->
+                                    
+                                </div>
+                            </div>
+                            <p class="">
+                                You're almost done. We need a little more information to create your profile. We cater your experience on this app to your interests.
+                            </p>
+                        
+                        </div>
+            
+                        <div class="details-graphic">
+                            <div class="cylce">
+                                <div>
+                                    <!-- <img class="red-arrow" src="assets/ellipse-23.svg" />  <img class="red-ell" src="assets/polygon-1.svg" />  -->
+                                    <!-- <img class="yellow-arrow" src="assets/ellipse-24.svg" />  <img class="yellow-ell" src="assets/polygon-2.svg" /> 
+                                    <img class="blue-arrow" src="assets/ellipse-25.svg" />  <img class="blue-ell" src="assets/polygon-3.svg" />  -->
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+
+            <div class="right">
+                
+
+                <form action="" id="form" class="form">
+                    
+                    <div class="account-header">
+                        <div class="account-profile">
+                            <div class="profile-rectangle">
+                                <img class="initial" src="assets/initial-L.svg" width= 35 height= 75 alt="initial" />
+                            </div>
+                            <div class="loboeh">
+                                <span class="name">Loboeh</span>
+                            </div>
+                        </div>
+                        <div class="button-holder">
+                            <button class="pick" type="submit">Pick a photo</button>
+                        </div>
+                        <p class="photo-text">Adding a photo can make it easier for others to recognize you.</p>
+                        
+                    </div>
+                    
+                    <!-- Job Title and Interests-->
+                    <div class="form-container">
+                        <label for="job">Job Title</label>
+                        <input type="text" id="job" autocomplete="off" />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <!-- <small>Error message</small> -->
+                    </div>
+                    <div class="form-container">
+                        <label for="interests">Subjects that interest you</label>
+                        <input type="text" id="interests" />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <!-- <small>Error message</small> -->
+                    </div>
+                    <!-- /Job Title and Interests-->
+
+                    <!-- Submit Complete Account -->
+                    <div class="form-container">
+                        <button class="complete" type="submit"><a href="home.html">Complete Account</a></button>
+                    </div>
+                    <!-- /Submit Submit Complete Account  -->
+
+                    <!-- Terms and Policy-->
+                    <div class="form-container">
+                        <p class="terms">
+                            By clicking "Complete Account", you agree to our terms of service and privacy policy
+                        </p>
+                    </div>
+                    <!-- /Terms and Policy-->
+                    
+                </form>
+            </div>  
+        </div>
+    </section>
+    
+</body>
+</html>

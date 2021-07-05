@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, Http404
+from django.contrib.auth import get_user_model
 from .forms import RegisterForm
 from .models import Users
 import json
@@ -19,6 +20,8 @@ def register(request):
             post = form.save(commit = False)
             post.save()
             form = RegisterForm()
+
+            return HttpResponseRedirect('../login/')
     # If a GET create a blank form 
     else:
         form = RegisterForm()
@@ -26,10 +29,14 @@ def register(request):
     return render(request, 'smapp/register.html', {'form':form})
 
 def user_detail(request):
-    try:
-        user = Users.id.get()
-    except Users.DoesNotExist:
-        raise Http404('User does not exist')
+
+    user = Users.objects.all()
+
+    # try:
+    #     username = (request.POST['Users.username'])
+    #     user = Users.objects.get(username = Users.username)
+    # except Users.DoesNotExist:
+    #     raise Http404('User does not exist')
 
     context = {
     'username': Users.username,
@@ -37,5 +44,8 @@ def user_detail(request):
     'last_name': Users.last_name,
     'email': Users.email
     }
-    return render(request, 'smapp/user_detail.html', context=context)
+    return render(request, 'smapp/user_detail.html', {'context':context})
+
+def login(request):
+    return render(request, 'smapp/login.html')
 

@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Social Media App User Details</h1>
-<form method="GET" class="form-group">
-    {% csrf_token %}
-    {{ form.as_p }}
 
-    <button type="submit" class="btn btn-success">Submit</button>
-</form>
+{{ user.username }} <br>
+{{ user.first_name }} <br>
+{{ user.email }}
+
 {% endblock %}

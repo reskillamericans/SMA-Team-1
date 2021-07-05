@@ -29,23 +29,15 @@ def register(request):
     return render(request, 'smapp/register.html', {'form':form})
 
 def user_detail(request):
-
+    
+    # Return QuerySet
     user = Users.objects.all()
-
-    # try:
-    #     username = (request.POST['Users.username'])
-    #     user = Users.objects.get(username = Users.username)
-    # except Users.DoesNotExist:
-    #     raise Http404('User does not exist')
+    user = request.user
 
     context = {
-    'username': Users.username,
-    'first_name': Users.first_name,
-    'last_name': Users.last_name,
-    'email': Users.email
+    'user': user,
     }
     return render(request, 'smapp/user_detail.html', {'context':context})
 
 def login(request):
     return render(request, 'smapp/login.html')
-

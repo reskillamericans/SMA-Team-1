@@ -6,12 +6,12 @@
     --montserrat: 'Montserrat', sans-serif;
     
     /* FONT-SIZES */
-    --fs-xlarge: 20px;
-    --fs-large: 15px;
-    --fs-medium: 14px;
-    --fs-default: .8125em;
-    --fs-small: 12px;
-    --fs-xsmall: 11px;
+    --fs-xlarge: 1.538rem;
+    --fs-large: 1.1538rem;
+    --fs-medium: 1.076rem;
+    --fs-default: 1rem;
+    --fs-small: .9230rem;
+    --fs-xsmall: .8461rem;
     --fs-xxsmall: .7692rem;
 
     /* FONT WEIGHT */
@@ -50,7 +50,7 @@
 html,
 body {
     font-family: var(--montserrat);
-    font-size: var(--fs-default);
+    font-size: 13px;
 }
 
 #bg {

@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
 
-
+/* Need to work on arrow cycle in desktop design and Input boxes */
 :root {
     --roboto: 'Roboto', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
     
     /* FONT-SIZES */
-    --fs-xlarge: 20px;
-    --fs-large: 15px;
-    --fs-medium: 14px;
-    --fs-default: .8125em;
-    --fs-small: 12px;
-    --fs-xsmall: 11px;
+    --fs-xlarge: 1.538rem;
+    --fs-large: 1.1538rem;
+    --fs-medium: 1.076rem;
+    --fs-default: 1rem;
+    --fs-small: .9230rem;
+    --fs-xsmall: .8461rem;
     --fs-xxsmall: .7692rem;
 
     /* FONT WEIGHT */
@@ -49,8 +49,8 @@
 }
 html,
 body {
-    font-family: var(--montserrat);
-    font-size: var(--fs-default);
+    font-family: var(--roboto);
+    font-size: 13px;
 }
 #bg {
     position: fixed; 
@@ -88,7 +88,7 @@ body {
 .title {
     margin: 2rem 0; 
     font-size: 16px;
-    font-weight: 500;
+    font-weight: var(--fw-med);
 }
 .header-right {
     width: auto;
@@ -121,8 +121,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
-    border: 2px solid #E1e1e1;
+    background-color: var(--white);
+    border: 2px solid #E1E1E1;
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 }
@@ -150,7 +150,7 @@ a {
 .close {
     margin-top: .75rem;
     font-size: var(--fs-xlarge);
-    border:none;
+    border: none;
     vertical-align: middle;
     align-self: center;
     color: var(--dark-blue); 
@@ -158,7 +158,6 @@ a {
 .close:hover {
     color: var(--white);
 }
-
 .form-layout {
     height: 560px;
     width: auto;
@@ -168,15 +167,11 @@ a {
     align-content: center;
     margin: auto 0;
     padding: 0 4rem;
-    filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 
 }
 .left {
     width: 440px;
-    height: 560px;
-    /* display: flex;
-    flex-direction: column; */
-    
+    height: 560px;  
 }
 .details {
     display: flex;
@@ -186,9 +181,8 @@ a {
     height: 560px;
     margin: 0 auto;
     padding: 43px 45px;
-    background-color: -white;
-    /* border: 1px solid var(--very-lt-gray);
-    border-radius: 15px; */
+    background-color: var(--white);
+    border: none;
 }
 .details-container {
     display: flex;
@@ -198,7 +192,6 @@ a {
     padding: 1rem auto;
     flex-direction: column;
     align-items: center;  
-    font-family: var(--roboto);
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -233,8 +226,7 @@ a {
 .bulb-holder {
     width: 20px;
     position: relative;
-    /* align-content: flex-start;
-    background-image: url(/assets/lightbulb.svg) no repeat; */
+    
 }
 .bulb {
     position: absolute;
@@ -242,15 +234,13 @@ a {
     /* top: 419px;
     left: 296px; */
     height: auto;
-    
-    /* z-index: 1; */
 }
 
-.bulb-line {
+/* .bulb-line {
     top: 437px;
     left: 299px;
     
-}
+} */
 
 .details-text p {
     font-family: var(--roboto);
@@ -298,7 +288,6 @@ form {
     padding: 1rem auto;
     flex-direction: column;
     align-items: center;  
-    font-family: var(--roboto);
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -333,7 +322,6 @@ form {
 }
 .name {
     padding: 47.5px 0;
-    font-family: var(--roboto);
     font-weight: var(--fw-med);
     font-size: 30px;
 }
@@ -346,14 +334,12 @@ form {
     border-radius: 15px;
     border: 1px solid var(--info);
     color: var(--info);
-    font-family: var(--roboto);
     font-size: 16px;
-    margin: .75rem auto;box-shadow: 0px 4px 4px 0px rgba(31, 31, 31, 25%);
-    /* filter: drop-shadow( 4px 0px 4px rgba(31, 31, 31, 25%)); */
+    margin: .75rem auto;
+    box-shadow: 0px 4px 4px 0px rgba(31, 31, 31, 25%);
 }
 .photo-text {
     width: 319px;
-    font-family: var(--roboto);
     font-size: 14px;
 }
 label {
@@ -418,14 +404,15 @@ input[type=text]:hover {
         display: none;
     }
     .header-layout {
-        max-width: 370px;
+        max-width: 100%;
         height: 37.5px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin: 2rem auto;
+        margin-bottom: 0;
         padding-top: 0;
-        padding-bottom: 2rem;   
+        padding-bottom: 2rem;  
     }
     .header-left {
         display: flex;
@@ -446,165 +433,195 @@ input[type=text]:hover {
         padding-right: 2rem;
         font-size: var(--fs-xsmall);
     }
-    .window {
-        max-width: 350px;
-        height: 600px;
-        top: 385px;
-        background-color: var(--very-lt-gray);
-        filter: none;
-    }
-    .form-layout {
-        width: 100%;
-        height: 100%;
+    .window-almost {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-content: center;
+        width: 360px;
+        height: auto;
+        top: 340px;
+        background-color: none;
+        border: none;
+        filter: none;
+        margin: 0 auto;
     }
-    .form-body{
-        min-height: 100%;
+    .form-layout {
+        width: 354px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
     .button-close {
-        display: none;
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
-    a.google,
-    a.github  {
-        max-width: 300px;
-        height: 32px;
+    .left {
+        width: 360px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-content: center; 
+        width: 360px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        background-color: var(--white);
+    }
+    .details-container {
+        width: 360px;
     }
     form {
-        max-width: 300px;
+        max-width: 330px;
         height: 410px;
         margin: 1.25rem auto;
-        padding: 1.5rem 0;
+        padding: 1rem auto;
         background-color: #f1f1f1;
         border: 1px solid var(--very-lt-gray);
         border-radius: 15px;
         filter: drop-shadow(0 4px 4px rgba(2, 2, 2, 0.25));
     }
-    label[for=email],
-    label[for=password] {
-        max-width: 255px;
+    .details-header {
+        display: flex;
+        width: 375px;
+        height: 40px;
+        font-family: var(--montserrat);
+        color: var(--white);
+        background-color: var(--info);
+        text-align: center;
+        top: 365px;
+    }
+    .intro {
+        width: 360px;
+        height: 28px;
+        top: 75px;
+        margin: 7px auto;
+        padding: 0;
+        color: var(--white);
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    .details-text {
+        width: 360px;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    .holder,
+    .bulb-holder,
+    .bulb {
+        visibility: hidden;
+    }
+    .details-text p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1;
+        margin-left: 0;
+        margin: .8rem auto;
+        text-align: center;
+    }
+    .details-graphics,
+    .cycle {
+        display: none;
+    }
+    .right {
+        width: 360px;
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+    }
+    form  {
+        width: 360px;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+    label[for=job],
+    label[for=interests] {
+        max-width: 254px;
         text-align: left;
         margin:.5rem auto;
         font-size: var(--fs-default);
     }
-    
-    input[type=email],
-    input[type=password],
-    button.submit {
-        width: 255px;
+    .form-container {
+        width: 328px;
+        height: auto;
+    }
+    .account-header {
+        width: 328px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding: lrem auto;
+    }
+    .account-profile {
+        width: 254px;
+        margin: auto;
+        padding-top: 1.5rem;
+    }
+    .profile-rectangle {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+    }
+    .initial {
+        width: 30px;
+        height: 70px;
+        margin: 15.5px 40px;
+    }
+    .loboeh {
+        display:flex;
+        padding: 0;
+        width: 110px;
+        height: 100px;
+    }
+    .name {
+        width: 120px;
+        padding: 0;
+        padding-left: 10px;
+        align-self: center;
+    }
+    .button-holder {
+        width: 328px;
+        text-align: center;
+    }
+    .pick {
+        width: 254px;
+        height: 32px;
+        color: var(--white);
+        background-color: var(--info);
+        padding: 0;
+    }
+    .photo-text {
+        width: 328px;
+        font-size: var(--fs-xxsmall);
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    input,
+    .complete {
+        width: 254px;
         height: 32px;
         font-size: var(--fs-default);
     }
-    .forgot {
-        max-width: 255px;
+    .complete {
+        margin-top: 15px;
+        padding: 0;
+    }
+    .policy {
+        height: 30px;
+    }
+    .terms {
         font-size: var(--fs-xxsmall);
-    }
-    .recaptcha-body {
-        max-width: 225px;
-        height: 71px; 
-        margin: 2rem auto; 
-        display: flex;
-        flex-direction: row;
-        border: 1px solid var(--very-lt-gray);
-        border-radius: 5px;
-        line-height: .6rem;
-    }
-    .checkit {
-        padding-right: 0;
-        font-size: var(-fs-default);
-    }
-    .right-captcha {
-        width: 75px;
-    }
-    .mark {
-        width: 225px;
-        height: 50px;
-    }
-    .keep {
-        width: 215px;
-        margin: 1rem auto;
-        padding-left: 5px;
-        font-size: var(--fs-small);
-    }
-    .register-mobile {
-        visibility: visible;
-        font-size: var(--fs-xxsmall);
-    }
-    .register-desktop {
-        visibility: hidden;
-    }
+        width: 190px;
+    }  
 }
-
-
-
-/* Customize the label (the container) */
-/* .container {
-    display: block;
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 14px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-} */
-  
-  /* Hide the browser's default checkbox */
-  /* .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  } */
-  
-  /* Create a custom checkbox */
-  /* .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-  } */
-  
-  /* On mouse-over, add a grey background color */
-  /* .container:hover input  {
-    background-color: #ccc;
-  } */
-  
-  /* When the checkbox is checked, add a blue background */
-  /* .container input:checked ~ .checkmark {
-    background-image: url(/assets/checkmark.svg);
-    background-color: #2196F3;
-  } */
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  /* .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-    outline: #CCCCCC;
-  } */
-  
-  /* Show the checkmark when checked */
-  /* .container input:checked ~ .checkmark:after {
-    display: block;
-  } */
-  
-  /* Style the checkmark/indicator */
-  /* .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    /* -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg); */
 

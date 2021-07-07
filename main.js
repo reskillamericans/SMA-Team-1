@@ -1,3 +1,5 @@
+
+
 //  Add email and password to an object when submitted
 
 var objects = {};
@@ -8,3 +10,5 @@ form.onsubmit = function(e){
     console.log(JSON.stringify(objects));
     e.preventDefault();
 }
+
+

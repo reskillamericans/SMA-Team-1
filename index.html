@@ -7,6 +7,7 @@
     <meta name="author"  content="Pia Torain">
     <meta name="description"  content="The Login in page of SMA-T1 pro">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkbox.css">
     <title>Login-Page</title>
 </head>
 <body>
@@ -66,46 +67,50 @@
                         <img src="assets/git.svg" alt="github logo"> 
                         <span>Sign In with GitHub </span>
                 </a>
-    
             </div>
+
 
             <form action="" id="form" class="form">
             
                 <!-- Email and Password -->
                 <div class="form-container">
                     <label for="email">Email</label>
-                    <input type="email" id="email" autocomplete="off" />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
+                    <input name="email" type="email" id="email" autocomplete="off" />
                     <!-- <small>Error message</small> -->
                 </div>
                 <div class="form-container">
                     <label for="password">Password</label>
-                    <input type="password" id="password" />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
+                    <input name="password" type="password" id="password" />
                     <!-- <small>Error message</small> -->
                 </div>
                 <!-- /Email and Password -->
                 
                 <div class="forgot">
-                    <span class="forgot-pwd">Forgot Password? <a href="#forgot-password" alt="forgot password">Click here</a></span>
+                    <span class="forgot-pwd">Forgot Password? <a href="Password-Reset.html" alt="reset password">Click here</a></span>
                 </div>
+
+                <!-- reCaptcha -->
                 <div class="form-container">
                     <div class="recaptcha-body">
-                        <input class="capbox" type="checkbox" checked="checked" />
-                        <label class="checkit" for="checkbox">I'm not a robot
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="right-captcha">
-                           
-                            <img src="assets/recaptcha.svg" width= 26.56px height= 25px alt="human-verify" />
-                            <span class="cap">reCAPTCHA</span>
-                            <span class="privacy">Privacy - Terms</span> 
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="check" hidden/>
+                            <!-- dont forget to put hidden back -->
+                            <label for="check" class="checkmark"></label>
                             
+                        </div>
+                        <div class="right-captcha">
+                            <div class="robo-text">
+                                <p>I am not a robot</p>
+                            </div>
+                            <div class="cap-right">
+                                <img src="assets/recaptcha.svg" width= 26.56 height= 25 alt="human-verify" />
+                                <span class="cap">reCAPTCHA</span>
+                                <span class="privacy">Privacy - Terms</span> 
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--/reCaptcha -->
 
 
                 <!-- Submit and Go to Home or Profile? -->
@@ -116,10 +121,12 @@
 
                 <!-- /Stay signed in  -->
                 <div class="mark">
-                    <input class="box" type="checkbox" checked="checked" />
-                    <label class="keep" for="checkbox">Keep me signed in on this computer
-                        <span class="keep"></span>
-                    </label> 
+                    <div class="container">
+                        <form>
+                            <input type="checkbox" id="keep" name="sign" hidden>
+                            <label for="keep" >Keep me signed in on this computer</label>
+                        </form>
+                    </div>
                 </div>
                 <!-- /Stay signed in  -->
 

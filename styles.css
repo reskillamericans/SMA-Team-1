@@ -70,6 +70,7 @@ body {
     margin: auto; 
     min-width: 50%;
     min-height: 50%;
+    opacity: 20%;
 }
 /* Header Layout */
 .header-layout{
@@ -84,7 +85,7 @@ body {
     flex-direction: row;
 }
 .mobile-m {
-    visibility: hidden;
+    display: none;
 }
 .title {
     margin: 2rem 0; 
@@ -390,7 +391,7 @@ input[type=email]:hover {
     color: var(--info);
 }
 .register-mobile {
-    visibility: hidden;
+    display: none;
 }
 
 /* MOBILE DESIGN - max-width 750px*/
@@ -422,7 +423,7 @@ input[type=email]:hover {
         margin: 1.75rem auto;
     }
     .mobile-m {
-        visibility: visible;
+        display: block;
     }
     .logo {
         max-width: 50px;
@@ -543,11 +544,11 @@ input[type=email]:hover {
         font-size: 11px;
     }
     .register-mobile {
-        visibility: visible;
+        display: block;
         font-size: var(--fs-xxsmall);
     }
     .register-desktop {
-        visibility: hidden;
+        display: none;
     }
 }
 

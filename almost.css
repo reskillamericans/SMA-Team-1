@@ -70,6 +70,7 @@ body {
     margin: auto; 
     min-width: 50%;
     min-height: 50%;
+    opacity: 20%;
 }
 .header-layout{
     display: flex;
@@ -83,7 +84,7 @@ body {
     flex-direction: row;
 }
 .mobile-m {
-    visibility: hidden;
+    display: none;
 }
 .title {
     margin: 2rem 0; 
@@ -420,7 +421,7 @@ input[type=text]:hover {
         margin: 1.75rem auto;
     }
     .mobile-m {
-        visibility: visible;
+        display: block;
     }
     .logo {
         max-width: 50px;
@@ -504,6 +505,7 @@ input[type=text]:hover {
         margin: 7px auto;
         padding: 0;
         color: var(--white);
+        padding-top: 3px;
         text-align: center;
         font-size: 24px;
     }

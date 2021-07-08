@@ -10,9 +10,8 @@ form.onsubmit = function(e){
     e.preventDefault();
 }
 
-//
+//Script for Forgot/Reset password - has error...run correctly only after clicking X in corner 
 document.addEventListener("DOMContentLoaded", () => {
-
     const main = document.getElementById("main");
     const BtnOne = document.getElementById('mainBtn');
     const email = document.getElementById("emailSent");
@@ -21,50 +20,39 @@ document.addEventListener("DOMContentLoaded", () => {
     const BtnThree = document.getElementById("confirmBtnThree");
     const success = document.getElementById("successReset");
     const BtnFour = document.getElementById("successBtnFour");
-    
-    main.style.display = "block";
+
     email.style.display = "none"; 
     reset.style.display = "none";
     success.style.display = "none";
-     
+    main.style.display = "block";
     
-});
-
-const main = document.getElementById("main");
-    const BtnOne = document.getElementById('mainBtn');
-    const email = document.getElementById("emailSent");
-    const BtnTwo = document.getElementById("emailBtnTwo");
-    const reset = document.getElementById("reset");
-    const BtnThree = document.getElementById("confirmBtnThree");
-    const success = document.getElementById("successReset");
-    const BtnFour = document.getElementById("successBtnFour");
-
-BtnOne.addEventListener('click', showEmail);
+    BtnOne.addEventListener('click', showEmail);
     BtnTwo.addEventListener('click', showReset);
     BtnThree.addEventListener('click', showSuccess);
     BtnFour.addEventListener('click', showHome);
-
-function showEmail() {
-    main.style.display = "none";
-    reset.style.display = "none";
-    success.style.display = "none";
-    email.style.display = "block"; 
-};
-function showReset() {
-    email.style.display = "none";
-    main.style.display = "none";
-    success.style.display = "none";
-    reset.style.display = "block";
-};
-function showSuccess() {
-    email.style.display = "none";
-    main.style.display = "none";
-    reset.style.display = "none";
-    success.style.display = "block";
-};
-function showHome() {
-    reset.style.display = "none";
-    email.style.display = "none";
-    success.style.display = "none";
-    main.style.display = "block";
-};
+    
+    function showEmail() {
+        main.style.display = "none";
+        reset.style.display = "none";
+        success.style.display = "none";
+        email.style.display = "block"; 
+    };
+    function showReset() {
+        email.style.display = "none";
+        main.style.display = "none";
+        success.style.display = "none";
+        reset.style.display = "block";
+    };
+    function showSuccess() {
+        email.style.display = "none";
+        main.style.display = "none";
+        reset.style.display = "none";
+        success.style.display = "block";
+    };
+    function showHome() {
+        reset.style.display = "none";
+        email.style.display = "none";
+        success.style.display = "none";
+        main.style.display = "block";
+    };
+});

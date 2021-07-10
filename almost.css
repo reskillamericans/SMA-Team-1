@@ -181,13 +181,14 @@ a {
     width: 440px;
     height: 560px;
     margin: 0 auto;
-    padding: 43px 45px;
+    padding: 43px 0px;
+    padding-left: 0px;
     background-color: var(--white);
     border: none;
 }
 .details-container {
     display: flex;
-    width: 340px;
+    width: 440px;
     height: auto;
     margin-top: 0;
     padding: 1rem auto;
@@ -199,8 +200,9 @@ a {
 }
 .details-header {
     display: flex;
-    width: 340px;
+    width: 100%;
     height: 120px;
+    margin-left: 35px;
     font-family: var(--montserrat);
     font-weight: var(--fw-med);
     color: var(--info);
@@ -210,11 +212,12 @@ a {
     width: auto;
     font-size: 48px;
     height: 59px;
-    margin: 1rem 0;
-    padding: 40px 0;
+    margin: 35px 0;
+    padding-top: 10px;
 }
 .details-text {
-    width: 375px;
+    width: 402px;
+    margin-left: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -222,49 +225,27 @@ a {
 .holder {
     width: 20px;
     display: flex;
-    margin-right: 5px;
-}
-.bulb-holder {
-    width: 20px;
-    position: relative;
-    
+    margin-left: 0;
 }
 .bulb {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    /* top: 419px;
-    left: 296px; */
     height: auto;
+    margin-left: 0;
+    margin-right: 5px;
 }
-
-/* .bulb-line {
-    top: 437px;
-    left: 299px;
-    
-} */
-
 .details-text p {
+    width: 100%;
     font-family: var(--roboto);
     font-size: 24px;
     text-align: left;
-    line-height: 1;
-    margin-left: 10px;
+    line-height: 1.1;
+    margin-left:5px;
     
 }
-/* .details-graphics {
-    position: absolute;
+.arrow-circle {
+    margin-top: 20px;
 }
-.red-arrow {
-    position: relative;
-    top: px;
-    left: 412px;
-}
-.red-ell {
-    top: 800px;
-    left: 515.74px;
-    rotate: -80.56deg;
-
-} */
 .right {
     width: 440px;
     height: 560px;
@@ -392,7 +373,7 @@ input[type=text]:hover {
 
 
 /* MOBILE DESIGN - max-width 450px*/
-@media screen and (max-width:34.615em) {
+@media screen and (max-width:57.69em) {
     html,
     body {
         width: 100%;
@@ -405,7 +386,7 @@ input[type=text]:hover {
         display: none;
     }
     .header-layout {
-        max-width: 100%;
+        width: 375px;
         height: 37.5px;
         display: flex;
         flex-direction: row;
@@ -437,7 +418,7 @@ input[type=text]:hover {
     .window-almost {
         display: flex;
         flex-direction: column;
-        width: 360px;
+        max-width: 375px;
         height: auto;
         top: 340px;
         background-color: none;
@@ -454,12 +435,10 @@ input[type=text]:hover {
         padding: 0;
     }
     .button-close {
-        visibility: hidden;
-        width: 0;
-        height: 0;
+        display: none;
     }
     .left {
-        width: 360px;
+        width: 375px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -469,14 +448,14 @@ input[type=text]:hover {
         display: flex;
         flex-direction: column;
         align-content: center; 
-        width: 360px;
+        width: 375px;
         height: auto;
-        margin: 0;
+        margin-left: 0;
         padding: 0;
         background-color: var(--white);
     }
     .details-container {
-        width: 360px;
+        width: 375px;
     }
     form {
         max-width: 330px;
@@ -490,8 +469,10 @@ input[type=text]:hover {
     }
     .details-header {
         display: flex;
-        width: 375px;
+        width: 360px;
         height: 40px;
+        margin-left: 0;
+        padding: 0;
         font-family: var(--montserrat);
         color: var(--white);
         background-color: var(--info);
@@ -499,10 +480,10 @@ input[type=text]:hover {
         top: 365px;
     }
     .intro {
-        width: 360px;
+        width: 100%;
         height: 28px;
         top: 75px;
-        margin: 7px auto;
+        margin: 7px 0;
         padding: 0;
         color: var(--white);
         padding-top: 3px;
@@ -519,28 +500,29 @@ input[type=text]:hover {
     .holder,
     .bulb-holder,
     .bulb {
-        visibility: hidden;
+        display: none;
     }
     .details-text p {
         width: 100%;
         font-size: 14px;
         line-height: 1;
         margin-left: 0;
-        margin: .8rem auto;
+        margin: .8rem 0;
         text-align: center;
     }
-    .details-graphics,
-    .cycle {
+    .arrow-circle {
         display: none;
     }
+    
     .right {
-        width: 360px;
+        width: 375px;
         height: 420px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
     }
     form  {
-        width: 360px;
+        width: 100%;
         height: auto;
         margin: 0 auto;
         padding: 0;

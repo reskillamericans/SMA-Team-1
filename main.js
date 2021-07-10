@@ -14,14 +14,14 @@ form.onsubmit = function(e){
 document.addEventListener("DOMContentLoaded", () => {
     const main = document.getElementById("main");
     const BtnOne = document.getElementById('mainBtn');
-    const email = document.getElementById("emailSent");
+    const emailPopUp = document.getElementById("emailSent");
     const BtnTwo = document.getElementById("emailBtnTwo");
     const reset = document.getElementById("reset");
     const BtnThree = document.getElementById("confirmBtnThree");
     const success = document.getElementById("successReset");
     const BtnFour = document.getElementById("successBtnFour");
 
-    email.style.display = "none"; 
+    emailPopUp .style.display = "none"; 
     reset.style.display = "none";
     success.style.display = "none";
     main.style.display = "block";
@@ -35,23 +35,23 @@ document.addEventListener("DOMContentLoaded", () => {
         main.style.display = "none";
         reset.style.display = "none";
         success.style.display = "none";
-        email.style.display = "block"; 
+        emailPopUp .style.display = "block"; 
     };
     function showReset() {
-        email.style.display = "none";
+        emailPopUp .style.display = "none";
         main.style.display = "none";
         success.style.display = "none";
         reset.style.display = "block";
     };
     function showSuccess() {
-        email.style.display = "none";
+        emailPopUp .style.display = "none";
         main.style.display = "none";
         reset.style.display = "none";
         success.style.display = "block";
     };
     function showHome() {
         reset.style.display = "none";
-        email.style.display = "none";
+        emailPopUp.style.display = "none";
         success.style.display = "none";
         main.style.display = "block";
     };

@@ -84,7 +84,7 @@ body {
     display: flex;
     flex-direction: row;
 }
-.mobile-m {
+.m-header-link {
     display: none;
 }
 .title {
@@ -290,9 +290,6 @@ input[type=email]:hover {
     border-radius: 5px;
     line-height: .6rem;
 }
-.hidden {
-    display: none;
-}
 #check {
     padding-right: 2px;
 }
@@ -422,22 +419,25 @@ input[type=email]:hover {
     }
     .header-left {
         display: flex;
+        width: 360px;
         flex-direction: row;
         margin: 1.75rem auto;
     }
-    .mobile-m {
+    .m-header-link {
         display: block;
+        margin-left: 5px;
+        margin-right: 125px;
     }
     .logo {
         max-width: 50px;
         height: 21px;
+        margin-right: 40px;
     }
     .title {
         display: none;
     }
     .header-right a {
-        padding-right: 2rem;
-        font-size: var(--fs-xsmall);
+        display: none;
     }
     .window {
         max-width: 350px;

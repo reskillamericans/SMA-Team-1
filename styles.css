@@ -309,23 +309,26 @@ input[type=email]:hover {
 }
 .right-captcha {
     width: 100%;
+    margin-left: 0;
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: flex-start;
       
 }
 .robo-text {
     position: relative;
-    margin: 32px 40px;
+    margin: 32px 0px;
     text-align: left;
     font-size: var(--fs-default);
 
 }
 .cap-right {
+    width: 140px;
     display: flex;
     flex-direction: column;
     margin: 10px 0;
+    margin-right: 0;
 
 }
 .right-captcha img {

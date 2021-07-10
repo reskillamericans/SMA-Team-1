@@ -2,129 +2,129 @@
     margin: 0;
     padding: 0;
 }
-/* Styling for reCaptcha Checkbox */
 .checkbox-wrapper {
-    position: absolute;
-    display: block;
-    width: 60px;
-    height: auto;
-    padding: 10px 12px;
-    top: 60;
-    left: 150;
+    width: 40px;
+    margin-left: 15px;
+    margin-top: 10px;
 }
 
-/* Styling the box */
-.checkmark {
-    display: block;
-    width: 25px;
-    height: 25px;
-    background: #ffffff;
-    border: 2px solid #cccccc;
-    border-radius: 5px;
-    position: relative;
-    /* 7 Make the affect smoother by using transition */
-    transition: background-color 0.4s;
-}
+/* STYLING FOR RECAPCHA  & BOTTOM CHECKBOX */
 
-/* Creating click event  then select the label element using ~*/
-#check:checked ~ .checkmark {
-    background-color: #ffffff;
-    border: none;
-}
-
-/* Make the element visible and create the check mark sign by defining borders right and bottom*/
-/* Mark is only in the top corner of the box have to define top position and rotate according to the z-axis to look like check mark sign*/
-/* Make check mark size larger by adding scale(10) above*/
-/* Opacity 0 to make the checkmark sign hidden */
-/* Add transition all .4s */
-.checkmark::after {
-    content: "";
-    position: absolute;
-    width: 13px;
-    height: 20px;
-    border-right:  5px solid #08bb68;
-    border-bottom: 5px solid #08bb68;
-    top: 40%;
-    left: 50%;
-    transform: translate( -50%, -50%) rotateZ(40deg) scale(10);
-    opacity: 0;
-    transition: all .4s; 
-}
-
-/* Make the check mark sign visible  */
-/* Transform by scale(1) */
-#check:checked ~ .checkmark::after {
-    opacity: 1;
-    transform: translate( -50%, -50%) rotateZ(40deg) scale(1);
-}
-/* Hide input element using "hidden" in html */
-
-
-/* STYLING FOR BOTTOM CHECKBOX */
 /* Selecting type checkbox by using parent*/
+.checkbox-wrapper > [type="checkbox"],
 .container > [type="checkbox"]{
     opacity: 0; 
 }
-
- /* Styling the label  */
-.container > [type="checkbox"] + label{
+  
+/* Styling the label  */
+.checkbox-wrapper > [type="checkbox"] + label,
+.container > [type="checkbox"] + label {
     position: relative;
     padding-left: 30px;
     cursor: pointer;
     display: inline-block;
-    color: #14223D;
+    color: black;
     line-height: 25px;
-}
- /*  */
-.container > [type="checkbox"] + label::before{
-     content: "";
-     position: absolute;
-     left: 0;
-     top: 0;
-     width: 25px;
-     height: 25px;
-     border: 2px solid #CCCCCC;
-     border-radius: 5px;
-     background: #ffffff;
- }
- /* Styling the box around the label after it is checked */
-.container >[type="checkbox"]:checked + label::before{
-     content: "";
-     position: absolute;
-     left: 0;
-     top: 0;
-     width: 25px;
-     height: 25px;
-     background: #ffffff;
-     border: none;
+ 
 }
 
-/* Adding Bg-image design once label is checked */
-.container > [type="checkbox"]:checked + label::after{
+ /* Styling the box around the label before it is checked */
+.checkbox-wrapper > [type="checkbox"] + label::before,
+.container > [type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.container > [type="checkbox"] + label::before {
+    width: 25px;
+    height: 25px;
+}
+ 
+/* Outline in checked position */
+.checkbox-wrapper >  [type="checkbox"]:checked + label::before,
+.container >[type="checkbox"]:checked + label::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 25px;
     height: 25px;
-    background-image: url(assets/X.svg);
+    background: #ffffff;
+    border: none;
+}
+.container >[type="checkbox"]:checked + label::before {
+    border: 2px solid #CCCCCC;
+}
+
+/* Adding Bg-image "checkmark" design once box is checked  */
+.checkbox-wrapper > [type="checkbox"]:checked + label::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    background-image: url(assets/checkmark.svg);
+    background-repeat: no-repeat;
     background-size: contain;
+    transform:scale(1);
+    opacity: 1;
+    transition: all .3s ease;
+    
+}
+/* Hiding the bg-image "checkmark"  when box is not checked*/
+.checkbox-wrapper > [type="checkbox"]:not(checked) + label::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url(assets/checkmark.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform:scale(0);
+    opacity:(0);
+}
+
+
+/* Adding Bg-image "X" design once label is checked */
+.container > [type="checkbox"]:checked + label::after{
+    content: "";
+    position: absolute;
+    margin: 2.5px 3px;
+    width: 23px;
+    height: 23px;
+    background-image: url(assets/Line\ 17.png), url(assets/Line\ 18.png);
+    background-size: 18px;
+    background-repeat: no-repeat, no-repeat;
     transform: scale(1);
     opacity: 1;
     transition: all .4s ease;
 }
 
- /* Hiding the bg-image box is not checked*/
-.container > [type="checkbox"]:not(checked) + label::after{
+/* Hiding the bg-image "X" once when box is not checked*/
+    .container > [type="checkbox"]:not(checked) + label::after{
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 25px;
     height: 25px;
-    background-image: url(assets/X.svg);
-    background-size: contain;
+    background-image: url(assets/Line\ 17.png), url(assets/Line\ 18.png);
+    background-size: 18px;
+    background-repeat: no-repeat, no-repeat;
     transform:scale(0);
     opacity:(0);
 }
+
+
+
+
 

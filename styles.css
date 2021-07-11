@@ -511,7 +511,8 @@ input[type=email]:hover {
     }
     .robo-text {
         position: relative;
-        margin: 30px 32px;
+        width: 100%;
+        margin: 30px 0;
         text-align: right;
         margin-right: 0;
         font-size: var(--fs-default);

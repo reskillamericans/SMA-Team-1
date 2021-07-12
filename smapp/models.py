@@ -12,7 +12,6 @@ class Users(AbstractUser):
     is_email_verified = models.BooleanField(default = False)
     password = models.CharField(max_length = 255)
     status = models.CharField(max_length = 255)
-    #user_type = models.CharField(max_length = 255, default = 'user')
     is_superuser = models.BooleanField(default = False)
     is_staff = models.BooleanField(default = False)
     is_active = models.BooleanField(default = True)

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"  content="Pia Torain">
     <meta name="description"  content="The Login in page of SMA-T1 pro">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="checkbox.css">
     <title>Login-Page</title>
 </head>
@@ -46,7 +46,8 @@
         <div class="closeout">
             <button class="button-close">
                 <a class="close" 
-                    href="#index.html"
+                    href="#"
+                    target="_blank"
                     alt="">
                     X
                 </a>
@@ -72,18 +73,16 @@
             </div>
 
 
-            <form action="" id="form" class="form">
+            <form action="/login" id="form" class="form" method="POST">
             
                 <!-- Email and Password -->
                 <div class="form-container">
                     <label for="email">Email</label>
                     <input name="email" type="email" id="email" autocomplete="off" />
-                    <!-- <small>Error message</small> -->
                 </div>
                 <div class="form-container">
                     <label for="password">Password</label>
                     <input name="password" type="password" id="password" />
-                    <!-- <small>Error message</small> -->
                 </div>
                 <!-- /Email and Password -->
                 
@@ -96,7 +95,6 @@
                     <div class="recaptcha-body">
                         <div class="checkbox-wrapper">
                             <input type="checkbox" id="check" hidden/>
-                            <!-- dont forget to put hidden back -->
                             <label for="check" class="checkmark"></label>
                             
                         </div>
@@ -117,7 +115,7 @@
 
                 <!-- Submit and Go to Home or Profile? -->
                 <div class="form-container">
-                    <button class="submit" type="submit"><a href="home.html">Sign in</a></button>
+                    <button class="submit" type="submit"><a href="#">Sign in</a></button>
                 </div>
                 <!-- /Submit and Go to Home or Profile? -->
 
@@ -134,18 +132,17 @@
 
                 <!-- Don't Have An Account  for mobile design-->
                 <div class="form-container">
-                    <p class="register-mobile">Don't have an account? <a href="register.html">Register</a></p>
+                    <p class="register-mobile">Don't have an account? <a href="#">Register</a></p>
                 </div>
                 <!-- /Don't Have An Account  for mobile design-->
             </form>
                 
             <!-- Don't Have An Account  for desktop design-->
             <div class="form-container">
-                <p class="register-desktop">Don't have an account? <a href="register.html">Register</a></p>
+                <p class="register-desktop">Don't have an account? <a href="#">Register</a></p>
             </div>
             <!-- /Don't Have An Account  for mobile design-->
         </div>  
     </section>
-    <script scr="main.js"></script> 
 </body>
 </html>

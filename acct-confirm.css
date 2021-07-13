@@ -202,10 +202,6 @@ a.go-to-login {
         height: auto;
         width: auto;
     }
-    .modal {
-        justify-content: none;
-        height: auto;
-    }
     .confirm-header {
         height: auto;
         font-size: .81em;

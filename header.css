@@ -110,6 +110,12 @@ body {
 a {
     text-decoration: none;
 }
+.header-right a:hover,
+.header-right a:focus {
+    color: var(--info);
+    text-decoration: underline;
+}
+
 .logo {
     max-width: 10.769rem;
     max-height: 5.53rem;
@@ -138,6 +144,7 @@ a {
         padding-top: 0;
         padding-bottom: 1rem;  
         border-bottom: 1px solid var(--very-lt-gray);
+        z-index: 2;
     }
     .header-left {
         display: flex;

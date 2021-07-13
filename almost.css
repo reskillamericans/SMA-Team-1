@@ -52,63 +52,6 @@ body {
     font-family: var(--roboto);
     font-size: 13px;
 }
-#bg {
-    position: fixed; 
-    top: -50%; 
-    left: -50%; 
-    width: 200%; 
-    height: 200%;
-}
-#bg img {
-    width: 1440px;
-    height: 1021px;
-    position: absolute; 
-    top: 150px; 
-    left: 9px; 
-    right: 0; 
-    bottom: 0; 
-    margin: auto; 
-    min-width: 50%;
-    min-height: 50%;
-    opacity: 20%;
-}
-.header-layout{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0;
-    padding-bottom: 4rem;   
-}
-
-.header-left {
-    display: flex;
-    flex-direction: row;
-}
-.m-header-link {
-    display: none;
-}
-.title {
-    margin: 2rem 0; 
-    font-size: 16px;
-    font-weight: var(--fw-med);
-}
-.header-right {
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 2rem 0;
-}
-.header-right a {
-    padding-right:4rem;
-    font-size: 16px;
-}
-a {
-    text-decoration: none;
-}
-.logo {
-    width: 170px;
-    height: 72px;
-}
 
 .window-almost {
     position: fixed;
@@ -342,6 +285,7 @@ input {
     border: 1px solid #CCCCCC;
     border-radius: 15px;  
     margin-bottom: 1rem;
+    padding: 10px;
 }
 input[type=text]:hover {
     border: 1px solid var(--info);
@@ -379,45 +323,7 @@ input[type=text]:hover {
         width: 100%;
         height: 100%;
     }
-    #bg {
-        display: none;
-    }
-    #bg img{
-        display: none;
-    }
-    .header-layout {
-        width: 375px;
-        height: 37.5px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 2rem auto;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 2rem;  
-    }
-    .header-left {
-        display: flex;
-        width: 360px;
-        flex-direction: row;
-        margin: 1.75rem auto;
-    }
-    .m-header-link {
-        display: block;
-        margin-left: 5px;
-        margin-right: 125px;
-    }
-    .logo {
-        max-width: 50px;
-        height: 21px;
-        margin-right: 40px;
-    }
-    .title {
-        display: none;
-    }
-    .header-right a {
-        display: none;
-    }
+    
     .window-almost {
         display: flex;
         flex-direction: column;
@@ -530,7 +436,7 @@ input[type=text]:hover {
         margin: 0 auto;
         padding: 0;
     }
-    label[for=job],
+    label[for=job-title],
     label[for=interests] {
         max-width: 254px;
         text-align: left;

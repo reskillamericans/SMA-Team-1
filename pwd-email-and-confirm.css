@@ -1,4 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
 
+:root {
+    --roboto: 'Roboto', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    
+    /* FONT-SIZES */
+    --fs-xlarge: 1.615rem;
+    --fs-18px: 1.38rem;
+    --fs-16px: 1.23rem;
+    --fs-large: 1.15rem;
+    
+    --fs-medium: 1.07rem;
+    --fs-default: 1rem;
+    --fs-small: .9230r;
+    --fs-xsmall: .846rem;
+    --fs-xxsmall: .769rem;
+
+    /* FONT WEIGHT */
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-montserrat-sbold: 600;
+    --fw-robo-bold: 700;
+
+    /* TEXT COLORS */
+    --dk: #1E1E1E;
+    --gray: #616161;
+    --lt-gr: #AFB1B2;
+
+    /* BACKGROUND COLORS */
+    --near-bk: #1E1E1E;
+    --very-lt-gray: #CCCCCC;
+    --white: #FFFFFF;
+    --off-white: #F8F8F8;
+    --rect-gray: #c4c4c4;
+    --borders: #E1E1E1;
+
+    /* COLORS */
+    --info: #53B6E0;
+    --success: #74C080;
+    --warning: #F0B518;
+    --error: #D9534F;
+    --dark-blue: #14223D;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+html,
+body {
+    font-family: var(--roboto);
+    font-size: 13px;
+    font-weight: var(--fw-reg);
+    
+}
 
 /* Email Sent PopUp styling */
 .modal,

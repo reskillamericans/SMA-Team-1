@@ -2,6 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 #from django.core.exceptions import NON_FIELD_ERRORS
 #from django.contrib.auth.models import User
 from .models import Users
+from django.contrib.auth.forms import PasswordResetForm, SetPasswordForm
 
 # Create the POST form class
 class RegisterForm(UserCreationForm):

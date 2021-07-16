@@ -221,6 +221,7 @@ a.github {
     background: #f1f1f1;
     color: #1f1f1f;
 }
+
 /* Styling the form */
 form {
     display: flex;
@@ -376,18 +377,7 @@ input[type=email]:hover {
     font-size: var(--fs-default);
     text-align: left;
 }
-.keeper {
-    margin: 10px auto;
-    width: 23px;
-    height: 23px;
-    border-radius: 5px;
-    border: 1px solid var(--very-lt-gray);
-}
 
-.keep-text {
-    padding-left: 1rem;
-    font-family: var(--roboto);
-}
 .register-desktop {
     font-size: 13px;
     text-decoration: none;

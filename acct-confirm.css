@@ -129,7 +129,7 @@ body {
     border: 1px solid var(--info);
     border-radius: 15px;      
 }
-a.go-to-login {
+a.go-to-almost{
     width: 200px;
     color: var(--white);
     background-color: var(--info);
@@ -190,7 +190,7 @@ a.go-to-login {
         justify-content: flex-end;
         margin-top: 1rem;
     }
-    a.go-to-login {
+    a.go-to-almost {
         margin-top: 6px;
     }
 }

@@ -329,7 +329,7 @@ input[type=text]:hover {
         flex-direction: column;
         max-width: 375px;
         height: auto;
-        top: 340px;
+        top: 35%;
         background-color: none;
         border: none;
         filter: none;

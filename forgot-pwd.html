@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"  content="Pia Torain">
+    <meta name="description"  content="The Forgot Password page of SMA-T1 pro">
+    <link rel="stylesheet" href="header-and-bg.css">
+    <link rel="stylesheet" href="forgot-pwd.css">
+    <link rel="stylesheet" href="forgot-pwd-email-sent.css">
+    <title>Forgot Password</title>
+</head>
+<body>
+    <!-- HEADER -->
+    
+    <div class="header-layout">
+        <div class="header-left" id="left">
+            <a class="m-header-link" href="login.html" target="_blank" alt="homepage-link" >
+                <img class="mobile-arrow" src="assets/coolicon.png" width= 20 height= 20 alt="arrow-icon" />
+            </a>
+            <img class="logo" src="assets/logo-SMA.png"  width=170px height=72px alt="SMA-logo" />
+            <div class="title">
+                <span>Social Media App 1</span>
+            </div>
+        </div>
+        
+        <div class="header-right" id="right">
+            <a class="links" href="#home">Home</a>
+            <a class="links" type="submit" href="login.html" target="_blank">Log in</a>
+            <a class="links" href="#signup">Sign Up</a>
+            <a class="links" href="#about-us">About Us</a>
+        </div>
+    </div>
+ 
+    <!-- /HEADER -->
+    
+    <!-- BACKGROUND IMAGE -->
+    <div id="bg">
+        <img src="assets/bg-SMA.png" alt="">
+    </div>
+    <!-- /BACKGROUND IMAGE -->
+
+    <!-- Having Trouble Window -->
+    <section class="having-window" id="main">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button class="button-close">
+                <a class="close" 
+                    href="login.html"
+                    target="_blank"
+                    alt="">
+                    X
+                </a>
+            </button>
+        </div>
+
+        <div class="form-layout">
+            <div class="left">
+                <div class="details">
+                    <!-- <div class="details-container"> -->
+                        <div class="details-header">
+                            <p class="intro">Having Trouble?</p>
+                        </div>
+                        <div class="details-text">
+                            
+                            <div class="bulb-holder">
+                                <img class="bulb" src="assets/lightbulb.png" width= 14.58 length= 20.83 alt="lightbulb" title="light bulb"/>
+                                <!-- <img class="bulb-line" src="assets/lightbulb-line.svg" width= 8.33 />  -->  
+                            </div>
+                            
+                            <p class="forgot">
+                                Forgot your account's password or having trouble logging in?
+                            </p>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="right">
+                <form action="/reset-password" method="POST" id="form" class="form-right">
+                
+                    <!-- Email -->
+                    <div class="form-container">
+                        <p class="m-recovery-link">Enter your email address an we'll send you a recovery link.</p>
+                    </div>
+            
+                    <div class="form-container">
+                        <label for="user_email">Email</label>
+                        <input name="user_email" type="text" id="user_email" autocomplete="on" required/>
+                    </div>
+
+                    <div class="email-request">
+                        <p class="recovery-link">Enter your email address an we'll send you a recovery link.</p>
+                    </div>
+                    <!-- /Email-->
+
+                    <!-- Submit and open Email Sent Pop-up? -->
+                    <div class="form-container">
+                        <button  type='submit' id="mainBtn" class="submit-request" >Send email</button>
+                    </div>
+                    <!-- /Submit and open Email Sent Pop-up? -->
+                </form>
+            </div>    
+        </div>  
+    </section>
+    <!-- /Having Trouble Window -->
+
+    <!-- Email Sent Popup-->
+    <div id="emailSent" class="email-window">
+        <div class="email-content">
+            <div class="email-header">
+                <h2>Email Sent</h2>
+            </div>
+            <div class="email-p">
+                <p class="email-reply"> An email has been successfully sent to the email <strong>lboehringer10@gmail.com.</strong>
+                    If you don't see the email from us, make sure to check your spam folder.
+                    Click <a href="#">resend email</a> if it has been over 5 minutes since the 
+                    was sent.
+                </p>
+                <p class="mobile-reply-one"> 
+                    An email has been successfully sent to the email <strong>lboehringer10@gmail.com.</strong>
+                    </p>
+                <p class="mobile-reply-two">
+                    If you don't see the email from us, make sure to check your spam folder. Click <a href="#">resend email</a> if it has been over 5 minutes since the 
+                    was sent.
+                </p>
+                <!-- Button will close email sent pop-up and link to Reset Password page. -->
+                <div class="btn-ok">
+                    <button  type="submit"  id="emailBtnTwo" class="email-ok" ><a href="reset-pwd.html" target="_blank" alt="Link to reset password">Okay</a></button>
+                </div>
+                <!-- /Button will close email sent pop-up and link to Reset Password page. -->
+            </div>
+        </div>
+    </div>
+    <!--/ Email Sent PopUp-->
+
+    <script src="forgot-pwd.js">
+        
+    </script> 
+</body>
+</html>

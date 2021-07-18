@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"  content="Pia Torain">
+    <meta name="description"  content="The Registration Page of SMA-T1 pro">
+    <link rel="stylesheet" href="header-and-bg.css">
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="registration-checkbox.css">
+    <link rel="stylesheet" href="registration-acct-confirm.css">
+    <title>Registration</title>
+</head>
+<body>
+    <!-- HEADER -->
+    
+    <div class="header-layout">
+        <div class="header-left" id="left">
+            <a class="m-header-link" href="#" target="_blank" alt="homepage-link" >
+                <img class="mobile-arrow" src="assets/coolicon.png" width= 20 height= 20 alt="arrow-icon" />
+            </a>
+            <img class="logo" src="assets/logo-SMA.png"  width=170 height=72 alt="SMA-logo" />
+            <div class="title">
+                <span>Social Media App 1</span>
+            </div>
+        </div>
+        
+        <div class="header-right" id="right">
+            <a class="links" href="#home">Home</a>
+            <a class="links" href="login.html" target="_blank">Log in</a>
+            <a class="links" href="#signup">Sign Up</a>
+            <a class="links" href="#about-us">About Us</a>
+        </div>
+    </div>
+ 
+    <!-- /HEADER -->
+    
+    <!-- BACKGROUND IMAGE -->
+    <div id="bg">
+        <img src="assets/bg-SMA.png" alt="">
+    </div>
+    <!-- /BACKGROUND IMAGE -->
+
+    <!-- Register Window -->
+    <section class="register-window" id="register">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button class="button-close">
+                <a class="close" 
+                    href="login.html"
+                    target="_blank"
+                    alt="link to login">
+                    X
+                </a>
+            </button>
+        </div>
+
+        <div class="form-layout">
+            <div class="left">
+                <div class="details">
+                    <!-- <div class="details-container"> -->
+                        <div class="details-header">
+                            <p class="intro">Join the community</p>
+                            <p class="note"> It's quick and easy</p>
+                        </div>
+
+                        <div class="details-text">
+                            <div class="chat-row">
+                                <img class="chat-icon" src="/assets/chatting.png" width= 39.39 length= 39 alt="chat" title="chatting"/>
+                                <p class="help-text">Stuck? ---- Ask a question?</p>
+                            </div>
+                            <div class="vote-row">
+                                <div class="votes">
+                                    <div class="up-vote"><img src="assets/upvote.png"  alt="vote-up"></div>
+                                    <div class="down-vote"><img src="assets/downvote.png" alt="vote-down"></div>
+                                </div>
+                                <p class="vote-text">Vote and comment</p>
+                            </div>
+                            <div class="save-tag">
+                                <img src="assets/blue-tag.png" alt="blue-tag">
+                                <p class="save-text">Safe your favorite tags, comments, and jobs</p>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="right">
+
+                <div class="other-signin">
+                    <a class="google" 
+                        href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" 
+                        target="_blank"
+                        alt="google-sign-in">
+                            <img src="assets/google-g.svg"  alt="google logo"> 
+                            <span>Sign In with Google</span> 
+                    </a>
+                    <a class="github" 
+                        href="https://github.com/login" 
+                        target="_blank" alt="github-signin"
+                        alt="github-sign-in">
+                            <img src="assets/git.svg" alt="github logo"> 
+                            <span>Sign In with GitHub </span>
+                    </a>
+                </div>
+                
+                
+                <!-- Registration Form-->
+                <form action="/registration" method="POST" id="form" class="form-right">
+                
+                    <!-- Registration -->
+                    <div class="form-container">
+                        <label for="user_name">Display Name</label>
+                        <input name="user_name" type="text" id="user_name" autocomplete="on" />
+                    </div>
+
+                    <div class="form-container">
+                        <label for="user_email">Email</label>
+                        <input name="user_email" type="text" id="user_email" autocomplete="on" />
+                    </div>
+
+                    <div class="form-container">
+                        <label for="user_paswword" >Password</label>
+                        <input name="user_password" type="password" id="user_password" autocomplete="on" />
+                    </div>
+
+                    <div class="criteria">
+                        <p class="criteria-text">Passwords must contain at least 8 characters, 
+                            including at least 1 letter and 1 number 
+                        </p>
+                    </div>
+                    <!-- /Registration-->
+
+                    <!-- Recaptcha Demo -->
+                    <div class="cap-container">
+                        <img src="assets/recaptchaunchecked.png" alt="recaptcha box" />
+                    </div>
+                    <!-- /Recaptcha Demo -->
+                    
+                    
+                    <div class="opt-in">
+                        <!-- Opt-in info -->
+                        <div class="details-opt-in">
+                            <input type="checkbox" id="opt"  hidden>
+                            <label for="opt" class="opt-in-text" >Opt-in to receive occassional product updates, user research invitations, 
+                                company announcements, and digests.</label>
+                            <!-- Opt in pop-up button -->
+                            <div class="explain-opt-in">
+                                <button  type="button" id="optBtn" class="get-opt-info">
+                                    <img src="assets/question.png" alt="opt-in explanation" />
+                                </button>
+                            </div>
+                            <!-- /Opt in pop-up button -->
+                        </div>
+                        <!-- /Opt-in info -->
+
+                        <!-- Submit and open Email Sent Pop-up? -->
+                        <div class="form-container">
+                            <button type="button" id="sign-up" class="submit-signup" >Sign up</button>
+                        </div>
+                        <!-- /Submit and open Email Sent Pop-up? -->
+
+                        <!-- Agree to terms -->
+                        <p class="reg-terms">
+                            By clicking "Sign up", you agree to our <a href="#">terms of service</a>, <a href="#">privacy policy</a>
+                            and <a href="#">cookie policy</a>
+                        </p>
+                        <!-- /Agree to terms -->
+                    </div>                  
+                </form>
+                <!-- /Registration Form-->
+
+                <div class="existing-account">
+                    <p class="existing-account-p">Already have an account?<a href="login.html" target="_blank" > Log in</a></p>
+                </div>        
+            </div>
+            
+        </div>
+        
+    </section>
+    <!-- /Register Window -->
+    
+    <!-- Opt Info Pop-up -->
+    <section class="opt-window" id="optIn">
+        <div class="pop-up-content">
+            <!-- Opt-in close button -->
+            <div class="close-pop">
+                <button class="close-opt" id="closeOptin" type=>x</button>  
+            </div>
+            <!-- /Opt-in close button -->
+            <br> 
+            <!-- Opt-in information -->
+            <p class="pop-text-one">
+                We know you hate spam, and we do too. That's why we make it easy for you to update 
+                you email preferences or unsubscribe at anytime.
+            </p>
+            <p class="pop-text-two">
+                We neve share your email address with third parties for marketing purposes.
+            </p>
+            <!-- /Opt-in information -->
+        </div>
+    </section>
+    <!-- /Opt Info Pop-up -->
+
+    <!-- Account Confirmed Pop-up -->
+    <section id="accountConfirmed" class="acct-confirmed">
+        <div class="confirm-content">
+            <div class="confirm-header">
+                <h2>Account Confirmed</h2>
+            </div>
+            <div class="confirm-p">
+                <p id="confirm-reply"> You have successfully confirmed your account with the email 
+                    <strong>lboehringer@gmail.com</strong>. You will use this email address to log in.
+                </p>
+
+                <!-- Button will open link to Almost There Page-->
+                <div class="acct-success">
+                    <button type="submit" class="btn-reset-success"> <a href="almost.html" target="_blank" class="go-to-almost" >OK</a></button>
+                </div>
+
+                <!-- /Button will open link to Almost There Page -->
+            </div>
+        </div>
+    </section>
+    <!-- /Account Confirmed Pop-up -->
+
+    <script src="registration.js"></script>
+</body>
+</html>

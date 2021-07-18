@@ -20,7 +20,8 @@
     --fw-light: 300;
     --fw-reg: 400;
     --fw-med: 500;
-    --fw-bold: 700;
+    --fw-montserrat-sbold: 600;
+    --fw-robo-bold: 700;
 
     /* TEXT COLORS */
     --dk: #1E1E1E;
@@ -41,7 +42,6 @@
     --warning: #F0B518;
     --error: #D9534F;
     --dark-blue: #14223D;
-
 }
 
 *,
@@ -54,10 +54,11 @@ html,
 body {
     font-family: var(--roboto);
     font-size: 13px;
-    font-weight: var(--fw-reg); 
+    font-weight: var(--fw-reg);
+    
 }
-.having-window {
-    display: none;
+.reset-window {
+    display: block;
     position: fixed;
     width: 1004px;
     height: 620px;
@@ -76,7 +77,9 @@ body {
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 }
-
+.reset-window {
+    display: none;
+}
 .closeout {
     width: 100%;
     display: flex;
@@ -93,11 +96,10 @@ body {
 }
 .button-close:hover {
     border: 1px solid var(--error);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-robo-sbold);
     background-color: var(--error);
     border-radius: 3px;
 }
-
 a.close {
     margin-top: .75rem;
     font-size: var(--fs-xlarge);
@@ -110,7 +112,7 @@ a.close {
     color: var(--white);
     cursor: pointer;
 }
-.form-layout {
+.reset-form-layout {
     height: auto;
     width: 904px;
     display: flex;
@@ -120,8 +122,8 @@ a.close {
     margin-top: 10rem;
     overflow: hidden;
 }
-/* Styling the left side */
-.details {
+/* Styling the right-side of the layout */
+.reset-details {
     display: flex;
     flex-direction: column;
     align-content: center; 
@@ -132,23 +134,23 @@ a.close {
     background-color: var(--off-white);
     border: none;
 }
-.details-header {
+.reset-details-header {
     display: flex;
     max-width: 100%;
     height: 5.348rem;
     margin-bottom: 1rem;
     font-family: var(--montserrat);
     font-weight: var(--fw-med);
-    color: var(--info);
+    color: var(--info);   
 }
-.intro {
+.reset-intro {
     width: 100%;
     font-size: 3.69rem;
     height: 5.348rem;
     padding-top: var(--fs-xxsmall);
     padding-left: var(--fs-large);
 }
-.details-text {
+.reset-details-text {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -159,10 +161,10 @@ a.close {
     
 }
 .bulb {
-    width: 100%;
-    height: auto;
+    width: 18.2px;
+    height: 24.26px;
 }
-.details-text p {
+.reset-text {
     display:flex;
     width: 34.61rem;
     font-family: var(--roboto);
@@ -171,14 +173,8 @@ a.close {
     line-height: 1;
     margin-left: 10px;  
 }
-p.text {
-    display:flex;
-    width:  34.61rem;
-    height: 7.23rem;
-    font-size: 1.84rem;
-}
 /* Styling the right side - form */
-.right {
+.right-reset {
     width: 440px;
     height: 340px;
     display: flex;
@@ -188,7 +184,7 @@ p.text {
     padding-right: auto;
 }
 form,
-.form-right {
+.form-right-reset {
     display: flex;
     flex-direction: column;
     align-content: center; 
@@ -201,10 +197,6 @@ form,
     border-radius: 15px;
     box-shadow: 0px 4px 4px 0px rgba(31, 31, 31, 25%);
 }
-.form-right {
-    padding: 4rem 3.46rem;
-}
-
 .form-container {
     display: flex;
     flex-direction: colunm;
@@ -216,26 +208,26 @@ form,
     font-size: var(--fs-large);
     line-height: var(--fs-xlarge);
 }
-
 .form-container:nth-child(1),
 .form-container:nth-child(2) {
     margin-top: 0;
 }
-.instructions {
-    width: 26.15rem;
-    height: 2.15rem;
-    margin-bottom: 0;
-}
-label[for=user_email]  {
+label[for=user_password],
+label[for=re-enter] { 
     width: 26.15rem;
     text-align: left;
-    margin: auto;
+    margin-top: .75rem;
+    margin-bottom: .3rem; 
+    margin-left: .23rem;
+    margin-right: 1.2rem;
+    padding-left: 10px;
     font-size: var(--fs-18px);
 }
-label[for=user_email]:hover {
+label[for=user_password]:hover,
+label[for=re-enter]:hover {
     color: var(--info);
 }
-input[type=text] {
+input[type=password] {
     width: 26.15rem;
     height: 2.46rem;
     border: 1px solid var(--very-lt-gray);
@@ -243,44 +235,55 @@ input[type=text] {
     margin-bottom: 3px;
     padding-left: var(--fs-xxsmall);
 }
-input[type=text]:hover {
+input[type=password]:hover{
     border: 1px solid var(--info);
 }
-.m-email-request {
-    display: none;
-}
-p.m-recovery-link {
-    display: none;
-}
-p.recovery-link {
-    width: 300px;
-    margin-bottom: 40px;
+.instructions {
+    width: 23.76rem;
+    font-size: 1.07rem;
+    margin-bottom: 3.07rem;
     padding-top: .615rem;
-    font-size: var(--fs-medium);
-    text-align: left;
 }
-.submit-request {
+p.guide {
+    padding-left: 8px;
+    margin-left: 0;
+    padding-right: 100px;
+    text-align: left;
+    line-height: 1;
+    font-size: var(--fs-xsmall);
+}
+.confirm {
+    display: flex;
+    width: 100%;
+    height: 4.61rem;
+    align-content: flex-end;
+}
+.submit-confirm {
     width: 100%;
     height: 2.46rem; 
     border-radius: var(--fs-large);
     font-size: var(--fs-medium);
     color: var(--white);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-robo-bold);
     background-color: var(--info);
     border: 1px solid var(--info);
     margin-top: 2.1rem;  
     margin-bottom: .25rem;
     text-align: center;
 }
-.submit-request:hover,
-.submit-request:focus {
+.submit-confirm {
+    margin-top:32px;
+    height: 32px;
+}
+.submit-confirm:hover,
+.submit-confirm:focus {
     opacity: 80%;
     cursor: pointer;
 }
 
-/* max-width 1040px*/
+/* max width 1040px*/
 @media screen and (max-width: 65em){
-    .having-window {
+    .reset-window {
         width: 90%;
         justify-content: center;
         align-content: center;
@@ -288,45 +291,55 @@ p.recovery-link {
     .button-close {
         margin-right: 0;
     }
-    .form-layout {
+    .reset-form-layout {
         width: 440px;
         max-width: 100%;
         height: auto;
         flex-direction: column;
         justify-content: stretch;
         margin: auto;
-        padding-top: 4rem;
-    }
-    .reset-window > .form-layout {
         padding-top: 1.5rem;
     }
-    
-    .details {
+    .reset-details {
         max-width: 100%;
         height: auto;
     }
-    .details-header {
-        margin: 0; 
+    .reset-details-header {
+        margin: 0;   
     }
-    p.intro {
+    p.reset-intro {
         padding: 0;
         text-align: center;
         font-size: 1.5em;
     }
-    p.forgot {
+    p.reset-text {
+        width: 440px;
+        height: auto;
         font-size: 1.25rem;
+        font-weight: 300;
+        margin-left: 10px;
     }
-    .right {
+    .right-reset {
         display: flex;
         max-width: 100%;
-        height: 300px;
+        height: 333px;
         border: none;
     }
-    form,
-    .form-right {
+    .form-right-reset {
+        display: flex;
+        max-width: 100%;
+        height: 330px;  
+    }
+    form {
         max-width: 100%;
         padding: auto;
         height: auto;   
+    }
+    .form-right-reset {
+        max-width: 100%;
+        padding: auto;
+        height: auto;   
+        padding: 2rem auto;
     }
     .form-container {
         max-width: 100%;
@@ -336,13 +349,7 @@ p.recovery-link {
     label {
         max-width: 100%;
     }
-    p.recovery-link {
-        max-width: 100%;
-        margin-bottom: 20px;
-        padding-left: 8px;
-    }
     input,
-    .submit-request,
     .submit-confirm {
         max-width: 100%;
     }  
@@ -350,83 +357,76 @@ p.recovery-link {
 
 /* max width 500px */
 @media screen and (max-width: 31.25em) {
-    .having-window {
+    .reset-window {
         top: 25%;
         height: auto;
         width: 289px;
         border: none;
-        filter: none;  
+        filter: none;
     }
-    .form-layout {
+    .reset-form-layout {
         padding: 0;
+        padding-top: 0;
         border: 1px solid var(--very-lt-gray);
         border-radius: 15px;
         box-shadow: 0px 4px 4px 0px rgba(31, 31, 31, 25%);
         overflow: hidden;
     }
-    .right {
+    .right-reset {
         height: auto;
     }
     /* Hiding the close "X" button */
     .button-close {
         display: none;
     }
-    /* Hiding the light-bulb */
     .bulb,
     .bulb-holder {
         display: none;
     }
-    /* Showing the mobile layout for text and hiding the desktop layout */
-    p.m-recovery-link {
-        display: block;
-    }
-    p.recovery-link {
-        display: none;
-    }
-    .details {
+    .reset-details {
         padding: 0;
     }
-    .details-header {
+    .reset-details-header {
         height: 57px;
         background: var(--info);
         z-index: 1;
     }
-    p.intro {
+    p.reset-intro {
         height: 57px;
         color: var(--white);
         padding-top: 1.2rem;
         font-size: 1.8rem;
     }
-    p.forgot {
+    p.reset-text {
         margin: 1rem 1.23rem;
         font-size: .564em;
         line-height: 1.2;
     }
-    p.text {
-        margin: 1rem 1.23rem;
-        font-size: .564em;
-        line-height: 1.2;
-    }
-    .form-right {
+    .form-right-reset {
         padding: 0 1.23rem;
         margin-bottom: 20px;
         border: none;
         filter: none;
         box-shadow: none; 
     }
-    p.m-recovery-link {
-        width: 100%;
-        margin: 0 1.23rem;
-        margin-bottom: 1rem;
-        text-align: left;
-        font-size: 14px;
-        line-height: 1.2;
-    }
-    label[for=user_email] {
+    label[for=user_password],
+    label[for=re-enter] {
         font-size: var(--fs-default);
+        margin-left: 1.5rem;
+        margin-bottom: 0;
+        padding-left: 3px;
     }
-    .submit-request {
-        margin-top: 1.005rem;
+    label[for=user_password] {
+        margin-top: 0;
+    }
+    p.guide {
+        margin-top: 5px;
+        padding-right: 0;
+        padding-left: 10px;
+        font-weight: var(--fw-light);
+    }
+    .submit-confirm {
+        margin-top: 1.5rem;
     }
 
 }

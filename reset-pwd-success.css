@@ -60,7 +60,8 @@ body {
 }
 
 /* Email Sent PopUp styling */
-.email-window {
+
+.password-success {
     display: none;
     position: fixed;
     width: 1004px;
@@ -77,29 +78,24 @@ body {
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 }
-.email-content {
+.pwd-success-content {
     display: flex;
     flex-direction: column;
 }
-.email-header {
+.pwd-success-header {
     width: 100%;
     height: 96px;
     color: var(--white);
     background: var(--info);
     border-radius: 15px 15px 0 0;
 }
-.email-header h2 {
+.pwd-success-header h2 {
     padding: 30px 20px;
     font-size: 36px;
     font-family: var(--roboto);
     font-weight: var(--fw-med); 
 }
-/* Hiding mobile design content layout */
-.mobile-reply-one,
-.mobile-reply-two {
-    display: none;
-}
-.email-p {
+.pwd-success-p {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -108,17 +104,19 @@ body {
     font-size: 24px;
     padding: 20px;
 }
-
-.email-p a {
+.pwd-reply {
+    height: 87px;
+}
+.pwd-success-p a {
     text-decoration: underline;
     font-weight: var(--fw-robo-bold);
     color: var(--info);
 }
-.btn-ok {
+.btn-reset-success {
     display: flex;
     justify-content: flex-end;
 }
-.email-ok {
+.reset-success {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -132,73 +130,59 @@ body {
     border: 1px solid var(--info);
     border-radius: 15px;      
 }
-.email-ok:hover,
-.email-ok:focus {
+
+a.back-to-login {
+    width: 200px;
+    color: var(--white);
+    background-color: var(--info);
+    text-decoration: none;
+    margin: auto; 
+}
+a.reset-success:hover,
+a.reset-success:focus {
     opacity: 80%;
     cursor: pointer;
 }
-.email-ok a {
-    color: var(--white);
-    text-decoration: none;
-    padding: 0;
-    margin: auto; 
-}
 
-/* Responsive design for email sent  max-width 1040px*/
+/* Responsive design for password reset popup max-width 1040px*/
+
 @media screen and (max-width: 65em) {
-    .email-window {
+
+    .password-success  {
         max-width: 90%;
         min-width: 80%;
         margin: 2rem auto;
     }
-    .email-header {
+    .pwd-success-header {
         height: 25%;
     }
-    .email-header h2 {
+    .pwd-success-header h2 {
         text-align: center;
         padding: 15px 10px;
         font-size: 2em;
-        margin: 0;   
+        margin: 0;
+        
     } 
-    .email-p {
+    .pwd-success-p {
         width: 100%;
         height: 180px;
         padding: .5rem;
     }
-    /* Hiding desktop design content */
-    .email-reply{
-        display: none;
+    .pwd-reply {
+        text-align: center;
     }
-    /* Showing mobile design content */
-    .mobile-reply-one,
-    .mobile-reply-two {
-        display: block;
-        height: auto;
-        font-size: 1.5rem;
-        padding: var(--fs-xxsmall);
-        padding-bottom: 0;
-        height: 60px;
-        text-align: start;
-    }
-    .mobile-reply-two {
-        margin-top: 0;
-        padding: auto;
-    }
-    .mobile-reply-two a {
-        text-decoration: none;
-    }
-    .btn-ok {
-        padding-right: 10px;
+    .btn-reset-success {
+        justify-content: center;
     }
 }
-
-/* max-width 767px */
+/* max-width 768px */
 @media screen and (max-width: 47.93em) {
     .modal-1-header {
         height: 57px;
     }
-    .mobile-reply-one,
-    .mobile-reply-two {
+    #mobile,
+    #mobile-p,
+    #reply-two {
         display: block;
         height: 100%;
         font-size: var(--fs-default);
@@ -206,13 +190,14 @@ body {
         padding-bottom: 0;
         height: 60px;
     }
-    .mobile-reply-two {
+    #reply-two {
+        font-size: var(--fs-xlarge);
+    }
+    #mobile-p {
         padding: auto 1rem;
-        padding-top: 0;  
+        padding-top: 0; 
     }
-    .email-ok {
+    .reset-success {
         padding-right: 5px;
-    }
-    
-    
+    } 
 }

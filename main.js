@@ -1,1 +1,0 @@
-//  Add email and password to an object when submitted

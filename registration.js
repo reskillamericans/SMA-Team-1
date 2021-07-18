@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     BtnSignup.addEventListener('click', showConfirmed);
 
     if (regSuccess.style.display ="none") {
-        BtnThree.addEventListener('click', function(e) {
+        BtnSignup.addEventListener('click', function(e) {
         e.preventDefault();
     });
         BtnSignup.addEventListener('click', showConfirmed);

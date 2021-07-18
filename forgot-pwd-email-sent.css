@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@300;@400;500;700&display=swap');
 
-/* Need to work on arrow cycle in desktop design and Input boxes */
 :root {
     --roboto: 'Roboto', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
@@ -13,11 +12,12 @@
     
     --fs-medium: 1.07rem;
     --fs-default: 1rem;
-    --fs-small: .9230r;
+    --fs-small: .9230rem;
     --fs-xsmall: .846rem;
     --fs-xxsmall: .769rem;
 
     /* FONT WEIGHT */
+    --fw-light: 300;
     --fw-reg: 400;
     --fw-med: 500;
     --fw-montserrat-sbold: 600;
@@ -59,15 +59,14 @@ body {
     
 }
 
-/* Account Confirmed PopUp styling */
-
-.acct-confirmed {
-    display: block;
+/* Email Sent PopUp styling */
+.email-window {
+    display: none;
     position: fixed;
     width: 1004px;
     min-width: 65rem;
-    height: 264px;
-    min-height: 264px;
+    height: 20.30rem;
+    min-height: 17.30rem;
     left: 50%;
     top: 30%;
     overflow: auto;
@@ -78,157 +77,142 @@ body {
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 }
-.confirm-content {
+.email-content {
     display: flex;
     flex-direction: column;
 }
-.confirm-header {
+.email-header {
     width: 100%;
     height: 96px;
     color: var(--white);
     background: var(--info);
     border-radius: 15px 15px 0 0;
 }
-.confirm-header h2 {
+.email-header h2 {
     padding: 30px 20px;
     font-size: 36px;
     font-family: var(--roboto);
     font-weight: var(--fw-med); 
 }
-
-.confirm-p {
+/* Hiding mobile design content layout */
+.mobile-reply-one,
+.mobile-reply-two {
+    display: none;
+}
+.email-p {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     height: 158px;
-    
+    font-size: 24px;
     padding: 20px;
 }
-#confirm-reply {
-    height: 56px;
-    font-size: 1.84rem;
-    font-weight: var(--fw-reg);
-}
 
-.acct-success {
+.email-p a {
+    text-decoration: underline;
+    font-weight: var(--fw-robo-bold);
+    color: var(--info);
+}
+.btn-ok {
     display: flex;
     justify-content: flex-end;
 }
-
-.btn-reset-success {
+.email-ok {
     display: flex;
     justify-content: center;
     align-content: center;
     width: 100px;
     height: 32px;
-    font-size: 16px;
+    font-size: var(--fs-16px);
+    font-family: (var(--roboto));
     font-weight: (var(--fw-robo-bold));
     color: var(--white);
     background-color: var(--info);
     border: 1px solid var(--info);
     border-radius: 15px;      
 }
-a.go-to-almost{
-    width: 200px;
-    color: var(--white);
-    background-color: var(--info);
-    text-decoration: none;
-    margin: auto;
-}
-.acct-success:hover,
-.acct-success:focus {
+.email-ok:hover,
+.email-ok:focus {
     opacity: 80%;
     cursor: pointer;
 }
+.email-ok a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0;
+    margin: auto; 
+}
 
-
-
-
-/* max-width 1040px*/
-
+/* Responsive design for email sent  max-width 1040px*/
 @media screen and (max-width: 65em) {
-    html,
-    body {
-
-        width: 100%;
-        height: 100%;
-    }
-    .acct-confirmed  {
+    .email-window {
         max-width: 90%;
-        min-width: 289px;
-        max-height: 264px;
-        min-height: 225px;
+        min-width: 80%;
         margin: 2rem auto;
     }
-    .confirm-header {
-        height: auto;
+    .email-header {
+        height: 25%;
     }
-    .confirm-header h2 {
+    .email-header h2 {
         text-align: center;
         padding: 15px 10px;
-        font-size: 2.3em;
-        margin: 0;  
+        font-size: 2em;
+        margin: 0;   
     } 
-    .confirm-p {
+    .email-p {
         width: 100%;
         height: 180px;
-        padding: auto;
-        padding-bottom: 1rem;
+        padding: .5rem;
     }
-    #confirm-reply {
-        text-align: left;
-        font-size: 1.65em;
+    /* Hiding desktop design content */
+    .email-reply{
+        display: none;
     }
-    /* .submit-modal {
-        padding-right: 5px;
-    } */
-    #bg img {
+    /* Showing mobile design content */
+    .mobile-reply-one,
+    .mobile-reply-two {
         display: block;
+        height: auto;
+        font-size: 1.5rem;
+        padding: var(--fs-xxsmall);
+        padding-bottom: 0;
+        height: 60px;
+        text-align: start;
     }
-    .acct-success {
-        justify-content: flex-end;
-        margin-top: 1rem;
+    .mobile-reply-two {
+        margin-top: 0;
+        padding: auto;
     }
-    a.go-to-almost {
-        margin-top: 6px;
+    .mobile-reply-two a {
+        text-decoration: none;
+    }
+    .btn-ok {
+        padding-right: 10px;
     }
 }
 
-
-/* max-width 375px */
-@media screen and (max-width: 28.84em) {
-    .acct-confirmed {
-        height: auto;
-        width: auto;
+/* max-width 767px */
+@media screen and (max-width: 47.93em) {
+    .modal-1-header {
+        height: 57px;
     }
-    .confirm-header {
-        height: auto;
-        font-size: .81em;
-    }
-    .confirm-p {
-        align-content: center;
-        height: 150px;
-        width: 257px;
-        align-content: center;
-        margin: 1rem;
-        margin-bottom: 2rem;
-        padding: 0;
-    }
-    #confirm-reply {
-        width: auto;
+    .mobile-reply-one,
+    .mobile-reply-two {
         display: block;
-        height: 75px;
-        font-size: 1.1em;
+        height: 100%;
+        font-size: var(--fs-default);
         padding: var(--fs-xxsmall);
-        padding: 0 .5rem;
-        line-height: 1.2;
-        
+        padding-bottom: 0;
+        height: 60px;
     }
-    .acct-success {
-        margin: 0;
+    .mobile-reply-two {
+        padding: auto 1rem;
+        padding-top: 0;  
     }
-    .btn-reset-success {
+    .email-ok {
         padding-right: 5px;
-    }     
+    }
+    
+    
 }

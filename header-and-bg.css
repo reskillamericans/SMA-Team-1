@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;@400;500;600;700&family=Roboto:wght@300;@400;500;700&display=swap');
 
 /* Need to work on arrow cycle in desktop design and Input boxes */
 :root {
@@ -18,10 +18,10 @@
     --fs-xxsmall: .769rem;
 
     /* FONT WEIGHT */
+    --fw-light: 300;
     --fw-reg: 400;
     --fw-med: 500;
-    --fw-montserrat-sbold: 600;
-    --fw-robo-bold: 700;
+    --fw-bold: 700;
 
     /* TEXT COLORS */
     --dk: #1E1E1E;
@@ -57,9 +57,10 @@ body {
     font-size: 13px;
     
 }
+/* Background image */
 #bg {
     position: fixed; 
-    top: -50%; 
+    top: -52%;  
     left: -50%; 
     width: 200%; 
     height: 200%;
@@ -80,8 +81,7 @@ body {
 .header-layout{
     display: flex;
     justify-content: space-between;
-    padding-top: 0;
-    padding-bottom: 4rem;   
+    padding-top: 0;  
 }
 
 .header-left {
@@ -102,13 +102,24 @@ body {
     flex-direction: row;
     justify-content: space-between;
     margin: 2rem 0;
+    margin-left: 1rem;
 }
-.header-right a {
+.links {
+    font-family: var(--montserrat);
+    font-weight: var(-fw-bold);
     padding-right:4rem;
     font-size: 1.23rem;
+    text-decoration: none;
+    z-index: 3;
+}
+
+.m-header-link {
+    text-decoration: none;
+    z-index: 3;
 }
 a {
     text-decoration: none;
+    z-index: 3;  
 }
 .header-right a:hover,
 .header-right a:focus {
@@ -173,13 +184,12 @@ a {
         font-size: var(--fs-medium);
     }
 }
-
+/* max width 768px */
 @media screen and (max-width: 48em) {
     .header-layout {
         width: 100%;
         height: auto;
         margin: 0 2rem;
-       
     }
     .header-left{
         min-width: 100%;
@@ -203,6 +213,13 @@ a {
     }
     .title,
     .header-right {
+        display: none;
+    }
+}
+
+/* Remove bg img at max width 600px */
+@media screen and (max-width: 37.5em) {
+    #bg img {
         display: none;
     }
 }

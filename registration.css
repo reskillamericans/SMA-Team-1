@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;@400;500;600&family=Roboto:wght@300;@400;500;700&display=swap');
 
 :root {
     --roboto: 'Roboto', sans-serif;
@@ -18,6 +17,7 @@
     --fs-xxsmall: .769rem;
 
     /* FONT WEIGHT */
+    --fw-light: 300;
     --fw-reg: 400;
     --fw-med: 500;
     --fw-montserrat-sbold: 600;
@@ -57,6 +57,7 @@ body {
     font-size: 13px;
     font-weight: var(--fw-reg);   
 }
+/* Registration Window */
 .register-window {
     position: fixed;
     width: 1004px;
@@ -112,6 +113,8 @@ body {
     color: var(--white);
     cursor: pointer;
 }
+
+/* Layout of Form Content */
 .form-layout {
     height:auto;
     width: 1004px;
@@ -121,10 +124,11 @@ body {
     padding: auto 3rem;
     overflow: hidden;
 }
+/* Left side of the layout */
 .left {
-    margin-top: 19rem;
+    margin-top: 18.5rem;
     margin-right: 0;
-    padding-left: 8rem;
+    padding-left: 9rem;
     width: 550px;
     display: flex;
     flex-direction: column;
@@ -136,13 +140,16 @@ p.intro {
 p.note {
     font-size: var(--fs-medium);
     color: var(--info);
+    font-weight: 400;
 }
 p.help-text,
 p.vote-text,
 p.save-text {
+    font-weight: var(--fw-light);
     font-size: var(--fs-18px);
     margin-left: 10px;
     padding-top: 10px;
+    
 } 
 .up-vote,
 .down-vote {
@@ -159,6 +166,7 @@ p.save-text {
     margin-bottom: 0;
 }
 
+/* Right side of the layout */
 .right {
     width: 400px;
     height: auto;
@@ -178,7 +186,7 @@ p.save-text {
 }
 a.google,
 a.github {
-    width: 340px;
+    width: 289px;
     height: 32px;
     display: inline-flex;
     justify-content: center;
@@ -217,7 +225,7 @@ form {
     display: flex;
     flex-direction: column;
     align-content: center; 
-    width: 340px;
+    width: 289px;
     height: auto;
     margin: 1rem auto;
     padding: 1.5rem 0;
@@ -238,39 +246,43 @@ form {
     text-align: center;
 }
 
-.form-container input[type="username"]
-.form-container input[type="email"],
-.form-container input[type="password"] {
+.form-container input[for=user_name],
+.form-container input[for=user_email],
+.form-container input[for=user_password] {
     box-sizing: border-box;
     padding-left: 10px;
 }
 
 label {
-    width: 289px;
+    width: 255px;
     text-align: left;
     margin: .75rem auto;
+    margin-bottom: 0;
+    font-size: var(--fs-default);
 }
-label[for=name]:hover
-label[for=password]:hover,
-label[for=email]:hover {
+label:hover {
     color: var(--info);
     
 }
 input {
-    width: 289px;
+    width: 255px;
     height: 32px;
     border: 1px solid var(--very-lt-gray);
     border-radius: 15px;  
     padding-left: 10px;
 }
+input:hover {
+    border: 1px solid var(--info);
+}
 .criteria {
     text-align: left;
-    width: 340px;
+    width: 289px;
 }
 .criteria-text {
-    width: 300px;
+    width: 255px;
     margin: auto;
-    margin-top: 1rem; 
+    margin-top: 1rem;
+    font-weight: 300; 
 }
 .criteria-text,
 .opt-in-text {
@@ -282,35 +294,34 @@ input {
     margin:1rem  auto;  
 }
 .opt-in {
-    width: 340px;
+    width: 289px;
     margin: 0;
-    /* margin-left: 0; */
     display: flex;
     flex-direction: column;
     z-index: -1;
 }
-
 .details-opt-in {
-    width: 340px;
+    width: 280px;
     height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;  
     height: auto;
-    margin: 0;
-    text-align: left;  
+    margin:0 auto;
+    text-align: center;  
     z-index: -1;
 }
 .opt-in-text {
+    margin-top: 0;
     margin-left: 5px;
-    margin-right: 20px;
+    margin-right: 0;
     padding-left: 20px;
-    padding-right: 10px;
+    padding-right: 25px;
     width: 250px;
     height: 36px;
     font-weight: 500;
-    font-size: 11px;
+    font-size: var(--fs-xxsmall);
     z-index: -1;
 
 }
@@ -325,7 +336,7 @@ input {
 }
 .submit-signup {
     margin: auto;
-    width: 289px;
+    width: 255px;
     height: 32px;
     color: var(--white);
     border: none;
@@ -337,25 +348,31 @@ input {
 .submit-signup:hover {
     opacity: 80%;
 }
+p.reg-terms {
+    width: 218px;
+    margin: 2rem auto;
+    margin-bottom: .75rem;
+    font-size: var(--fs-xxsmall);
+    font-weight: var(--fw-light);
+}
+.existing-account {
+    width: 289px;
+    margin: auto;
+}
 .existing-account-p {
     font-size: var(--fs-xxsmall);
 }
 .criteria-text,
 .existing-account-p  {
-    font-weight: 300;
+    font-weight: var(--fw-light);
 }
-p.reg-terms {
-    width: 257px;
-    margin: 2rem auto;
-    margin-bottom: .75rem;
-    font-size: var(--fs-xsmall);
-}
+
 .existing-account-p {
-    width: 340px;
+    width: 218px;
     margin: 2rem auto;
     text-align: center;
-    margin-bottom: 2.5rem;
-    font-weight: var(--fw-robo-bold);
+    margin-bottom: 1.5rem;
+    
 }
 
 /* Opt-in Pop-up Window */
@@ -368,7 +385,7 @@ p.reg-terms {
     display: flex;
     flex-direction: column;
     left: 50%;
-    top: 66%;
+    top: 68%;
     transform: translate(-50%, -50%);
     z-index: 1000;
 }
@@ -376,20 +393,21 @@ p.reg-terms {
     display: none;
 }
 .pop-up-content {
-    width: 208px;
-    margin-left: 620px;
+    width: 191px;
+    margin-left: 630px;
     height: auto;
-    padding: 1rem ;
+    padding: .5rem ;
     padding-top: 0;
     padding-right: 0;
     background-color: var(--white);
     border: 1px solid var(--very-lt-gray);
     border-radius: 8px;
-    font-size: 10px;
+    font-size: var(--fs-xxsmall);
+    font-weight: var(--fw-light);
 }
 p.pop-text-one {
     margin-bottom: .5rem;
-    padding-right: 1rem;
+    padding-right: .5rem;
 }
 
 .close-opt {
@@ -404,4 +422,159 @@ p.pop-text-one {
 }
 .close-opt:hover{
     color: var(--error);
+}
+
+
+/* max width 1040 */
+@media screen and (max-width: 65em) {
+    html,
+    body {
+        width: 100%; 
+        height: 60%;  
+    }
+    .register-window {
+        width: 321px;
+        height: 768px; 
+        top: 40%;
+        border: none;
+        background: none;  
+        filter: none;
+    }
+    .opt-window {
+        left: -4.5%;
+        top: 85%;
+    }
+    .closeout {
+        display: none;
+    }
+    .form-layout {
+        width: 321px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 2rem;
+        background-color: none;
+        
+    }
+    .left,
+    .form-right {
+        width: 289px;
+        margin: 0;
+        padding: 0;
+        text-align: center; 
+        margin: auto;
+    }
+    .left {
+        padding-left: 0;
+    }
+    p.intro,
+    p.note {
+        color: var(--dark-blue);
+    }
+    p.intro {
+        font-size: 24px;
+        font-weight: var(--fw-med);
+    }
+    p.note {
+        margin-bottom: .5rem;
+        font-size: var(--fs-medium);
+        font-weight: 300;
+    }
+    .details-text {
+        display: none;
+    }
+    .right {
+        width: 321px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 0;
+        text-align: center;
+        background-color: var(--very-lt-gray);
+        border-radius: 15px;
+    }
+    .other-signin {
+        width: 289px;
+        margin: auto;
+        margin-bottom: 2.5rem;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+    a.google,
+    a.github {
+        width: 289px;
+    }
+    
+    .form-right {
+        width: 289px;
+    }
+    input {
+        width: 255px;
+    }
+    label,
+    label[for=user_name],
+    label[for=user_email] {
+        width: 230px;
+        margin: .75rem 1.5rem;
+        margin-bottom: 0;
+    }
+    .criteria {
+        width: 287px;
+        text-align: left;
+    }
+    p.criteria-text {
+        width: 255px;
+    }
+    .opt-in {
+        width: 289px;
+    }
+    .details-opt-in {
+        width: 289px;
+    }
+    .opt-in-text {
+        width: 240px;
+        margin-right: 0;
+        margin-top: 0;
+        font-size: var(--fs-xxsmall);
+    }
+    .submit-signup {
+        width: 255px;
+    }
+    p.reg-terms {
+        width: 217px;
+        margin: 1.5rem auto;
+        font-size: var(--fs-xxsmall);
+        font-weight: var(--fw-reg);
+    }
+    .existing-account-p {
+        width: 152px;
+        margin: 2rem auto;
+        text-align: center;
+        
+        font-weight: var(--fw-robo-bold);
+    }
+    .opt-window {
+        width: 321px;
+        /* min-width: 321px; */
+        top: 63%;
+        left: 50%;
+        
+    }
+    .pop-up-content {
+        width: 191px;
+        margin: auto;
+        height: auto;
+        padding: .5rem ;
+        padding-top: 0;
+        padding-right: 0;
+        background-color: var(--white);
+        border: 1px solid var(--very-lt-gray);
+        border-radius: 8px;
+        font-size: 10px;
+    }
+    p.pop-text-one {
+        margin-bottom: .5rem;
+        padding-right: .5rem;
+    }
 }

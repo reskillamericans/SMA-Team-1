@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"  content="Pia Torain">
-    <meta name="description"  content="The Login in page of SMA-T1 pro">
-    <link rel="stylesheet" href="header.css">
+    <meta name="description"  content="The Registration Page of SMA-T1 pro">
+    <link rel="stylesheet" href="header-and-bg.css">
     <link rel="stylesheet" href="registration.css">
     <link rel="stylesheet" href="registration-checkbox.css">
-    <link rel="stylesheet" href="acct-confirm.css">
+    <link rel="stylesheet" href="registration-acct-confirm.css">
     <title>Registration</title>
 </head>
 <body>
@@ -17,10 +17,10 @@
     
     <div class="header-layout">
         <div class="header-left" id="left">
-            <a class="m-header-link" href="home.html" target="_blank" alt="homepage-link" >
+            <a class="m-header-link" href="#" target="_blank" alt="homepage-link" >
                 <img class="mobile-arrow" src="assets/coolicon.png" width= 20 height= 20 alt="arrow-icon" />
             </a>
-            <img class="logo" src="assets/logo-SMA.png"  width=170px height=72px alt="SMA-logo" />
+            <img class="logo" src="assets/logo-SMA.png"  width=170 height=72 alt="SMA-logo" />
             <div class="title">
                 <span>Social Media App 1</span>
             </div>
@@ -42,7 +42,7 @@
     </div>
     <!-- /BACKGROUND IMAGE -->
 
-    <!-- Form Window -->
+    <!-- Register Window -->
     <section class="register-window" id="register">
         <!-- X TO CLOSE WINDOW -->
         <div class="closeout">
@@ -50,7 +50,7 @@
                 <a class="close" 
                     href="login.html"
                     target="_blank"
-                    alt="">
+                    alt="link to login">
                     X
                 </a>
             </button>
@@ -105,24 +105,24 @@
                     </a>
                 </div>
                 
-                <!-- Note: Removed POST method to test pop-up -->
-                <!-- <form action="" id="form" class="form-right"> -->
+                
+                <!-- Registration Form-->
                 <form action="/registration" method="POST" id="form" class="form-right">
                 
                     <!-- Registration -->
                     <div class="form-container">
-                        <label for="name" id="name">Display Name</label>
-                        <input name="name" type="text" id="name" autocomplete="on" />
+                        <label for="user_name">Display Name</label>
+                        <input name="user_name" type="text" id="user_name" autocomplete="on" />
                     </div>
 
                     <div class="form-container">
-                        <label for="email" id="email">Email</label>
-                        <input name="email" type="text" id="email_address" autocomplete="on" />
+                        <label for="user_email">Email</label>
+                        <input name="user_email" type="text" id="user_email" autocomplete="on" />
                     </div>
 
                     <div class="form-container">
-                        <label for="paswword" id="email">Password</label>
-                        <input name="password" type="password" id="password" autocomplete="on" />
+                        <label for="user_paswword" >Password</label>
+                        <input name="user_password" type="password" id="user_password" autocomplete="on" />
                     </div>
 
                     <div class="criteria">
@@ -140,19 +140,20 @@
                     
                     
                     <div class="opt-in">
-                
-                            <div class="details-opt-in">
-                                
-                                <input type="checkbox" id="opt" name="sign" hidden>
-                                <label for="opt" class="opt-in-text" >Opt-in to receive occassional product updates, user research invitations, 
-                                    company announcements, and digests.</label>
-    
-                                <div class="explain-opt-in">
-                                    <button  type="button" id="optBtn" class="get-opt-info">
-                                        <img src="assets/question.png" alt="opt-in explanation" />
-                                    </button>
-                                </div>
+                        <!-- Opt-in info -->
+                        <div class="details-opt-in">
+                            <input type="checkbox" id="opt"  hidden>
+                            <label for="opt" class="opt-in-text" >Opt-in to receive occassional product updates, user research invitations, 
+                                company announcements, and digests.</label>
+                            <!-- Opt in pop-up button -->
+                            <div class="explain-opt-in">
+                                <button  type="button" id="optBtn" class="get-opt-info">
+                                    <img src="assets/question.png" alt="opt-in explanation" />
+                                </button>
                             </div>
+                            <!-- /Opt in pop-up button -->
+                        </div>
+                        <!-- /Opt-in info -->
 
                         <!-- Submit and open Email Sent Pop-up? -->
                         <div class="form-container">
@@ -168,6 +169,8 @@
                         <!-- /Agree to terms -->
                     </div>                  
                 </form>
+                <!-- /Registration Form-->
+
                 <div class="existing-account">
                     <p class="existing-account-p">Already have an account?<a href="login.html" target="_blank" > Log in</a></p>
                 </div>        
@@ -176,15 +179,18 @@
         </div>
         
     </section>
-    <!-- /Form Window -->
+    <!-- /Register Window -->
     
     <!-- Opt Info Pop-up -->
     <section class="opt-window" id="optIn">
         <div class="pop-up-content">
+            <!-- Opt-in close button -->
             <div class="close-pop">
                 <button class="close-opt" id="closeOptin" type=>x</button>  
             </div>
-            <br>       
+            <!-- /Opt-in close button -->
+            <br> 
+            <!-- Opt-in information -->
             <p class="pop-text-one">
                 We know you hate spam, and we do too. That's why we make it easy for you to update 
                 you email preferences or unsubscribe at anytime.
@@ -192,11 +198,12 @@
             <p class="pop-text-two">
                 We neve share your email address with third parties for marketing purposes.
             </p>
+            <!-- /Opt-in information -->
         </div>
     </section>
-    <!-- Opt Info Pop-up -->
+    <!-- /Opt Info Pop-up -->
 
-    <!-- Registration Success -->
+    <!-- Account Confirmed Pop-up -->
     <section id="accountConfirmed" class="acct-confirmed">
         <div class="confirm-content">
             <div class="confirm-header">
@@ -207,16 +214,17 @@
                     <strong>lboehringer@gmail.com</strong>. You will use this email address to log in.
                 </p>
 
-                <!-- Button will close email sent pop-up and return user to login-->
+                <!-- Button will open link to Almost There Page-->
                 <div class="acct-success">
                     <button type="submit" class="btn-reset-success"> <a href="almost.html" target="_blank" class="go-to-almost" >OK</a></button>
                 </div>
 
-                <!-- /Button will close email sent pop-up and return user to login -->
+                <!-- /Button will open link to Almost There Page -->
             </div>
         </div>
     </section>
-    <!-- /Registration Success -->
+    <!-- /Account Confirmed Pop-up -->
+
     <script src="registration.js"></script>
 </body>
 </html>

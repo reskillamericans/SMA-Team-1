@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;@400;500;600&family=Roboto:wght@300;@400;500;700&display=swap');
 
 :root {
     --roboto: 'Roboto', sans-serif;
@@ -17,10 +17,10 @@
     --fs-xxsmall: .769rem;
 
     /* FONT WEIGHT */
+    --fw-light: 300;
     --fw-reg: 400;
     --fw-med: 500;
-    --fw-montserrat-sbold: 600;
-    --fw-robo-bold: 700;
+    --fw-bold: 700;
 
     /* TEXT COLORS */
     --dk: #1E1E1E;
@@ -32,7 +32,7 @@
     --very-lt-gray: #CCCCCC;
     --white: #FFFFFF;
     --off-white: #F8F8F8;
-    --rect-gray: #c4c4c4;
+    --rect-gray: #C4C4C4;
     --borders: #E1E1E1;
 
     /* COLORS */
@@ -58,15 +58,15 @@ body {
     
 }
 
-/* Email Sent PopUp styling */
-.modal,
-.success {
-    display: none;
+/* Account Confirmed PopUp styling */
+
+.acct-confirmed {
+    display: block;
     position: fixed;
     width: 1004px;
     min-width: 65rem;
-    height: 20.30rem;
-    min-height: 17.30rem;
+    height: 264px;
+    min-height: 264px;
     left: 50%;
     top: 30%;
     overflow: auto;
@@ -77,177 +77,145 @@ body {
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 }
-.modal-content {
+.confirm-content {
     display: flex;
     flex-direction: column;
 }
-.modal-1-header {
+.confirm-header {
     width: 100%;
     height: 96px;
     color: var(--white);
     background: var(--info);
     border-radius: 15px 15px 0 0;
 }
-.modal-1-header h2 {
+.confirm-header h2 {
     padding: 30px 20px;
     font-size: 36px;
     font-family: var(--roboto);
     font-weight: var(--fw-med); 
 }
-#mobile,
-#mobile-p {
-    display: none;
-}
-.modal-1-p {
+
+.confirm-p {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     height: 158px;
-    font-size: 24px;
     padding: 20px;
 }
-#reply-two {
-    height: 87px;
+#confirm-reply {
+    height: 56px;
+    font-size: 1.84rem;
+    font-weight: var(--fw-reg);
 }
-.modal-1-p a {
-    text-decoration: underline;
-    font-weight: var(--fw-robo-bold);
-    color: var(--info);
-}
-.btn-ok {
+.acct-success {
     display: flex;
     justify-content: flex-end;
 }
 .btn-reset-success {
     display: flex;
-    justify-content: flex-end;
-}
-.submit-modal,
-.reset-success {
-    display: flex;
     justify-content: center;
     align-content: center;
     width: 100px;
     height: 32px;
-    font-size: 16px;
-    font-weight: (var(--fw-robo-bold));
+    font-size: var(--fs-16px);
+    font-weight: (var(--fw-bold));
     color: var(--white);
     background-color: var(--info);
     border: 1px solid var(--info);
     border-radius: 15px;      
 }
-.submit-modal {
-    padding-top: 6px;
-}
-a.back-to-login {
-    width: 200px;
+a.go-to-almost{
+    width: 80px;
     color: var(--white);
     background-color: var(--info);
     text-decoration: none;
     margin: auto;
 }
-.submit-modal:hover,
-.submit-modal:focus,
-a.reset-success:hover,
-a.reset-success:focus {
+.acct-success:hover,
+.acct-success:focus {
     opacity: 80%;
     cursor: pointer;
 }
 
-
-
-
-/* Responsive design for email sent and password reset popups max-width 1040px*/
+/* max-width 1040px*/
 
 @media screen and (max-width: 65em) {
-    .modal,
-    .success  {
+    html,
+    body {
+        width: 100%;
+        height: 60%;
+    }
+    .acct-confirmed  {
         max-width: 90%;
-        min-width: 80%;
+        min-width: 289px;
+        max-height: 264px;
+        min-height: 225px;
         margin: 2rem auto;
     }
-    .modal-1-header {
-        height: 25%;
+    .confirm-header {
+        height: auto;
     }
-    .modal-1-header h2 {
+    .confirm-header h2 {
         text-align: center;
         padding: 15px 10px;
-        font-size: 2em;
-        margin: 0;
-        
+        font-size: 2.3em;
+        margin: 0;  
     } 
-    .modal-1-p {
+    .confirm-p {
         width: 100%;
         height: 180px;
-        padding: .5rem;
-    }
-    #reply {
-        display: none;
-    }
-    #reply-two {
-        text-align: center;
-    }
-    #mobile,
-    #mobile-p {
-        display: block;
-        height: auto;
-        font-size: 1.5rem;
-        padding: var(--fs-xxsmall);
-        padding-bottom: 0;
-        height: 60px;
-        text-align: start;
-    }
-    #mobile-p {
-        margin-top: 0;
         padding: auto;
+        padding-bottom: 1rem;
     }
-    #mobile-p a {
-        text-decoration: none;
+    #confirm-reply {
+        text-align: left;
+        font-size: 1.65em;
     }
-    .submit-modal {
-        padding-right: 5px;
+    
+    .acct-success {
+        justify-content: flex-end;
+        margin-top: 1rem;
     }
-    #bg img {
-        display: block;
-    }
-    .btn-reset-success {
-        justify-content: center;
-    }
-    a.back-to-login {
+    a.go-to-almost {
         margin-top: 6px;
     }
 }
 
 
-
-@media screen and (max-width: 47.93em) {
-    .modal-1-header {
-        height: 57px;
+/* max-width 375px */
+@media screen and (max-width: 28.84em) {
+    .acct-confirmed {
+        height: auto;
+        width: auto;
     }
-    #mobile,
-    #mobile-p,
-    #reply-two {
+    .confirm-header {
+        height: auto;
+        font-size: .81em;
+    }
+    .confirm-p {
+        align-content: center;
+        height: 150px;
+        width: 257px;
+        align-content: center;
+        margin: 1rem;
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+    #confirm-reply {
+        width: auto;
         display: block;
-        height: 100%;
-        font-size: var(--fs-large);
+        height: 75px;
+        font-size: 1.1em;
         padding: var(--fs-xxsmall);
-        padding-bottom: 0;
-        height: 60px;
-    }
-    #reply-two {
-        font-size: var(--fs-xlarge);
-
-    }
-    #mobile-p {
-        padding: auto 1rem;
-        padding-top: 0;
+        padding: 0 .5rem;
+        line-height: 1.2;
         
     }
-    .submit-modal,
-    .reset-success {
-        padding-right: 5px;
+    .acct-success {
+        margin: 0;
     }
-    
-    
+    .btn-reset-success {
+        padding-right: 5px;
+    }     
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@300;@400;500;700&display=swap');
 
 
 :root {
@@ -13,15 +13,15 @@
     
     --fs-medium: 1.07rem;
     --fs-default: 1rem;
-    --fs-small: .9230r;
+    --fs-small: .9230rem;
     --fs-xsmall: .846rem;
     --fs-xxsmall: .769rem;
 
     /* FONT WEIGHT */
+    --fw-light: 300;
     --fw-reg: 400;
     --fw-med: 500;
-    --fw-montserrat-sbold: 600;
-    --fw-robo-bold: 700;
+    --fw-bold: 700;
 
     /* TEXT COLORS */
     --dk: #1E1E1E;
@@ -33,7 +33,7 @@
     --very-lt-gray: #CCCCCC;
     --white: #FFFFFF;
     --off-white: #F8F8F8;
-    --rect-gray: #c4c4c4;
+    --rect-gray: #C4C4C4;
     --borders: #E1E1E1;
 
     /* COLORS */
@@ -42,6 +42,7 @@
     --warning: #F0B518;
     --error: #D9534F;
     --dark-blue: #14223D;
+
 }
 
 *,
@@ -56,65 +57,6 @@ body {
     font-family: var(--roboto);
     font-size: 13px;
 }
-/* Background image */
-#bg {
-    position: fixed; 
-    top: -50%; 
-    left: -50%; 
-    width: 200%; 
-    height: 200%;
-}
-#bg img {
-    width: 1440px;
-    height: 1021px;
-    position: absolute; 
-    top: 150px; 
-    left: 9px; 
-    right: 0; 
-    bottom: 0; 
-    margin: auto; 
-    min-width: 50%;
-    min-height: 50%;
-    opacity: 20%;
-}
-/* Header Layout */
-.header-layout{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 0;
-    padding-bottom: 4rem;   
-}
-
-.header-left {
-    display: flex;
-    flex-direction: row;
-}
-.m-header-link {
-    display: none;
-}
-.title {
-    margin: 2rem 0; 
-    font-size: 16px;
-    font-weight: 500;
-}
-.header-right {
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 2rem 0;
-}
-.header-right a {
-    padding-right:4rem;
-    font-size: 16px;
-}
-a {
-    text-decoration: none;
-}
-.logo {
-    width: 170px;
-    height: 72px;
-}
 
 /* Main Content */
 .window {
@@ -122,14 +64,14 @@ a {
     width: 668px;
     height: 770px;
     left: 50%;
-    top: 40%;
+    top: 45%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--white);
+    background-color: var(--off-white);
     border: 2px solid var(--very-lt-gray);
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
@@ -152,7 +94,7 @@ a {
 }
 .button-close:hover {
     border: 1px solid var(--error);
-    font-weight: var(--fw-robo-sbold);
+    font-weight: var(--fw-bold);
     background-color: var(--error);
     border-radius: 3px;
 }
@@ -175,6 +117,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    
 }
 
 /* Sytling the optional sign-in methods */
@@ -192,14 +135,14 @@ a.github {
     display: inline-flex;
     justify-content: center;
     border-radius: 15px; 
-    font-size: 13px;
+    font-size: var(--fs-default);
     text-decoration: none;
 }
 a.google {
     color: var(--gray);
     background:var(--white);
     border: 1px solid var(--very-lt-gray);
-    margin-bottom: 14px;
+    margin-bottom: 9px;
 }
 a.github {
     color: var(--white);
@@ -213,13 +156,9 @@ a.github {
 .github span {
     padding-top: .5rem;
 }
-.google:hover {
-    background-color: var(--gray);
-    color: var(--white);
-}
+.google:hover,
 .github:hover {
-    background: #f1f1f1;
-    color: #1f1f1f;
+    opacity: 40%;
 }
 
 /* Styling the form */
@@ -256,6 +195,8 @@ label {
     width: 340px;
     text-align: left;
     margin: .75rem auto;
+    margin-bottom: .25rem;
+    padding-left: 2px;
 }
 label[for=password]:hover,
 label[for=email]:hover {
@@ -364,7 +305,8 @@ input[type=email]:hover {
 .submit a {
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: var(--fs-large);
+    font-weight: var(--fw-bold);
 }
 .mark {
     width: 340px;
@@ -396,53 +338,15 @@ input[type=email]:hover {
         width: 100%;
         height: 100%;
     }
-    #bg {
-        display: none;
-    }
-    #bg img{
-        display: none;
-    }
-    .header-layout {
-        max-width: 370px;
-        height: 37.5px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 2rem auto;
-        padding-top: 0;
-        padding-bottom: 2rem;   
-    }
-    .header-left {
-        display: flex;
-        width: 360px;
-        flex-direction: row;
-        margin: 1.75rem auto;
-    }
-    .m-header-link {
-        display: block;
-        margin-left: 5px;
-        margin-right: 125px;
-    }
-    .logo {
-        max-width: 50px;
-        height: 21px;
-        margin-right: 40px;
-    }
-    .title {
-        display: none;
-    }
-    .header-right a {
-        display: none;
-    }
     .window {
-        max-width: 350px;
+        max-width: 321px;
         height: 600px;
         top: 385px;
         background-color: var(--very-lt-gray);
         filter: none;
     }
     .form-layout {
-        width: 100%;
+        width: 321px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -454,11 +358,11 @@ input[type=email]:hover {
     }
     a.google,
     a.github  {
-        max-width: 300px;
+        max-width: 289px;
         height: 32px;
     }
     form {
-        max-width: 300px;
+        max-width: 289px;
         height: 410px;
         margin: 1.25rem auto;
         padding: 1.5rem 0;
@@ -467,11 +371,13 @@ input[type=email]:hover {
         border-radius: 15px;
         filter: drop-shadow(0 4px 4px rgba(2, 2, 2, 0.25));
     }
-    label[for=email],
-    label[for=password] {
+    label[for=user_email],
+    label[for=user_password] {
         max-width: 255px;
         text-align: left;
-        margin:.5rem auto;
+        margin: 1rem auto;
+        margin-bottom: 0;
+        padding-left: 10px;
         font-size: var(--fs-default);
     }
     
@@ -485,6 +391,7 @@ input[type=email]:hover {
     .forgot {
         max-width: 255px;
         font-size: var(--fs-xxsmall);
+        padding-left: 10px;
     }
     .recaptcha-body {
         max-width: 225px;
@@ -529,18 +436,13 @@ input[type=email]:hover {
         margin: .5rem;
     }
     .mark {
-        width: 225px;
+        width: 289px;
         height: 50px;
     }
-    .keep-text-box {
-        width: 215px; 
-        margin: auto;
-        padding: 0;
-    }
-    .keep-text {
-        margin: 1rem auto; 
-        padding-left: 5px;
-        font-size: 11px;
+    .container,
+    label[for=keep] {
+        width: 255px;
+        margin: 0 auto;
     }
     .register-mobile {
         display: block;

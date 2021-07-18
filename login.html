@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"  content="Pia Torain">
-    <meta name="description"  content="The Login in page of SMA-T1 pro">
+    <meta name="description"  content="Login in page of SMA-T1">
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="checkbox.css">
-    <title>Login-Page</title>
+    <link rel="stylesheet" href="login-checkbox.css">
+    <link rel="stylesheet" href="header-and-bg.css">
+    <title>Login</title>
 </head>
 <body>
     <!-- HEADER -->
@@ -40,7 +41,7 @@
     </div>
     <!-- /BACKGROUND IMAGE -->
 
-    <!-- FORM  WINDOW-->
+    <!--LOGIN FORM  WINDOW-->
     <section class="window">
         <!-- X TO CLOSE WINDOW -->
         <div class="closeout">
@@ -54,7 +55,9 @@
             </button>
         </div>
 
+        <!-- Content Layout -->
         <div class="form-layout">
+            <!-- Sign-in  via Google or Github-->
             <div class="other-signin">
                 <a class="google" 
                     href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" 
@@ -71,18 +74,19 @@
                         <span>Sign In with GitHub </span>
                 </a>
             </div>
+            <!-- /Sign-in  via Google or Github-->
 
-
+            <!-- Login Form -->
             <form action="/login" id="form" class="form" method="POST">
             
                 <!-- Email and Password -->
                 <div class="form-container">
-                    <label for="email">Email</label>
-                    <input name="email" type="email" id="email" autocomplete="off" />
+                    <label for="user_email">Email</label>
+                    <input name="user_email" type="email" id="user_email" autocomplete="off" />
                 </div>
                 <div class="form-container">
-                    <label for="password">Password</label>
-                    <input name="password" type="password" id="password" />
+                    <label for="user_password">Password</label>
+                    <input name="user_password" type="password" id="user_password" />
                 </div>
                 <!-- /Email and Password -->
                 
@@ -115,7 +119,7 @@
 
                 <!-- Submit and Go to Home or Profile? -->
                 <div class="form-container">
-                    <button class="submit" type="submit"><a href="#">Sign in</a></button>
+                    <button class="submit" type="submit"><a href="#">Log in</a></button>
                 </div>
                 <!-- /Submit and Go to Home or Profile? -->
 
@@ -136,13 +140,16 @@
                 </div>
                 <!-- /Don't Have An Account  for mobile design-->
             </form>
+             <!-- /Login Form -->
                 
             <!-- Don't Have An Account  for desktop design-->
             <div class="form-container">
                 <p class="register-desktop">Don't have an account? <a href="registration.html" target="_blank">Register</a></p>
             </div>
             <!-- /Don't Have An Account  for mobile design-->
-        </div>  
+        </div> 
+        <!-- /Content Layout --> 
     </section>
+    <!-- /LOGIN FORM  WINDOW-->
 </body>
 </html>

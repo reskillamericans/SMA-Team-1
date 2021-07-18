@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"  content="Pia Torain">
-    <meta name="description"  content="The Login in page of SMA-T1 Project">
+    <meta name="description"  content="The Almost There page of SMA-T1 Project">
+    <link rel="stylesheet" href="header-and-bg.css">
     <link rel="stylesheet" href="almost.css">
-    <link rel="stylesheet" href="header.css">
+    
     <title>Almost</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
         
         <div class="header-right" id="right">
             <a class="links" href="#">Home</a>
-            <a class="links" href="login.html">Log in</a>
+            <a class="links" href="login.html" target="_blank" >Log in</a>
             <a class="links" href="#">Sign Up</a>
             <a class="links" href="#">About Us</a>
         </div>
@@ -40,6 +41,7 @@
     </div>
     <!-- /BACKGROUND IMAGE -->
 
+    <!-- ALMOST THERE WINDOW-->
     <section class="window-almost">
         <!-- X TO CLOSE WINDOW -->
         <div class="closeout">
@@ -52,8 +54,10 @@
             </button>
         </div>
         
-        <!-- FORM  WINDOW-->
+        <!-- Content Layout-->
         <div class="form-layout">
+
+            <!-- Left side content -->
             <div class="left">
                 <div class="details">
                     <div class="details-container">
@@ -70,7 +74,6 @@
                                 You're almost done. We need a little more information to create your profile.
                                  We cater experience on this app to your interests.
                             </p>
-                        
                         </div>
             
                         <div class="details-graphic">
@@ -84,12 +87,13 @@
                     </div>
                 </div>
             </div>
+            <!-- /Left side content -->
 
+
+            <!-- Right side content -->
             <div class="right">
-                
-
+                <!-- Form layout -->
                 <form action="" id="form" class="form">
-                    
                     <div class="account-header">
                         <div class="account-profile">
                             <div class="profile-rectangle">
@@ -103,13 +107,12 @@
                             <button class="pick" type="submit">Pick a photo</button>
                         </div>
                         <p class="photo-text">Adding a photo can make it easier for others to recognize you.</p>
-                        
                     </div>
                     
                     <!-- Job Title and Interests-->
                     <div class="form-container">
-                        <label for="job-title">Job Title</label>
-                        <input type="text" id="job-title" name="job-title" autocomplete="off" />
+                        <label for="job_title">Job Title</label>
+                        <input type="text" id="job_title" name="job_title" autocomplete="off" />
                     </div>
                     <div class="form-container">
                         <label for="interests">Subjects that interest you</label>
@@ -117,24 +120,26 @@
                     </div>
                     <!-- /Job Title and Interests-->
 
-                    <!-- Submit Complete Account -->
+                    <!-- Submit Complete Account will link to Login page-->
                     <div class="form-container">
                         <button class="complete" type="submit"><a href="login.html">Complete Account</a></button>
                     </div>
-                    <!-- /Submit Submit Complete Account  -->
+                    <!-- /Submit Complete Account will link to Login page -->
 
                     <!-- Terms and Policy-->
                     <div class="form-container policy">
                         <p class="terms">
-                            By clicking "Complete Account", you agree to our terms of service and privacy policy
+                            By clicking "Complete Account", you agree to our <a href="#" alt='terms and service'>terms of service</a> and <a href="#" alt="privacy policy">privacy policy</a> 
                         </p>
                     </div>
                     <!-- /Terms and Policy-->
-                    
                 </form>
-            </div>  
+                <!-- /Form layout -->
+            </div>
+            <!-- /Right side content -->  
         </div>
+        <!--/ Content Layout-->
     </section>
-    
+    <!-- /ALMOST THERE WINDOW-->
 </body>
 </html>

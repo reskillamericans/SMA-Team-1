@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;@400;500;600&family=Roboto:wght@300;@400;500;700&display=swap');
 
 /* Need to work on arrow cycle in desktop design and Input boxes */
 :root {
@@ -6,19 +6,22 @@
     --montserrat: 'Montserrat', sans-serif;
     
     /* FONT-SIZES */
-    --fs-xlarge: 1.538rem;
-    --fs-large: 1.1538rem;
-    --fs-medium: 1.076rem;
+    --fs-xlarge: 1.615rem;
+    --fs-18px: 1.38rem;
+    --fs-16px: 1.23rem;
+    --fs-large: 1.15rem;
+    
+    --fs-medium: 1.07rem;
     --fs-default: 1rem;
     --fs-small: .9230rem;
-    --fs-xsmall: .8461rem;
-    --fs-xxsmall: .7692rem;
+    --fs-xsmall: .846rem;
+    --fs-xxsmall: .769rem;
 
     /* FONT WEIGHT */
+    --fw-light: 300;
     --fw-reg: 400;
     --fw-med: 500;
-    --fw-montserrat-sbold: 600;
-    --fw-robo-bold: 700;
+    --fw-bold: 700;
 
     /* TEXT COLORS */
     --dk: #1E1E1E;
@@ -86,7 +89,7 @@ body {
 }
 .button-close:hover {
     border: 1px solid var(--error);
-    font-weight: var(--fw-robo-sbold);
+    font-weight: var(--fw-med);
     background-color: var(--error);
     border-radius: 3px;
 }
@@ -201,7 +204,7 @@ form {
     height: 560px;
     margin: 0 auto;
     padding: 43px 45px;
-    background-color: #f1f1f1;
+    background-color: var(--white);
     border: 1px solid var(--very-lt-gray);
     border-radius: 15px;
 }
@@ -259,13 +262,16 @@ form {
     border-radius: 15px;
     border: 1px solid var(--info);
     color: var(--info);
-    font-size: 16px;
+    font-size: var(--fs-16px);
     margin: .75rem auto;
     box-shadow: 0px 4px 4px 0px rgba(31, 31, 31, 25%);
 }
+.pick:hover {
+    opacity: 40%;
+}
 .photo-text {
     width: 319px;
-    font-size: 14px;
+    font-size: var(--fs-medium);
 }
 label {
     width: 340px;
@@ -275,7 +281,7 @@ label {
     margin-left: 1.2rem;
     margin-right: 1.2rem;
 }
-label[for=job]:hover,
+label[for=job_title]:hover,
 label[for=interests]:hover {
     color: var(--info);
 }
@@ -305,25 +311,25 @@ input[type=text]:hover {
 }
 .complete a {
     text-decoration: none;
-    color: white;
-    font-size: 14px;  
+    color: var(--white);
+    font-size: var(--fs-medium); 
+    font-weight: var(--fw-bold); 
 }
 
 .terms {
     width: 320px;
-    font-size: 14px;
+    font-size: var(--fs-medium);
     line-height: 1.2;
 }
 
 
-/* MOBILE DESIGN - max-width 450px*/
-@media screen and (max-width:57.69em) {
+/* MOBILE DESIGN - max-width 925px*/
+@media screen and (max-width: 57.69em) {
     html,
     body {
         width: 100%;
-        height: 100%;
+        height: 60%;
     }
-    
     .window-almost {
         display: flex;
         flex-direction: column;
@@ -371,7 +377,7 @@ input[type=text]:hover {
         height: 410px;
         margin: 1.25rem auto;
         padding: 1rem auto;
-        background-color: #f1f1f1;
+        background-color: var(--white);
         border: 1px solid var(--very-lt-gray);
         border-radius: 15px;
         filter: drop-shadow(0 4px 4px rgba(2, 2, 2, 0.25));
@@ -398,6 +404,7 @@ input[type=text]:hover {
         padding-top: 3px;
         text-align: center;
         font-size: 24px;
+        font-weight: var(--fw-med);
     }
     
     .details-text {
@@ -413,7 +420,8 @@ input[type=text]:hover {
     }
     .details-text p {
         width: 100%;
-        font-size: 14px;
+        font-size: var(--fs-medium);
+        font-weight: var(--fw-light);
         line-height: 1;
         margin-left: 0;
         margin: .8rem 0;
@@ -425,22 +433,24 @@ input[type=text]:hover {
     
     .right {
         width: 375px;
-        height: 420px;
+        height: auto;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
     }
     form  {
         width: 100%;
-        height: auto;
+        height: 420px;
         margin: 0 auto;
         padding: 0;
+        background-color: var(--white);
     }
-    label[for=job-title],
+    label[for=job_title],
     label[for=interests] {
         max-width: 254px;
         text-align: left;
-        margin:.5rem auto;
+        margin: 0 auto;
+        margin-bottom: 0;
         font-size: var(--fs-default);
     }
     .form-container {
@@ -489,9 +499,15 @@ input[type=text]:hover {
     .pick {
         width: 254px;
         height: 32px;
+        margin-bottom: 0;
         color: var(--white);
+        font-weight: var(--fw-bold);
         background-color: var(--info);
         padding: 0;
+        box-shadow: none;
+    }
+    .pick:hover {
+        opacity: 80%;
     }
     .photo-text {
         width: 328px;
@@ -515,6 +531,12 @@ input[type=text]:hover {
     .terms {
         font-size: var(--fs-xxsmall);
         width: 190px;
+        margin: 0 auto;
     }  
 }
 
+@media screen and (max-width: 37.5em) {
+    #bg img {
+        display: none;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"  content="Pia Torain">
+    <meta name="description"  content="The Login in page of SMA-T1 pro">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <title>Login-Page</title>
+</head>
+<body>
+    <!-- HEADER -->
+    
+    <div class="header-layout">
+        <div class="header-left" id="left">
+            <a class="m-header-link" href="home.html" target="_blank" alt="homepage-link" >
+                <img class="mobile-arrow" src="assets/coolicon.png" width= 20 height= 20 alt="arrow-icon" />
+            </a>
+            <img class="logo" src="assets/logo-SMA.png"  width=170px height=72px alt="SMA-logo" />
+            <div class="title">
+                <span>Social Media App 1</span>
+            </div>
+        </div>
+        
+        <div class="header-right" id="right">
+            <a class="links" href="#home">Home</a>
+            <a class="links" href="#login">Log in</a>
+            <a class="links" href="#signup">Sign Up</a>
+            <a class="links" href="#about-us">About Us</a>
+        </div>
+    </div>
+ 
+    <!-- /HEADER -->
+    
+    <!-- BACKGROUND IMAGE -->
+    <div id="bg">
+        <img src="assets/bg-SMA.png" alt="">
+    </div>
+    <!-- /BACKGROUND IMAGE -->
+
+    <!-- FORM  WINDOW-->
+    <section class="window">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button class="button-close">
+                <a class="close" 
+                    href="#"
+                    target="_blank"
+                    alt="">
+                    X
+                </a>
+            </button>
+        </div>
+
+        <div class="form-layout">
+            <div class="other-signin">
+                <a class="google" 
+                    href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" 
+                    target="_blank"
+                    alt="google-sign-in">
+                        <img src="assets/google-g.svg"  alt="google logo"> 
+                        <span>Sign In with Google</span> 
+                </a>
+                <a class="github" 
+                    href="https://github.com/login" 
+                    target="_blank" alt="github-signin"
+                    alt="github-sign-in">
+                        <img src="assets/git.svg" alt="github logo"> 
+                        <span>Sign In with GitHub </span>
+                </a>
+            </div>
+
+
+            <form action="/login" id="form" class="form" method="POST">
+            
+                <!-- Email and Password -->
+                <div class="form-container">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" id="email" autocomplete="off" />
+                </div>
+                <div class="form-container">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" id="password" />
+                </div>
+                <!-- /Email and Password -->
+                
+                <div class="forgot">
+                    <span class="forgot-pwd">Forgot Password? <a href="password.html" alt="reset password">Click here</a></span>
+                </div>
+
+                <!-- reCaptcha -->
+                <div class="form-container">
+                    <div class="recaptcha-body">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="check" hidden/>
+                            <label for="check" class="checkmark"></label>
+                            
+                        </div>
+                        <div class="right-captcha">
+                            <div class="robo-text">
+                                <p>I am not a robot</p>
+                            </div>
+                            <div class="cap-right">
+                                <img src="assets/recaptcha.svg" width= 26.56 height= 25 alt="human-verify" />
+                                <span class="cap">reCAPTCHA</span>
+                                <span class="privacy">Privacy - Terms</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/reCaptcha -->
+
+
+                <!-- Submit and Go to Home or Profile? -->
+                <div class="form-container">
+                    <button class="submit" type="submit"><a href="#">Sign in</a></button>
+                </div>
+                <!-- /Submit and Go to Home or Profile? -->
+
+                <!-- /Stay signed in  -->
+                <div class="mark">
+                    <div class="container">
+                        <form>
+                            <input type="checkbox" id="keep" name="sign" hidden>
+                            <label for="keep" >Keep me signed in on this computer</label>
+                        </form>
+                    </div>
+                </div>
+                <!-- /Stay signed in  -->
+
+                <!-- Don't Have An Account  for mobile design-->
+                <div class="form-container">
+                    <p class="register-mobile">Don't have an account? <a href="#">Register</a></p>
+                </div>
+                <!-- /Don't Have An Account  for mobile design-->
+            </form>
+                
+            <!-- Don't Have An Account  for desktop design-->
+            <div class="form-container">
+                <p class="register-desktop">Don't have an account? <a href="#">Register</a></p>
+            </div>
+            <!-- /Don't Have An Account  for mobile design-->
+        </div>  
+    </section>
+</body>
+</html>

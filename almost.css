@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+
+/* Need to work on arrow cycle in desktop design and Input boxes */
+:root {
+    --roboto: 'Roboto', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    
+    /* FONT-SIZES */
+    --fs-xlarge: 1.538rem;
+    --fs-large: 1.1538rem;
+    --fs-medium: 1.076rem;
+    --fs-default: 1rem;
+    --fs-small: .9230rem;
+    --fs-xsmall: .8461rem;
+    --fs-xxsmall: .7692rem;
+
+    /* FONT WEIGHT */
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-montserrat-sbold: 600;
+    --fw-robo-bold: 700;
+
+    /* TEXT COLORS */
+    --dk: #1E1E1E;
+    --gray: #616161;
+    --lt-gr: #AFB1B2;
+
+    /* BACKGROUND COLORS */
+    --near-bk: #1E1E1E;
+    --very-lt-gray: #CCCCCC;
+    --white: #FFFFFF;
+    --off-white: #F8F8F8;
+    --rect-gray: #c4c4c4;
+
+    /* COLORS */
+    --info: #53B6E0;
+    --success: #74C080;
+    --warning: #F0B518;
+    --error: #D9534F;
+    --dark-blue: #14223D;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+html,
+body {
+    font-family: var(--roboto);
+    font-size: 13px;
+}
+
+.window-almost {
+    position: fixed;
+    width: 1004px;
+    height: 770px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    border: 2px solid #E1E1E1;
+    border-radius: 15px;
+    filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
+}
+.closeout {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+.button-close {
+    margin-top: .75rem;
+    margin-right: .68rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: white;
+    border: none;
+}
+.button-close:hover {
+    border: 1px solid var(--error);
+    font-weight: var(--fw-robo-sbold);
+    background-color: var(--error);
+    border-radius: 3px;
+}
+
+.close {
+    margin-top: .75rem;
+    font-size: var(--fs-xlarge);
+    border: none;
+    vertical-align: middle;
+    align-self: center;
+    color: var(--dark-blue); 
+}
+.close:hover {
+    color: var(--white);
+}
+.form-layout {
+    height: 560px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: auto 0;
+    padding: 0 4rem;
+
+}
+.left {
+    width: 440px;
+    height: 560px;  
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    align-content: center; 
+    width: 440px;
+    height: 560px;
+    margin: 0 auto;
+    padding: 43px 0px;
+    padding-left: 0px;
+    background-color: var(--white);
+    border: none;
+}
+.details-container {
+    display: flex;
+    width: 440px;
+    height: auto;
+    margin-top: 0;
+    padding: 1rem auto;
+    flex-direction: column;
+    align-items: center;  
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+.details-header {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    margin-left: 35px;
+    font-family: var(--montserrat);
+    font-weight: var(--fw-med);
+    color: var(--info);
+    text-align: left;
+}
+.intro {
+    width: auto;
+    font-size: 48px;
+    height: 59px;
+    margin: 35px 0;
+    padding-top: 10px;
+}
+.details-text {
+    width: 402px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.holder {
+    width: 20px;
+    display: flex;
+    margin-left: 0;
+}
+.bulb {
+    /* position: absolute; */
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 5px;
+}
+.details-text p {
+    width: 100%;
+    font-family: var(--roboto);
+    font-size: 24px;
+    text-align: left;
+    line-height: 1.1;
+    margin-left:5px;
+    
+}
+.arrow-circle {
+    margin-top: 20px;
+}
+.right {
+    width: 440px;
+    height: 560px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center; 
+    width: 440px;
+    height: 560px;
+    margin: 0 auto;
+    padding: 43px 45px;
+    background-color: #f1f1f1;
+    border: 1px solid var(--very-lt-gray);
+    border-radius: 15px;
+}
+.form-container {
+    display: flex;
+    width: 340px;
+    height: auto;
+    margin-top: 0;
+    padding: 1rem auto;
+    flex-direction: column;
+    align-items: center;  
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+.account-header {
+    width: 340px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.account-profile {
+    width: 340px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.profile-rectangle {
+    width: 125px;
+    height: 125px;
+    background-color: var(--rect-gray);
+    border-radius: 12px;
+    margin-right: 20px;
+}
+.initial {
+    margin: 25px 45px;
+}
+.loboeh {
+    display:flex;
+    width: 125px;
+    height: 125px;
+}
+.name {
+    padding: 47.5px 0;
+    font-weight: var(--fw-med);
+    font-size: 30px;
+}
+.button-holder {
+    width: 340px;
+}
+.pick {
+    width: 125px;
+    height: 26px;
+    border-radius: 15px;
+    border: 1px solid var(--info);
+    color: var(--info);
+    font-size: 16px;
+    margin: .75rem auto;
+    box-shadow: 0px 4px 4px 0px rgba(31, 31, 31, 25%);
+}
+.photo-text {
+    width: 319px;
+    font-size: 14px;
+}
+label {
+    width: 340px;
+    text-align: left;
+    margin-top: .75rem;
+    margin-bottom: .3rem; 
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+label[for=job]:hover,
+label[for=interests]:hover {
+    color: var(--info);
+}
+input {
+    width: 340px;
+    height: 32px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;  
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+input[type=text]:hover {
+    border: 1px solid var(--info);
+}
+
+.complete {
+    width: 340px;
+    height: 32px; 
+    border-radius: 15px;
+    background-color: var(--info);
+    border: 1px solid var(--info);
+    margin-top: 2.1rem;  
+    margin-bottom: .25rem;
+}
+.complete:hover {
+    opacity: 80%;
+}
+.complete a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;  
+}
+
+.terms {
+    width: 320px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+
+/* MOBILE DESIGN - max-width 450px*/
+@media screen and (max-width:57.69em) {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .window-almost {
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+        height: auto;
+        top: 340px;
+        background-color: none;
+        border: none;
+        filter: none;
+        margin: 0 auto;
+    }
+    .form-layout {
+        width: 354px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .button-close {
+        display: none;
+    }
+    .left {
+        width: 375px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-content: center; 
+        width: 375px;
+        height: auto;
+        margin-left: 0;
+        padding: 0;
+        background-color: var(--white);
+    }
+    .details-container {
+        width: 375px;
+    }
+    form {
+        max-width: 330px;
+        height: 410px;
+        margin: 1.25rem auto;
+        padding: 1rem auto;
+        background-color: #f1f1f1;
+        border: 1px solid var(--very-lt-gray);
+        border-radius: 15px;
+        filter: drop-shadow(0 4px 4px rgba(2, 2, 2, 0.25));
+    }
+    .details-header {
+        display: flex;
+        width: 360px;
+        height: 40px;
+        margin-left: 0;
+        padding: 0;
+        font-family: var(--montserrat);
+        color: var(--white);
+        background-color: var(--info);
+        text-align: center;
+        top: 365px;
+    }
+    .intro {
+        width: 100%;
+        height: 28px;
+        top: 75px;
+        margin: 7px 0;
+        padding: 0;
+        color: var(--white);
+        padding-top: 3px;
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    .details-text {
+        width: 360px;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+    .holder,
+    .bulb-holder,
+    .bulb {
+        display: none;
+    }
+    .details-text p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1;
+        margin-left: 0;
+        margin: .8rem 0;
+        text-align: center;
+    }
+    .arrow-circle {
+        display: none;
+    }
+    
+    .right {
+        width: 375px;
+        height: 420px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    form  {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+    label[for=job-title],
+    label[for=interests] {
+        max-width: 254px;
+        text-align: left;
+        margin:.5rem auto;
+        font-size: var(--fs-default);
+    }
+    .form-container {
+        width: 328px;
+        height: auto;
+    }
+    .account-header {
+        width: 328px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding: lrem auto;
+    }
+    .account-profile {
+        width: 254px;
+        margin: auto;
+        padding-top: 1.5rem;
+    }
+    .profile-rectangle {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+    }
+    .initial {
+        width: 30px;
+        height: 70px;
+        margin: 15.5px 40px;
+    }
+    .loboeh {
+        display:flex;
+        padding: 0;
+        width: 110px;
+        height: 100px;
+    }
+    .name {
+        width: 120px;
+        padding: 0;
+        padding-left: 10px;
+        align-self: center;
+    }
+    .button-holder {
+        width: 328px;
+        text-align: center;
+    }
+    .pick {
+        width: 254px;
+        height: 32px;
+        color: var(--white);
+        background-color: var(--info);
+        padding: 0;
+    }
+    .photo-text {
+        width: 328px;
+        font-size: var(--fs-xxsmall);
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    input,
+    .complete {
+        width: 254px;
+        height: 32px;
+        font-size: var(--fs-default);
+    }
+    .complete {
+        margin-top: 15px;
+        padding: 0;
+    }
+    .policy {
+        height: 30px;
+    }
+    .terms {
+        font-size: var(--fs-xxsmall);
+        width: 190px;
+    }  
+}
+

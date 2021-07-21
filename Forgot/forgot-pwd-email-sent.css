@@ -1,0 +1,222 @@
+
+
+:root {
+    --roboto: 'Roboto', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    
+    /* FONT-SIZES */
+    --fs-xlarge: 1.615rem;
+    --fs-18px: 1.38rem;
+    --fs-16px: 1.23rem;
+    --fs-large: 1.15rem;
+    
+    --fs-medium: 1.07rem;
+    --fs-default: 1rem;
+    --fs-small: .9230rem;
+    --fs-xsmall: .846rem;
+    --fs-xxsmall: .769rem;
+
+    /* FONT WEIGHT */
+    --fw-light: 300;
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-montserrat-sbold: 600;
+    --fw-robo-bold: 700;
+
+    /* TEXT COLORS */
+    --dk: #1E1E1E;
+    --gray: #616161;
+    --lt-gr: #AFB1B2;
+
+    /* BACKGROUND COLORS */
+    --near-bk: #1E1E1E;
+    --very-lt-gray: #CCCCCC;
+    --white: #FFFFFF;
+    --off-white: #F8F8F8;
+    --rect-gray: #c4c4c4;
+    --borders: #E1E1E1;
+
+    /* COLORS */
+    --info: #53B6E0;
+    --success: #74C080;
+    --warning: #F0B518;
+    --error: #D9534F;
+    --dark-blue: #14223D;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+html,
+body {
+    font-family: var(--roboto);
+    font-size: 13px;
+    font-weight: var(--fw-reg);
+    
+}
+
+/* Email Sent PopUp styling */
+.email-window {
+    display: none;
+    position: fixed;
+    width: 1004px;
+    min-width: 65rem;
+    height: 20.30rem;
+    min-height: 17.30rem;
+    left: 50%;
+    top: 21%;
+    overflow: auto;
+    transform: translate(-50%, -50%);
+    background-color: var(--off-white);
+    background-color: var(--off-white);
+    border: 2px solid var(--borders);
+    border-radius: 15px;
+    filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
+}
+.email-content {
+    display: flex;
+    flex-direction: column;
+}
+.email-header {
+    width: 100%;
+    height: 96px;
+    color: var(--white);
+    background: var(--info);
+    border-radius: 15px 15px 0 0;
+}
+.email-header h2 {
+    padding: 30px 20px;
+    font-size: 36px;
+    font-family: var(--roboto);
+    font-weight: var(--fw-med); 
+}
+/* Hiding mobile design content layout */
+.mobile-reply-one,
+.mobile-reply-two {
+    display: none;
+}
+.email-p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 158px;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.email-p a {
+    text-decoration: underline;
+    font-weight: var(--fw-robo-bold);
+    color: var(--info);
+}
+.btn-ok {
+    display: flex;
+    justify-content: flex-end;
+}
+.email-ok {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100px;
+    height: 32px;
+    font-size: var(--fs-16px);
+    font-family: (var(--roboto));
+    font-weight: (var(--fw-robo-bold));
+    color: var(--white);
+    background-color: var(--info);
+    border: 1px solid var(--info);
+    border-radius: 15px;      
+}
+.email-ok:hover,
+.email-ok:focus {
+    opacity: 80%;
+    cursor: pointer;
+}
+.email-ok a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0;
+    margin: auto; 
+}
+
+/* Responsive design for email sent  max-width 1040px*/
+@media screen and (max-width: 65em) {
+    .email-window {
+        max-width: 90%;
+        min-width: 80%;
+        margin: 2rem auto;
+        top: 21%;
+    }
+    .email-header {
+        height: 40%;
+    }
+    .email-header h2 {
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 2em;
+        margin: 0;   
+    } 
+    .email-p {
+        width: 100%;
+        height: 180px;
+        padding: .5rem;
+    }
+    /* Hiding desktop design content */
+    .email-reply{
+        display: none;
+    }
+    /* Showing mobile design content */
+    .mobile-reply-one,
+    .mobile-reply-two {
+        display: block;
+        height: auto;
+        font-size: 1.5rem;
+        padding: var(--fs-xxsmall);
+        padding-bottom: 0;
+        height: 60px;
+        text-align: start;
+    }
+    .mobile-reply-two {
+        margin-top: 0;
+        padding: auto;
+    }
+    .mobile-reply-two a {
+        text-decoration: none;
+    }
+    .btn-ok {
+        padding-right: 10px;
+    }
+}
+
+/* max-width 767px */
+@media screen and (max-width: 47.93em) {
+    #bg img {
+        display: none;
+    }
+    .modal-1-header {
+        height: 57px;
+    }
+    .mobile-reply-one,
+    .mobile-reply-two {
+        display: block;
+        height: 100%;
+        font-size: var(--fs-default);
+        padding: var(--fs-xxsmall);
+        padding-bottom: 0;
+        height: 60px;
+    }
+    .mobile-reply-two {
+        padding: auto 1rem;
+        padding-top: 0;  
+    }
+    .email-ok {
+        padding-right: 5px;
+    }
+    
+    
+}

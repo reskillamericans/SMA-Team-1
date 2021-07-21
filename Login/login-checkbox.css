@@ -8,7 +8,7 @@
     margin-top: 10px;
 }
 
-/* STYLING FOR RECAPCHA  & STAY SIGNED IN  CHECKBOX */
+/* STYLING FOR RECAPCHA  & BOTTOM CHECKBOX */
 
 /* Selecting type checkbox by using parent*/
 .checkbox-wrapper > [type="checkbox"],

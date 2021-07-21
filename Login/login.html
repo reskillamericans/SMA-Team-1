@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author"  content="Pia Torain">
     <meta name="description"  content="Login in page of SMA-T1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="login-checkbox.css">
-    <link rel="stylesheet" href="header-and-bg.css">
+    <link rel="stylesheet" href="header-bg-and-X.css">
     <title>Login</title>
 </head>
 <body>
@@ -16,7 +19,7 @@
     
     <div class="header-layout">
         <div class="header-left" id="left">
-            <a class="m-header-link" href="home.html" target="_blank" alt="homepage-link" >
+            <a class="m-header-link" href="#" alt="homepage-link" >
                 <img class="mobile-arrow" src="assets/coolicon.png" width= 20 height= 20 alt="arrow-icon" />
             </a>
             <img class="logo" src="assets/logo-SMA.png"  width=170px height=72px alt="SMA-logo" />
@@ -26,10 +29,10 @@
         </div>
         
         <div class="header-right" id="right">
-            <a class="links" href="#home">Home</a>
-            <a class="links" href="#login">Log in</a>
-            <a class="links" href="#signup">Sign Up</a>
-            <a class="links" href="#about-us">About Us</a>
+            <a class="links" href="#">Home</a>
+            <a class="links" href="login.html" alt="link to login page">Log in</a>
+            <a class="links" href="registration.html" alt="link to registration page">Sign Up</a>
+            <a class="links" href="#">About Us</a>
         </div>
     </div>
  
@@ -37,21 +40,19 @@
     
     <!-- BACKGROUND IMAGE -->
     <div id="bg">
-        <img src="assets/bg-SMA.png" alt="">
+        <img id="img-bg" class="app-bg" src="assets/bg-SMA.png" alt="">
     </div>
     <!-- /BACKGROUND IMAGE -->
 
     <!--LOGIN FORM  WINDOW-->
-    <section class="window">
+    <section id="login" class="window">
         <!-- X TO CLOSE WINDOW -->
         <div class="closeout">
-            <button class="button-close">
-                <a class="close" 
-                    href="#"
-                    target="_blank"
-                    alt="">
-                    X
+            <button id="loginClose" class="button-close" type="button">
+                <a href="landing.html" alt="link to landing page">
+                    <img src="assets/X.svg">
                 </a>
+               
             </button>
         </div>
 
@@ -77,21 +78,21 @@
             <!-- /Sign-in  via Google or Github-->
 
             <!-- Login Form -->
-            <form action="/login" id="form" class="form" method="POST">
+            <form action="/login" id="login-form" class="form" method="POST">
             
                 <!-- Email and Password -->
                 <div class="form-container">
                     <label for="user_email">Email</label>
-                    <input name="user_email" type="email" id="user_email" autocomplete="off" />
+                    <input name="user_email" type="email" id="user_email" autocomplete="off" required/>
                 </div>
                 <div class="form-container">
                     <label for="user_password">Password</label>
-                    <input name="user_password" type="password" id="user_password" />
+                    <input name="user_password" type="password" id="user_password" required/>
                 </div>
                 <!-- /Email and Password -->
                 
                 <div class="forgot">
-                    <span class="forgot-pwd">Forgot Password? <a href="password.html" alt="reset password" target="_blank">Click here</a></span>
+                    <span class="forgot-pwd">Forgot Password? <a href="forgot-pwd.html" alt="forgot password" >Click here</a></span>
                 </div>
 
                 <!-- reCaptcha -->
@@ -119,7 +120,7 @@
 
                 <!-- Submit and Go to Home or Profile? -->
                 <div class="form-container">
-                    <button class="submit" type="submit"><a href="#">Log in</a></button>
+                    <button class="submit" id="login-btn" type="submit"><a href="#">Log in</a></button> 
                 </div>
                 <!-- /Submit and Go to Home or Profile? -->
 
@@ -131,25 +132,25 @@
                             <label for="keep" >Keep me signed in on this computer</label>
                         </form>
                     </div>
+
+                    <!-- Don't Have An Account  for mobile design-->
+                    <p class="register-mobile">Don't have an account? <a href="registration.html">Register</a></p>
+                     <!-- /Don't Have An Account  for mobile design-->
                 </div>
                 <!-- /Stay signed in  -->
-
-                <!-- Don't Have An Account  for mobile design-->
-                <div class="form-container">
-                    <p class="register-mobile">Don't have an account? <a href="registration.html" target="_blank">Register</a></p>
-                </div>
-                <!-- /Don't Have An Account  for mobile design-->
+               
             </form>
              <!-- /Login Form -->
                 
             <!-- Don't Have An Account  for desktop design-->
             <div class="form-container">
-                <p class="register-desktop">Don't have an account? <a href="registration.html" target="_blank">Register</a></p>
+                <p class="register-desktop">Don't have an account? <a href="registration.html">Register</a></p>
             </div>
             <!-- /Don't Have An Account  for mobile design-->
         </div> 
         <!-- /Content Layout --> 
     </section>
     <!-- /LOGIN FORM  WINDOW-->
+    <script src="/login.js"></script>
 </body>
 </html>

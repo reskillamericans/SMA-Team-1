@@ -1,10 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect, Http404
 from django.contrib.auth import get_user_model
 from .forms import RegisterForm
 from .models import Users
 import json
-from django.shortcuts import render, redirect
 from django.conf import settings
 from .emails import send_forgot_password_mail
 

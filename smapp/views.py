@@ -48,7 +48,26 @@ def user_detail(request):
     return render(request, 'smapp/user_detail.html', {'context':context})
 
 def login(request):
-    return render(request, 'smapp/login.html')
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate( username = username, password = password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('/')
+
+        else:
+            messages.info(request, 'invalid credentials')
+            return redirect('login')
+
+    else:
+        return render(request, 'smapp/login.html')
+
+
+
+    
 
 
 def password_reset(request, token):

@@ -37,11 +37,11 @@ class User_Followers(models.Model):
 
 class Password_Resets(models.Model):
     user_id = models.ForeignKey(Users, on_delete = models.PROTECT)
-    token = models.CharField(max_length = 255)
-    is_token_used = models.BooleanField()
+    token = models.CharField(max_length = 255, default=None)
+    is_token_used = models.BooleanField(default=False)
     expired_at = models.DateTimeField(default = None)
-    updated_at = models.DateTimeField()
-    created_at = models.DateTimeField()
+    updated_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
 class User_Socials(models.Model):
     user_id = models.OneToOneField(Users, on_delete = models.PROTECT)

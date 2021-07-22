@@ -1,0 +1,241 @@
+/* HEADER, BACKGROUNG AND CLOSE BUTTON CSS */
+
+:root {
+    --roboto: 'Roboto', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+    
+    /* FONT-SIZES */
+    --fs-xlarge: 1.615rem;
+    --fs-18px: 1.38rem;
+    --fs-16px: 1.23rem;
+    --fs-large: 1.15rem;
+    
+    --fs-medium: 1.07rem;
+    --fs-default: 1rem;
+    --fs-small: .9230rem;
+    --fs-xsmall: .846rem;
+    --fs-xxsmall: .769rem;
+
+    /* FONT WEIGHT */
+    --fw-light: 300;
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-bold: 700;
+
+    /* TEXT COLORS */
+    --dk: #1E1E1E;
+    --gray: #616161;
+    --lt-gr: #AFB1B2;
+
+    /* BACKGROUND COLORS */
+    --near-bk: #1E1E1E;
+    --very-lt-gray: #CCCCCC;
+    --white: #FFFFFF;
+    --off-white: #F8F8F8;
+    --rect-gray: #C4C4C4;
+    --borders: #E1E1E1;
+
+    /* COLORS */
+    --info: #53B6E0;
+    --success: #74C080;
+    --warning: #F0B518;
+    --error: #D9534F;
+    --dark-blue: #14223D;
+    --google-red: #DB4437;
+}
+
+
+/* Background image */
+#bg {
+    position: fixed; 
+    top: -51%;  
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+}
+#bg img {
+    max-width:1440px;
+    max-height: 1021px;
+    position: absolute; 
+    top: 11.53rem; 
+    left: .7rem; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+    /* opacity: 20%; */
+}
+.header-layout{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0; 
+    z-index: 2; 
+}
+
+.header-left {
+    display: flex;
+    flex-direction: row;
+}
+.m-header-link {
+    display: none;
+}
+.title {
+    margin: 2rem 0; 
+    font-size: 1.23rem;
+    font-weight: var(--fw-med);
+}
+.header-right {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 0;
+    margin-left: 1rem;
+}
+.links {
+    width: 100px;
+    font-family: var(--montserrat);
+    font-weight: var(-fw-bold);
+    padding: 0 auto;
+    font-size: 1.23rem;
+    text-decoration: none;
+    z-index: 3;
+}
+
+.m-header-link {
+    text-decoration: none;
+    z-index: 3;
+}
+a {
+    text-decoration: none;
+    z-index: 3;  
+}
+.header-right a:hover,
+.header-right a:focus {
+    color: var(--info);
+    font-weight: var(-fw-med);
+}
+.header-right a:visited {
+    
+    font-weight: var(--fw-bold);
+}
+
+.logo {
+    max-width: 10.769rem;
+    max-height: 5.53rem;
+}
+/* MOBILE HEADER DESIGN - max-width 1040px*/
+@media screen and (max-width: 65em) {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+    #bg {
+        display: block;
+    }
+    #bg img{
+        display: block;
+    }
+    .header-layout {
+        max-width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        padding-top: 0;
+        padding-bottom: 1rem;  
+        border-bottom: 1px solid var(--very-lt-gray);
+        z-index: 2;
+    }
+    .header-left {
+        display: flex;
+        width: auto;
+        flex-direction: row;
+        margin: 1.75rem auto;
+        margin-left: 10px;
+    }
+    .logo {
+        max-width: 50px;
+        height: 35px;
+        margin-right: 10px;
+    }
+    .title {
+        width: 200px;
+        height: 50px;
+        display: inline-block;
+        font-size:var(--fs-medium);
+        margin: .5rem 0;
+    }
+    .header-right a {
+        font-size: var(--fs-medium);
+    }
+}
+/* max width 768px */
+@media screen and (max-width: 48em) {
+
+    .header-layout {
+        width: 100%;
+        min-width: 375px;
+        height: auto;
+        margin-right: 0rem;
+    }
+    .header-left{
+        width: 50%;
+        min-width: 160px;
+        margin-left: 30px;
+        margin-bottom: 0;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .m-header-link {
+        display: block;
+        text-align: left;
+        padding-top: 5px;
+        margin-right: auto;
+    }
+    .logo {
+        margin-right: 5px;
+    }
+    .header-right {
+        margin-right: 0;
+    }
+    .title,
+    .header-right {
+        display: none;
+    }
+}
+
+/* Closeout button X */
+.closeout {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+   
+}
+.button-close {
+    margin-top: .75rem;
+    margin-right: .68rem;
+    width: 1.5rem;
+    height: 1.45rem;
+    background-color: white;
+    border: none;
+}
+.button-close img:hover {
+    border: 2px solid var(--error);
+    border-radius: 3px;
+}
+
+/* max-width 500px*/
+@media screen and (max-width: 31.25em){
+    .closeout {
+        display: none;
+    }
+
+}

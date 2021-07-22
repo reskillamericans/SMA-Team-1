@@ -6,11 +6,11 @@
 
 {% block title %}Registration{% endblock %}
 {% block content %}
-<h1>Social Media App User Registration</h1>
-<form method="POST" class="form-group">
-    {% csrf_token %}
-    {{ form.as_p }}
+    <h1>Social Media App User Registration</h1>
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
 
-    <button type="submit" class="btn btn-success">Register</button>
-</form>
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
 {% endblock %}

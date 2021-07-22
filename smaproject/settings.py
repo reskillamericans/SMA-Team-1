@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # add app
     'smapp.apps.SmappConfig',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -106,8 +107,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'smapp.Users'
-AUTH_PROFILE_MODULE = 'smapp.Users'
+AUTH_USER_MODEL = 'accounts.Users'
+AUTH_PROFILE_MODULE = 'accounts.Users'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

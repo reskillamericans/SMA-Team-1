@@ -1,55 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
-#from django.forms import ModelForm
-
-
-# Create your models here.
-class Users(AbstractUser):
-    first_name = models.CharField(max_length = 255)
-    last_name = models.CharField(max_length = 255)
-    username = models.CharField(max_length = 255, unique = True)
-    email = models.EmailField(unique = True)
-    is_email_verified = models.BooleanField(default = False)
-    password = models.CharField(max_length = 255)
-    status = models.CharField(max_length = 255)
-    is_superuser = models.BooleanField(default = False)
-    is_staff = models.BooleanField(default = False)
-    is_active = models.BooleanField(default = True)
-    bio = models.CharField(max_length = 255)
-    occupation = models.CharField(max_length = 255)
-    location = models.CharField(max_length = 255)
-    followers_count = models.IntegerField(default = 0, null = True)
-    following_count = models.IntegerField(default = 0, null = True)
-    profile_picture = models.ImageField()
-    last_login = models.DateTimeField(auto_now_add = True)
-    date_joined = models.DateTimeField(auto_now_add = True)
-
-    def _str__(self):
-        return self.first_name + self.last_name
+from accounts.models import Users
 
 class User_Followers(models.Model):
     user_id = models.ForeignKey(Users, on_delete = models.PROTECT)
     #follower_id = models.ForeignKey(Users, on_delete = models.PROTECT)
     is_post_notification_subscribed = models.BooleanField()
     status = models.BooleanField()
-    updated_at = models.DateTimeField()
-    created_at = models.DateTimeField()
-
-class Password_Resets(models.Model):
-    user_id = models.ForeignKey(Users, on_delete = models.PROTECT)
-    token = models.CharField(max_length = 255, default=None)
-    is_token_used = models.BooleanField(default=False)
-    expired_at = models.DateTimeField(default = None)
-    updated_at = models.DateTimeField(auto_now_add=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-class User_Socials(models.Model):
-    user_id = models.OneToOneField(Users, on_delete = models.PROTECT)
-    facebook_link = models.CharField(max_length = 255)
-    github_link = models.CharField(max_length = 255)
-    linkedin_link = models.CharField(max_length = 255)
-    instagram_link = models.CharField(max_length = 255)
-    twitter_link = models.CharField(max_length = 255)
     updated_at = models.DateTimeField()
     created_at = models.DateTimeField()
 

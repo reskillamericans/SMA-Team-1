@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, register, user_detail, login
+from .views import index, register, user_detail, login, forgot_password
 from django.contrib.auth import views
 from .views import *
 

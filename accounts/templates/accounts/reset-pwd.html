@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"  content="Pia Torain">
+    <meta name="description"  content="The Login in page of SMA-T1 pro">
+    <link rel="stylesheet" href="header-and-bg.css">
+    <link rel="stylesheet" href="reset-pwd.css">
+    <link rel="stylesheet" href="reset-pwd-success.css">
+    <title>Reset Password</title>
+</head>
+<body>
+    <!-- HEADER -->
+    
+    <div class="header-layout">
+        <div class="header-left" id="left">
+            <a class="m-header-link" href="home.html" target="_blank" alt="homepage-link" >
+                <img class="mobile-arrow" src="assets/coolicon.png" width= 20 height= 20 alt="arrow-icon" />
+            </a>
+            <img class="logo" src="assets/logo-SMA.png"  width=170px height=72px alt="SMA-logo" />
+            <div class="title">
+                <span>Social Media App 1</span>
+            </div>
+        </div>
+        
+        <div class="header-right" id="right">
+            <a class="links" href="#home">Home</a>
+            <a class="links" type="submit" href="login.html" target="_blank">Log in</a>
+            <a class="links" href="#signup">Sign Up</a>
+            <a class="links" href="#about-us">About Us</a>
+        </div>
+    </div>
+ 
+    <!-- /HEADER -->
+    
+    <!-- BACKGROUND IMAGE -->
+    <div id="bg">
+        <img src="assets/bg-SMA.png" alt="">
+    </div>
+    <!-- /BACKGROUND IMAGE -->
+
+    <!-- Reset Password Window  -->
+    <section class="reset-window" id="reset">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button class="button-close">
+                <a class="close" 
+                    href="login.html"
+                    target="_blank"
+                    alt="">
+                    X
+                </a>
+            </button>
+        </div>
+
+        <div class="reset-form-layout">
+            <!-- <div class="left"> -->
+                <div class="reset-details">
+                    <!-- <div class="details-container"> -->
+                        <div class="reset-details-header">
+                            <p class="reset-intro">Reset? You Bet!</p>
+                        </div>
+                        <div class="reset-details-text">
+                            
+                                <div class="bulb-holder">
+                                    <img class="bulb" src="assets/lightbulb.png" width= 14.58 length= 20.83 alt="lightbulb" title="light bulb"/>
+                                    <!-- <img class="bulb-line" src="assets/lightbulb-line.svg" width= 8.33 />  -->  
+                                </div>
+                    
+                            <p class="reset-text">
+                                Reset your password to something unique and memorable.
+                            </p>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            <!-- </div> -->
+
+            <div class="right-reset">
+                <form action="/reset-password" mehtod="POST" id="form" class="form-right-reset">
+                    <!--  Password Reset-->
+                    <div class="form-container">
+                        <label for="user_password">Password</label>
+                        <input name="user_password" type="password" id="user_password" />
+                    </div>
+                    <div class="form-container">
+                        <label for="re-enter">Re-enter Password</label>
+                        <input name="re-enter" type="password" id="re-enter" autocomplete="on" />
+                    </div>   
+                        
+                    <div class="form-container">
+                        <p class="guide">
+                            Passwords must contain at least 8 characters, including 1 letter and 1 number.
+                        </p>
+                    </div>
+                    <!-- /Password Reset-->
+
+                    <!-- Confirm -->
+                    <div class="form-container" >
+                        <button type="submit"  id="confirmBtnThree" class="submit-confirm" >
+                            Confirm Password
+                        </button>
+                    </div>
+                    <!-- /Confirm -->
+                </form>    
+            </div>
+        </div>  
+    </section>
+    <!-- /Reset Window  -->
+    
+    <!-- Password Successful Reset Popup-->
+    <div id="successReset" class="password-success">
+        <div class="pwd-success-content">
+            <div class="pwd-success-header">
+                <h2>Password Reset</h2>
+            </div>
+            <div class="pwd-success-p">
+                <p class="pwd-reply"> Your password has been successfully reset.
+                </p>
+
+                <!-- Button will close email sent pop-up and return user to login-->
+                <div class="btn-reset-success">
+                    <button class="reset-success"> <a href="login.html" target="_blank" class="back-to-login" >OK</a></button>
+                </div>
+
+                <!-- /Button will close email sent pop-up and return user to login -->
+            </div>
+        </div>
+    </div>
+    <!-- /Password Successful Reset Popup-->
+    
+    <script src="reset-pwd.js">
+        
+    </script> 
+</body>
+</html>

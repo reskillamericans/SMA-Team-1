@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import django_heroku
+import django_on_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
+
 
 # Application definition
 
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # add app
     'smapp.apps.SmappConfig',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +60,9 @@ ROOT_URLCONF = 'smaproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            str(BASE_DIR.joinpath('templates'))
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,6 +107,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'accounts.Users'
+AUTH_PROFILE_MODULE = 'accounts.Users'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -127,4 +135,12 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True 
+EMAIL_PORT = 587 
+EMAIL_HOST_USER = 'email' 
+EMAIL_HOST_PASSWORD = 'password'

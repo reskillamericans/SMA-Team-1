@@ -137,3 +137,46 @@ def send_forgot_password_mail(email, token):
     recipient_list = [email]
     send_mail(subject, message, email_from, recipient_list)
     return True
+
+def profile(request, user_id):
+    user_obj = Users.objects.get(user = user_id)
+    session_user = Users.objects.get(user = request.session['user'])
+    session_following, create = Followers.objects.get_or_create(user = session_user)
+    following, create = Followers.objects.get_or_create(user = session_user.id)
+    check_user_followers = Followers.objects.filter(another_user = user_obj)
+
+    is_followed = False
+    if session_following.another_user.filter(name = user_name).exists() or following.another_user.filter(name = user_id).exists():
+        is_followed = True
+    else:
+        is_followed = False
+    param ={'user_obj':user_obj,'followers':check_user_followers, 'following':following,'is followed':is_followed}
+    if 'usser' in request.session:
+        return render(request, 'profile.html', param)
+
+    else:
+        return redirect('index')
+
+
+def follow_user(request, user_id):
+    other_user = Users.objects.get(user = user_id)
+    session_user = request.session['user']
+    get_user = Users.objects.get(name = session_user)
+    check_follower = Followers.objects.get(user = get_user.id)
+    is_followed = False
+    if other_user.name != session_user:
+        if check_follower.another_user.filter(name = other_user).exists():
+            add_user = Followers.objects.get(user = get_user)
+            add_user.another_user.remove(other_user)
+            is_followed = False
+            return redirect(f'/profile/{session_user}')
+        else:
+            add_user = Followers.objects.get(user = get_user)
+            add_user.another_user.add(other_user)
+            is_followed = True
+            return redirect(f'/profile/{session_user}')
+
+        return redirect(f'/profile/{session_user}')
+    else:
+        return redirect(f'profile/{session_user}')
+

@@ -90,3 +90,12 @@ class Messages(models.Model):
     read_at = models.DateTimeField()
     updated_at = models.DateTimeField()
     created_at = models.DateTimeField()
+
+class Followers(models.Model):
+    user = models.OneToOneField(Users, on_delete=models.CASCADE)
+    another_user = models.ManyToManyField(Users, related_name='another_user')
+
+    def __str__(self):
+        return self.users.name
+
+

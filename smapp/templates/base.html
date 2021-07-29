@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+
+    </head>
     <body>
-<h1>Welcome</h1>
-<li><a href="{% url 'register' %}">User Registration</a></li>
-<li><a href="{% url 'user_detail' %}">User Detail</a></li>
-<li><a href="{% url 'login' %}">Login</a></li>
-<li><a href="{% url 'forgot_password' %}">Forgot Password</a></li>
-{% block content %}
-{% endblock %}
+        
+        {% if user.is_authenticated %}
+            <h1>Welcome {{ user.username }}</h1>
+        {% else %}
+            <li><a href="{% url 'accounts:register' %}">User Registration</a></li>
+            <li><a href="{% url 'accounts:user_detail' %}">User Detail</a></li>
+            <li><a href="{% url 'accounts:login' %}">Login</a></li>
+            <li><a href="{% url 'accounts:forgot_password' %}">Forgot Password</a></li>
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
     </body>
 </html>
 

@@ -1,5 +1,6 @@
 from django.db import models
 from accounts.models import Users
+from django.conf import settings
 
 class User_Followers(models.Model):
     user_id = models.ForeignKey(Users, on_delete = models.PROTECT)
@@ -39,7 +40,9 @@ class Post_Likes(models.Model):
     created_at = models.DateTimeField()
 
 class Messages(models.Model):
-    sender_id = models.ForeignKey(Users, on_delete = models.PROTECT)
+    sender_id = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="message_sender", on_delete=models.DO_NOTHING)
+    #sender_id = models.ForeignKey(Users, on_delete = models.PROTECT)
+    receiver_id = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="message_receiver", on_delete=models.DO_NOTHING)
     #recipient_id = models.ForeignKey(Users, on_delete = models.PROTECT)
     title = models.CharField(max_length = 255)
     content = models.TextField()

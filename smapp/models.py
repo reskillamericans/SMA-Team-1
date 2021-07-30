@@ -47,6 +47,16 @@ class Messages(models.Model):
     updated_at = models.DateTimeField()
     created_at = models.DateTimeField()
 
+
+
+class User(models.Model):
+    name = models.CharField(max_length=40)
+    pwd = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.name
+
+
 class Followers(models.Model):
     user = models.OneToOneField(Users, on_delete=models.CASCADE)
     another_user = models.ManyToManyField(Users, related_name='another_user')

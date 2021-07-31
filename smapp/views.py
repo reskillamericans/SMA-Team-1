@@ -1,20 +1,42 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Posts
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
+from .models import Posts, Categories
 from .forms import PostForm
 
 def index(request):
-    return render(request, 'smapp/index.html')
+    return render(request, 'index.html')
 
 def create_post(request):
-    if request.method == "POST":
-        form = PostForm(request.POST)
-    if form.is_valid():
-        post = form.save(commit = False)
-        post.author = request.user
-        post.save()
-    else:
-        form = PostForm()
-    return render(request, 'smapp/create_post.html', {'form':form})
+    if not request.user.is_authenticated:
+        messages.info(request, "Please login")
+        return redirect("login")
+    if request.method != 'POST':
+        return render(request, 'create_post.html')
+    if not request.POST.get('title') and request.POST.get('content'):
+        context = {'error': 'The post was not successfully created. Please enter a title and content'}
+        return render(request, 'create_post.html', context)
+    post = Posts()
+    post.user_id = request.user
+    post_category_id = request.POST.get('category_id')
+    post.post_category_id = get_category_id(post_category_id)
+    post.title = request.POST.get('title')
+    post.content = request.POST.get('content')
+    post.save()
+    messages.success(request, "Your post has been successfully created")
+    return redirect('index')
+
+def get_category_id(category):
+    if category == '':
+        return None
+    # If category exists, return category
+    try:
+        post_category = Categories.objects.get(cat_type=category)
+        return post_category
+    except Categories.DoesNotExist:
+        # Else Create category
+        new_category = Categories(cat_type=category)
+        new_category.save()
+        return new_category
 
 def edit_post(request, pk):
     post = get_object_or_404(Posts, pk = pk)

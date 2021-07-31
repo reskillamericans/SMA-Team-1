@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib import auth
 from django.http import HttpResponse
-from .models import User, Followers
+from .models import Users, Followers
 from django.conf import settings
 
 

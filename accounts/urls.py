@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import register, login, forgot_password, password_reset
+from .views import register, login, forgot_password, password_reset, user_detail
 from smapp.views import index
 
 app_name = "accounts"

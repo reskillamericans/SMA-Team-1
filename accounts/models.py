@@ -3,13 +3,16 @@ from django.contrib.auth.models import AbstractUser
 
 
 class Users(AbstractUser):
+    class AccountStatus(models.TextChoices):
+        LOCKED = 'Locked', 'Locked'
+        UNLOCKED = 'Unlocked', 'Unlocked'
     first_name = models.CharField(max_length = 255)
     last_name = models.CharField(max_length = 255)
     username = models.CharField(max_length = 255, unique = True)
     email = models.EmailField(unique = True)
     is_email_verified = models.BooleanField(default = False)
     password = models.CharField(max_length = 255)
-    status = models.CharField(max_length = 255)
+    status = models.CharField(max_length=10, choices=AccountStatus.choices, default=AccountStatus.UNLOCKED, null=True, blank=True)
     is_superuser = models.BooleanField(default = False)
     is_staff = models.BooleanField(default = False)
     is_active = models.BooleanField(default = True)
@@ -23,23 +26,37 @@ class Users(AbstractUser):
     date_joined = models.DateTimeField(auto_now_add = True)
 
     def _str__(self):
-        return self.first_name + self.last_name
+        return self.username
+
 
 class User_Socials(models.Model):
     user_id = models.OneToOneField(Users, on_delete = models.PROTECT)
-    facebook_link = models.CharField(max_length = 255)
-    github_link = models.CharField(max_length = 255)
-    linkedin_link = models.CharField(max_length = 255)
-    instagram_link = models.CharField(max_length = 255)
-    twitter_link = models.CharField(max_length = 255)
-    updated_at = models.DateTimeField()
-    created_at = models.DateTimeField()
+    facebook_link = models.CharField(max_length=255, null=True, blank=True, default=None)
+    github_link = models.CharField(max_length=255, null=True, blank=True, default=None)
+    linkedin_link = models.CharField(max_length=255, null=True, blank=True, default=None)
+    instagram_link = models.CharField(max_length=255, null=True, blank=True, default=None)
+    twitter_link = models.CharField(max_length=255, null=True, blank=True, default=None)
+    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self) -> str:
+        return self.user_id.username
+
+    class Meta:
+        verbose_name_plural = "User Socials"
+        ordering = ['user_id']
     
 class Password_Resets(models.Model):
-    user_id = models.ForeignKey(Users, on_delete = models.PROTECT)
-    token = models.CharField(max_length = 255, default=None)
+    user_id = models.ForeignKey(Users, on_delete=models.PROTECT)
+    token = models.CharField(max_length=255, unique=True, null=True, blank=True, default=None)
     is_token_used = models.BooleanField(default=False)
-    expired_at = models.DateTimeField(default = None)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    expired_at = models.DateTimeField(default=None)
+    updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.user_id.username
+
+    class Meta:
+        verbose_name_plural = "Password Resets"
+        ordering = ['user_id']

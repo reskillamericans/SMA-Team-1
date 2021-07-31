@@ -98,3 +98,6 @@ def send_forgot_password_mail(email, token):
     recipient_list = [email]
     send_mail(subject, message, email_from, recipient_list)
     return True
+
+def user_detail(request):
+    return render(request, 'user_detail.html')

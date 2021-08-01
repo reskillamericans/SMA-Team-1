@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./media.css" />
+    <link rel="stylesheet" href="./right-sec.css" />
+    <link rel="stylesheet" href="./mobile-side-bar.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div
+      class="container"
+      style="
+        width: 85%;
+        margin: auto;
+        position: relative;
+        background-color: #ccc;
+      "
+    >
+      <!-- ///////////////left bar end//////////////////-->
+      <div class="left_side_bar" style="display: flex; flex-direction:column">
+        <!-- //////////// -->
+       
+        <div class="mobile-profile-pic-sidebar mobile_visible">
+ <div class="X_button">
+            <img src="./images/X.svg" alt="">
+        </div>
+
+          <div class="sidebar_picture_username_occupation_container">
+            <div class="sidebar_picture_container profile_pic"></div>
+            <div class="username_occupation_container">
+              <div class="sidebar_mobile_username username">Loboeh</div>
+              <div class="sidebar_mobile_occupation occupation">UX Design</div>
+            </div>
+          </div>
+          <div class="sidebar_followers_following_container">
+              <div class="following">
+                  <span class="following_number">20</span> Following
+              </div>
+              <div class="followers">
+                  <span class="followers_number">25</span> Followers
+              </div>
+          </div>
+        </div>
+
+        <!-- ///////////// -->
+
+        <div class="left_sidebar_inner_content">
+          <div class="left_side_logo">
+            <img src="./images/sma.png" alt="" />
+          </div>
+
+
+
+          
+
+          <div class="left_side_links">
+            <div class="side_icon_and_links_item blue-links">
+              <img src="./images/home.svg" class="side_icon side_icon_blue" alt="" />
+              <div class="side_link">Home</div>
+            </div>
+
+            <div class="side_icon_and_links_item">
+              <img src="./images/bell.svg" class="side_icon" alt="" />
+              <div class="side_link">Notifications</div>
+            </div>
+
+            <div class="side_icon_and_links_item">
+              <img src="./images/env.svg" class="side_icon" alt="" />
+              <div class="side_link">Messages</div>
+            </div>
+
+            <div class="side_icon_and_links_item">
+              <img src="./images/bookmark.svg" class="side_icon" alt="" />
+              <div class="side_link">Bookmarks</div>
+            </div>
+
+            <div class="side_icon_and_links_item">
+              <img src="./images/list.svg" class="side_icon" alt="" />
+              <div class="side_link">Lists</div>
+            </div>
+
+            <div class="side_icon_and_links_item">
+              <img src="./images/user.svg" class="side_icon" alt="" />
+              <div class="side_link">Profile</div>
+            </div>
+
+            <div class="side_icon_and_links_item">
+              <img src="./images/circle.svg" class="side_icon" alt="" />
+              <div class="side_link">More</div>
+            </div>
+          </div>
+          <!-- end left side  links -->
+
+          <div class="new_post_button_cont">
+            <a href="#" class="new_post_button" style="display: inline-block"
+              >New Post</a
+            >
+          </div>
+
+          <div class="left-sidebar-profile-image-container">
+            <div class="left_sidebar_profile_pic profile_pic"></div>
+            <div class="left_sidebar_username_and_occupation_container">
+              <div class="left_sidebar_username_and_at_symbol">
+                <span>@</span>
+                <div class="left_sidebar_username-text username">Loboeh</div>
+              </div>
+              <div class="left_sidebar_occupation">UX designer</div>
+            </div>
+
+            <a href=""
+              ><img
+                src="./images/vertical_dots.svg"
+                class="vertical_dots"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /////////left bar end////////////////-->
+
+      <!-- //////////top bar start////////-->
+
+      <div class="top">
+        <div class="top_content">
+          <div class="headerbar_username_and_followers_container">
+            <a href=""
+              ><img src="./images/Arrow.svg" alt="" class="arrow"
+            /></a>
+            <div class="headerbar_username_info">
+              <div class="headerbar_username username">Loboeh</div>
+              <div class="headerbar_post_count post_count">25 posts</div>
+            </div>
+          </div>
+          <div style="clear: both"></div>
+          <div class="headerbar_search_container">
+            <img
+              src="./images/search_glass.svg"
+              class="search_glass"
+              alt=""
+            />
+            <input
+              type="text"
+              class="headerbar_text_field"
+              placeholder="Search SMA One"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- end of top bar section -->
+
+      <!--////////// middle-section start /////////// -->
+
+      <div class="middle-section">
+        <div class="profile_card">
+          <div class="card_background">
+              <div class="hamb_button">
+                  <img src="./images/hamb.png" alt="">
+              </div>
+          </div>
+
+          <div class="card_mid_section">
+            <div class="profile_pic_and_edit_button">
+              <div class="profile_img_border">
+                <div class="card_profile_pic profile_pic"></div>
+
+                <div class="card_user_info">
+                  <div class="username_online_status">
+                    <div class="card_username username">Loboeh</div>
+                    <img src="./images/Online Status.svg" alt="" />
+                  </div>
+
+                  <div class="card_occupation occupation">UX designer</div>
+                </div>
+              </div>
+
+              <a href="">Edit Profile</a>
+            </div>
+          </div>
+
+          <div class="card_bottom_section">
+            <div class="_user_summary">
+              I am a self-taught UX designer. I prefer to work with Figma and
+              Adobe XD. My design aesthetic is clean and function design.
+              Message me if you want to collabotrate or discuss design.
+            </div>
+
+            <div class="user_location_joined_website_container">
+              <div class="card_links_left">
+                <div class="location_container">
+                  <img src="./images/location.svg" alt="" /> Alberta Canada
+                </div>
+                <div class="website_container">
+                  <img src="./images/link.svg" alt="" />
+                  <a href="#"> www.loboeh.me</a>
+                </div>
+              </div>
+              <div class="card_links_right">
+                <div class="joined_container">
+                  <img src="./images/calender.svg" alt="" /> Joined June
+                  2020
+                </div>
+              </div>
+            </div>
+
+            <div class="followers_and_following">
+              <div class="following">
+                <span class="following_number">20 </span> Following
+              </div>
+              <div class="followers">
+                <span class="follower_number">25</span> Followers
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of profile card -->
+
+        <div class="middle-section-bottom">
+          <div class="middle-section-bottom_navigation">
+            <div class="posts_replies_likes_cont">
+              <div class="posts section_nav clicked">Posts</div>
+              <div class="replies section_nav">Replies</div>
+              <div class="likes section_nav">Likes</div>
+            </div>
+          </div>
+
+          <div class="post_container">
+            <div class="post structure_bottom">
+              <div class="structure_profile_image_container">
+                <div class="profile_pic structure_prof_pic"></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structuret_username_and_time_posted">
+                  <div class="structure_username username">Loboeh</div>
+                  <div class="time_posted">1 hr</div>
+                </div>
+                <div class="structure_text">Almost done!</div>
+
+                <div class="structure_stats">
+                  <div class="text_bubble_container">
+                    <img src="./images/text_bubble.svg" alt="" />
+                    <div class="post_number">52</div>
+                  </div>
+
+                  <div class="star_container">
+                    <img src="./images/star.svg" alt="" />
+                    <div class="post_number"></div>
+                  </div>
+
+                  <div class="heart_container">
+                    <img src="./images/heart.svg" class="heart_img" alt="" />
+                    <div class="heart_number">100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="post structure_bottom">
+              <div class="structure_profile_image_container">
+                <div class="profile_pic structure_prof_pic"></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structuret_username_and_time_posted">
+                  <div class="structure_username username">Loboeh</div>
+                  <div class="time_posted">June 30, 2021</div>
+                </div>
+                <div class="structure_text">
+                  Reply if you need inspiration for your project! Feeling
+                  Creative.
+                </div>
+
+                <div class="structure_stats">
+                  <div class="text_bubble_container">
+                    <img src="./images/text_bubble.svg" alt="" />
+                    <div class="post_number">52</div>
+                  </div>
+
+                  <div class="star_container">
+                    <img src="./images/star.svg" alt="" />
+                    <div class="post_number"></div>
+                  </div>
+
+                  <div class="heart_container">
+                    <img src="./images/heart.svg" class="heart_img" alt="" />
+                    <div class="heart_number">100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="post structure_bottom">
+              <div class="structure_profile_image_container">
+                <div class="profile_pic structure_prof_pic"></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structuret_username_and_time_posted">
+                  <div class="structure_username username">Loboeh</div>
+                  <div class="time_posted">June 24, 2021</div>
+                </div>
+                <div class="structure_text">
+                  There are so many things to do...
+                </div>
+
+                <div class="structure_stats">
+                  <div class="text_bubble_container">
+                    <img src="./images/text_bubble.svg" alt="" />
+                    <div class="post_number">52</div>
+                  </div>
+
+                  <div class="star_container">
+                    <img src="./images/star.svg" alt="" />
+                    <div class="post_number"></div>
+                  </div>
+
+                  <div class="heart_container">
+                    <img src="./images/heart.svg" class="heart_img" alt="" />
+                    <div class="heart_number">100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reply_container hidenav">
+            <div class="all_replies">
+              <div class="reply structure_bottom">
+                <div class="structure_profile_image_container">
+                  <div
+                    class="other_profile_pic structure_prof_pic"
+                    style="background-image: url(./images/user1.png)"
+                  ></div>
+                </div>
+                <div class="structure_right_side">
+                  <div class="structuret_username_and_time_posted">
+                    <div class="structure_username username">Loboeh</div>
+                    <div class="time_posted">1 hr</div>
+                  </div>
+                  <div class="structure_text">Almost done!</div>
+
+                  <div class="structure_stats">
+                    <div class="text_bubble_container">
+                      <img src="./images/text_bubble.svg" alt="" />
+                      <div class="post_number">52</div>
+                    </div>
+
+                    <div class="star_container">
+                      <img src="./images/star.svg" alt="" />
+                      <div class="post_number"></div>
+                    </div>
+
+                    <div class="heart_container">
+                      <img src="./images/heart.svg" class="heart_img" alt="" />
+                      <div class="heart_number">100</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reply structure_bottom not_first " >
+                <div class="structure_profile_image_container">
+                  <div class="profile_pic structure_prof_pic"></div>
+                </div>
+                <div class="structure_right_side">
+                  <div class="structuret_username_and_time_posted">
+                    <div class="structure_username username">Loboeh</div>
+                    <div class="time_posted">1 hr</div>
+                  </div>
+                  <div class="structure_text">Almost done!</div>
+
+                  <div class="structure_stats">
+                    <div class="text_bubble_container">
+                      <img src="./images/text_bubble.svg" alt="" />
+                      <div class="post_number">52</div>
+                    </div>
+
+                    <div class="star_container">
+                      <img src="./images/star.svg" alt="" />
+                      <div class="post_number"></div>
+                    </div>
+
+                    <div class="heart_container">
+                      <img src="./images/heart.svg" class="heart_img" alt="" />
+                      <div class="heart_number">100</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="show_more_replies">
+                     <button> Show More replies</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="all_replies">
+              <div class="reply structure_bottom">
+                <div class="structure_profile_image_container">
+                  <div
+                    class="other_profile_pic structure_prof_pic"
+                    style="background-image: url(./images/user1.png)"
+                  ></div>
+                </div>
+                <div class="structure_right_side">
+                  <div class="structuret_username_and_time_posted">
+                    <div class="structure_username username">Loboeh</div>
+                    <div class="time_posted">1 hr</div>
+                  </div>
+                  <div class="structure_text">Almost done!</div>
+
+                  <div class="structure_stats">
+                    <div class="text_bubble_container">
+                      <img src="./images/text_bubble.svg" alt="" />
+                      <div class="post_number">52</div>
+                    </div>
+
+                    <div class="star_container">
+                      <img src="./images/star.svg" alt="" />
+                      <div class="post_number"></div>
+                    </div>
+
+                    <div class="heart_container">
+                      <img src="./images/heart.svg" class="heart_img" alt="" />
+                      <div class="heart_number">100</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reply structure_bottom not_first">
+                <div class="structure_profile_image_container">
+                  <div
+                    class="other_profile_pic structure_prof_pic"
+                    style="background-image: url(./images/user1.png)"
+                  ></div>
+                </div>
+                <div class="structure_right_side">
+                  <div class="structuret_username_and_time_posted">
+                    <div class="structure_username username">Loboeh</div>
+                    <div class="time_posted">1 hr</div>
+                  </div>
+                  <div class="structure_text">Almost done!</div>
+
+                  <div class="structure_stats">
+                    <div class="text_bubble_container">
+                      <img src="./images/text_bubble.svg" alt="" />
+                      <div class="post_number">52</div>
+                    </div>
+
+                    <div class="star_container">
+                      <img src="./images/star.svg" alt="" />
+                      <div class="post_number"></div>
+                    </div>
+
+                    <div class="heart_container">
+                      <img src="./images/heart.svg" class="heart_img" alt="" />
+                      <div class="heart_number">100</div>
+                    </div>
+                  </div>
+                </div>
+                   <div class="show_more_replies">
+                     <button> Show More replies</button>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+
+          <div class="like_container hidenav">
+            <div class="like structure_bottom">
+              <div class="structure_profile_image_container">
+                <div
+                  class="other_profile_pic structure_prof_pic"
+                  style="background-image: url(./images/user1.png)"
+                ></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structuret_username_and_time_posted">
+                  <div class="structure_username username">Loboeh</div>
+                  <div class="time_posted">1 hr</div>
+                </div>
+                <div class="structure_text">Almost done!</div>
+
+                <div class="structure_stats">
+                  <div class="text_bubble_container">
+                    <img src="./images/text_bubble.svg" alt="" />
+                    <div class="post_number">52</div>
+                  </div>
+
+                  <div class="star_container">
+                    <img src="./images/star.svg" alt="" />
+                    <div class="post_number"></div>
+                  </div>
+
+                  <div class="heart_container ">
+                    <img src="./images/heart.svg" class="red_heart heart_img" alt="" />
+                    <div class="heart_number">100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="like structure_bottom">
+              <div class="structure_profile_image_container">
+                <div
+                  class="other_profile_pic structure_prof_pic"
+                  style="background-image: url(./images/user2.png)"
+                ></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structuret_username_and_time_posted">
+                  <div class="structure_username username">Loboeh</div>
+                  <div class="time_posted">1 hr</div>
+                </div>
+                <div class="structure_text">Almost done!</div>
+
+                <div class="structure_stats">
+                  <div class="text_bubble_container">
+                    <img src="./images/text_bubble.svg" alt="" />
+                    <div class="post_number">52</div>
+                  </div>
+
+                  <div class="star_container">
+                    <img src="./images/star.svg" alt="" />
+                    <div class="post_number"></div>
+                  </div>
+
+                  <div class="heart_container">
+                    <img src="./images/heart.svg" class="red_heart  heart_img" alt="" />
+                    <div class="heart_number">100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="like structure_bottom">
+              <div class="structure_profile_image_container">
+                <div
+                  class="other_profile_pic structure_prof_pic"
+                  style="background-image: url(./images/user3.png)"
+                ></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structuret_username_and_time_posted">
+                  <div class="structure_username username">Loboeh</div>
+                  <div class="time_posted">1 hr</div>
+                </div>
+                <div class="structure_text">Almost done!</div>
+
+                <div class="structure_stats">
+                  <div class="text_bubble_container">
+                    <img src="./images/text_bubble.svg" alt="" />
+                    <div class="post_number">52</div>
+                  </div>
+
+                  <div class="star_container">
+                    <img src="./images/star.svg" alt="" />
+                    <div class="post_number"></div>
+                  </div>
+
+                  <div class="heart_container">
+                    <img src="./images/heart.svg" class="red_heart heart_img" alt="" />
+                    <div class="heart_number">100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="like structure_bottom">
+              <div class="structure_profile_image_container">
+                <div
+                  class="other_profile_pic structure_prof_pic"
+                  style="background-image: url(./images/user1.png)"
+                ></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structuret_username_and_time_posted">
+                  <div class="structure_username username">Loboeh</div>
+                  <div class="time_posted">1 hr</div>
+                </div>
+                <div class="structure_text">Almost done!</div>
+
+                <div class="structure_stats">
+                  <div class="text_bubble_container">
+                    <img src="./images/text_bubble.svg" alt="" />
+                    <div class="post_number">52</div>
+                  </div>
+
+                  <div class="star_container">
+                    <img src="./images/star.svg" alt="" />
+                    <div class="post_number"></div>
+                  </div>
+
+                  <div class="heart_container">
+                    <img src="./images/heart.svg" class="red_heart heart_img" alt="" />
+                    <div class="heart_number ">100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="like structure_bottom">
+              <div class="structure_profile_image_container">
+                <div
+                  class="other_profile_pic structure_prof_pic"
+                  style="background-image: url(./images/user1.png)"
+                ></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structuret_username_and_time_posted">
+                  <div class="structure_username username">Loboeh</div>
+                  <div class="time_posted">1 hr</div>
+                </div>
+                <div class="structure_text">Almost done!</div>
+
+                <div class="structure_stats">
+                  <div class="text_bubble_container">
+                    <img src="./images/text_bubble.svg" alt="" />
+                    <div class="post_number">52</div>
+                  </div>
+
+                  <div class="star_container">
+                    <img src="./images/star.svg" alt="" />
+                    <div class="post_number"></div>
+                  </div>
+
+                  <div class="heart_container">
+                    <img src="./images/heart.svg" class="red_heart heart_img" alt="" />
+                    <div class="heart_number">100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end of post navigation -->
+      </div>
+
+      <!--///////// middle-section end //////// -->
+
+      <!--////////// right-section start ///////////// -->
+
+      <div class="right-section">
+        <div class="latest_replies_container">
+          <div class="latest_replies_header">Latest Replies</div>
+
+          <div class="latest_reply_users">
+            <div class="latest_replies structure_bottom">
+              <div class="structure_profile_image_container">
+                <div
+                  class="profile_pic reply_user_pic structure_prof_pic"
+                  style="background-image: url(./images/reply-user-1.svg)"
+                ></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structure_username reply_username">
+                  NopeRN replied to:
+                </div>
+
+                <div class="latest_replies_text">
+                  Reply if you need inspiration on your project
+                </div>
+                <div class="reply_bubble_container">
+                  <img src="./images/reply-bubble.svg" alt="" />
+                  <div class="reply_bubble_number">3</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_replies structure_bottom">
+              <div class="structure_profile_image_container">
+                <div
+                  class="profile_pic reply_user_pic structure_prof_pic"
+                  style="background-image: url(./images/reply-user-2.svg)"
+                ></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structure_username reply_username">
+                  Pylanx replied to:
+                </div>
+
+                <div class="latest_replies_text">Starting a new project.</div>
+                <div class="reply_bubble_container">
+                  <img src="./images/reply-bubble.svg" alt="" />
+                  <div class="reply_bubble_number">4</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_replies structure_bottom">
+              <div class="structure_profile_image_container">
+                <div
+                  class="profile_pic reply_user_pic structure_prof_pic"
+                  style="background-image: url(./images/reply-user-3.svg)"
+                ></div>
+              </div>
+              <div class="structure_right_side">
+                <div class="structure_username reply_username">
+                  NopeRN replied to:
+                </div>
+
+                <div class="latest_replies_text">Almost Done!</div>
+                <div class="reply_bubble_container">
+                  <img src="./images/reply-bubble.svg" alt="" />
+                  <div class="reply_bubble_number">3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="show_more_section">
+            <button>Show More</button>
+          </div>
+        </div>
+
+        <div class="communities_container_section">
+          <div class="community_header">Communities</div>
+
+          <div class="community_list">
+            <!-- one community-->
+            <div class="community_item">
+              <div class="community_item_left">
+                <div class="community_title">UX Design</div>
+                <div class="community_population">
+                  <span class="community_population_number">100</span> users in
+                  this community
+                </div>
+              </div>
+              <div class="community_item_right">
+                <button class="leave_community_button">Leave</button>
+              </div>
+            </div>
+            <!--  -->
+
+            <!-- one community-->
+            <div class="community_item">
+              <div class="community_item_left">
+                <div class="community_title">Figma</div>
+                <div class="community_population">
+                  <span class="community_population_number">100</span> users in
+                  this community
+                </div>
+              </div>
+              <div class="community_item_right">
+                <button class="leave_community_button">Leave</button>
+              </div>
+            </div>
+            <!--  -->
+
+            <!-- one community-->
+            <div class="community_item">
+              <div class="community_item_left">
+                <div class="community_title">Adobe XD</div>
+                <div class="community_population">
+                  <span class="community_population_number">100</span> users in
+                  this community
+                </div>
+              </div>
+              <div class="community_item_right">
+                <button class="leave_community_button">Leave</button>
+              </div>
+            </div>
+            <!--  -->
+
+            <!-- one community-->
+            <div class="community_item">
+              <div class="community_item_left">
+                <div class="community_title">Adobe Photoshop</div>
+                <div class="community_population">
+                  <span class="community_population_number">100</span> users in
+                  this community
+                </div>
+              </div>
+              <div class="community_item_right">
+                <button class="leave_community_button">Leave</button>
+              </div>
+            </div>
+            <!--  -->
+
+            <!-- one community-->
+            <div class="community_item">
+              <div class="community_item_left">
+                <div class="community_title">Art</div>
+                <div class="community_population">
+                  <span class="community_population_number">100</span> users in
+                  this community
+                </div>
+              </div>
+              <div class="community_item_right">
+                <button class="leave_community_button">Leave</button>
+              </div>
+            </div>
+            <!--  -->
+
+            <!-- one community-->
+            <div class="community_item">
+              <div class="community_item_left">
+                <div class="community_title">Adobe XD</div>
+                <div class="community_population">
+                  <span class="community_population_number">100</span> users in
+                  this community
+                </div>
+              </div>
+              <div class="community_item_right">
+                <button class="leave_community_button">Leave</button>
+              </div>
+            </div>
+            <!--  -->
+
+            <!-- one community-->
+            <div class="community_item">
+              <div class="community_item_left">
+                <div class="community_title">Adobe Photoshop</div>
+                <div class="community_population">
+                  <span class="community_population_number">100</span> users in
+                  this community
+                </div>
+              </div>
+              <div class="community_item_right">
+                <button class="leave_community_button">Leave</button>
+              </div>
+            </div>
+            <!--  -->
+
+            <!-- one community-->
+            <div class="community_item">
+              <div class="community_item_left">
+                <div class="community_title">Art</div>
+                <div class="community_population">
+                  <span class="community_population_number">100</span> users in
+                  this community
+                </div>
+              </div>
+              <div class="community_item_right">
+                <button class="leave_community_button">Leave</button>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+
+          <div class="show_more_section_community">
+            <button>Show More</button>
+          </div>
+        </div>
+      </div>
+
+      <!--//////// right-section end ////////////// -->
+    </div>
+    <!-- end container -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

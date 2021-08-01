@@ -12,8 +12,7 @@ class User_Followers(models.Model):
 
 
 class Categories(models.Model):
-    created_by = models.ForeignKey(Users, on_delete=models.PROTECT)
-    cat_type = models.CharField(max_length=255)
+    cat_type = models.CharField(max_length=255, null=True)
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
 

@@ -10,20 +10,24 @@ def create_post(request):
     if not request.user.is_authenticated:
         messages.info(request, "Please login")
         return redirect("login")
-    if request.method != 'POST':
-        return render(request, 'create_post.html')
     if not request.POST.get('title') and request.POST.get('content'):
         context = {'error': 'The post was not successfully created. Please enter a title and content'}
         return render(request, 'create_post.html', context)
-    post = Posts()
-    post.user_id = request.user
-    post_category_id = request.POST.get('category_id')
-    post.post_category_id = get_category_id(post_category_id)
-    post.title = request.POST.get('title')
-    post.content = request.POST.get('content')
-    post.save()
-    messages.success(request, "Your post has been successfully created")
-    return redirect('index')
+    if request.method == 'POST':
+        try:
+            post = Posts()
+            post.user_id = request.user
+            post_category_id = request.POST.get('category_id')
+            post.post_category_id = get_category_id(post_category_id)
+            post.title = request.POST.get('title')
+            post.content = request.POST.get('content')
+            post.save()
+            messages.success(request, "Your post has been successfully created")
+            return redirect('index')
+        except BaseException as e:
+            messages.error(request, type(e).__name__)
+            messages.error(request, e)
+            return render(redirect, 'index')
 
 def get_category_id(category):
     if category == '':

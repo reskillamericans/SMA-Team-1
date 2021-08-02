@@ -12,6 +12,10 @@ from .models import Password_Resets
 User = get_user_model()
 
 
+def index(request):
+    return render(request, 'accounts/index.html')
+
+
 def register(request):
     # register function needs to be implemented. Follow logiin method
     return render(request, 'accounts/register.html')

@@ -1,0 +1,971 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #cccccc;
+}
+/* Container */
+.container {
+  display: grid;
+  /* height: 100vh; */
+  grid-template-columns: 20% 45% 35%;
+  grid-template-rows: 10% 20% 25% 40% 10%;
+  grid-template-areas:
+    "sidenav nav nav"
+    "sidenav main content2"
+    "sidenav content1 content2"
+    "sidenav content1 content3"
+    "sidenav content1 footer";
+  gap: 5px;
+}
+/* Home Navbar */
+nav {
+  background-color: white;
+  grid-area: nav;
+  padding-left: 15px;
+  padding-right: 2rem;
+}
+.home {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: black;
+  padding-left: 10px;
+  padding-right: 0;
+}
+.homesearch {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 48px;
+  background-color: white;
+}
+/* Search Bar */
+.wrapper {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+}
+.search-icon {
+  position: absolute;
+  top: 20px;
+  left: 8px;
+  width: 20px;
+}
+#search-text-input {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  width: 320px;
+  height: 40px;
+  margin-top: 7px;
+  border-radius: 15px;
+  padding-left: 40px;
+  border-color: black;
+  border-width: 1px;
+}
+/* Side Nav Bar */
+#sidenav {
+  background-color: white;
+  grid-area: sidenav;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  width: 100%;
+}
+/* Side Bar Logo */
+#sidenav .logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+/* Side Bar Menu */
+#sidenav .icons a i {
+  height: 20px;
+  display: inline;
+  padding-right: 5px;
+}
+#sidenav .icons a:hover {
+  color: #53b6e0;
+}
+#sidenav .icons {
+  margin-top: 15px;
+  margin-left: 80px;
+}
+#sidenav .icons a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: black;
+  width: 70%;
+  padding-top: 20px;
+  font-size: 17px;
+}
+/* New Message Button */
+.newpostbutton {
+  /* display and margin center button element */
+  display: block;
+  margin: auto;
+  margin-top: 60px;
+  padding: 8px 40px 8px 40px;
+  border-radius: 15px;
+  color: white;
+  background-color: #53b6e0;
+  border-color: transparent;
+  cursor: pointer;
+  align-content: center;
+}
+/* Nav Bar Profile Box */
+#sidenav .profile_content {
+  /* position:absolute;
+  bottom: 0;
+  left: 0; */
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
+#sidenav .profile_content .profile {
+  /* position: relative;
+  padding: 10px 6px; */
+  height: 60px;
+  padding-top: 100px;
+  padding-left: 30px;
+}
+.profile_content .profile .profile_details {
+  display: flex;
+  align-items: center;
+}
+.profile .profile_details img {
+  height: 50px;
+  width: 45px;
+  object-fit: cover;
+  padding-left: 30px;
+}
+.profile .profile_details .name_job {
+  margin-left: 10px;
+}
+.profile .profile_details .name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.profile .profile_details .job {
+  font-size: 12px;
+}
+.profile #logout {
+  padding-left: 30px;
+  min-width: 50px;
+  color: black;
+}
+/* New Post */
+main {
+  background-color: white;
+  grid-area: main;
+}
+.new-comment {
+  display: flex;
+}
+.iconsbutton {
+  display: flex;
+}
+
+.newcommentpp a img {
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.postform form .newmessage {
+  resize: none;
+  height: 75px;
+  max-width: 30rem;
+  margin-top: 5px;
+  margin-left: 2px;
+  border-color: transparent;
+  font-family: "Roboto", sans-serif;
+}
+.comment-icons {
+  grid-area: "icons";
+  height: 10px;
+  margin-left: 50px;
+}
+.comment-icons a {
+  padding: 8px;
+  color: #53b6e0;
+  font-size: 20px;
+}
+
+.postbutton {
+  padding: 6px 20px 6px 20px;
+  border-radius: 15px;
+  color: white;
+  background-color: #53b6e0;
+  border-color: transparent;
+  cursor: pointer;
+  margin-left: 200px;
+}
+
+/* Feed */
+
+#content1 {
+  font-family: "Roboto", sans-serif;
+  grid-area: content1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.feed1 {
+  flex-grow: 1;
+  background-color: white;
+}
+.feed2 {
+  flex-grow: 1;
+  background-color: white;
+}
+.feed3 {
+  flex-grow: 1;
+  background-color: white;
+}
+.feed4 {
+  flex-grow: 1;
+  background-color: white;
+}
+.feed5 {
+  flex-grow: 1;
+  background-color: white;
+}
+.feed6 {
+  flex-grow: 1;
+  background-color: white;
+}
+.feed7 {
+  flex-grow: 1;
+  background-color: white;
+}
+
+.pp-username-time {
+  display: flex;
+}
+.feed1pp a img {
+  height: 55px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.feed-username a {
+  margin-left: 15px;
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+.message p {
+  margin-left: 15px;
+}
+/* how to keep time from shifting due to username??? */
+.timesincepost {
+  margin-left: 60px;
+  font-weight: 300;
+  margin-top: -5px;
+}
+.dbl-ellipsis {
+  margin-left: 15em;
+  margin-top: 10px;
+}
+
+.message {
+  margin-left: 60px;
+  margin-top: -50px;
+}
+.feedicons {
+  margin-left: 80px;
+  margin-top: -8px;
+  margin-bottom: 4px;
+}
+.feedicons a i {
+  margin-right: 5px;
+}
+.feedicons a {
+  margin-right: 115px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Latest Posts */
+#content2 {
+  grid-area: content2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.lp1 {
+  background-color: white;
+}
+
+.lp1 p {
+  flex-grow: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-left: 20px;
+}
+.lp-pp img {
+  margin-left: 10px;
+}
+.lp-un {
+  margin-top: 5px;
+}
+.lp-un a {
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin-left: 10px;
+  font-size: 15px;
+}
+.lp-pp-un {
+  display: flex;
+}
+.lp-message p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-left: 80px;
+  word-wrap: break-word;
+  margin-top: -48px;
+  font-size: 14px;
+}
+.lp-icon {
+  margin-top: -30px;
+  margin-left: 17em;
+}
+.lp-icon i {
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+}
+.lp-icon span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.lp2 {
+  flex-grow: 2;
+  background-color: white;
+}
+.lp2 img {
+  margin-top: 10px;
+}
+.lp-message {
+  margin-right: 100px;
+}
+.lp3 {
+  flex-grow: 2;
+  background-color: white;
+}
+.lp3 img {
+  margin-top: 10px;
+}
+.lp4 {
+  flex-grow: 2;
+  background-color: white;
+}
+.lp4 img {
+  margin-top: 10px;
+}
+.lp5 {
+  flex-grow: 1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #53b6e0;
+  background-color: white;
+  font-size: 12px;
+}
+.lp5 p {
+  margin-left: 10px;
+}
+/* Communities need help with flex sizing */
+#content3 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  grid-area: content3;
+}
+.comm1 {
+  height: 38px;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+.comm2 {
+  flex-grow: 2;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+.comm3 {
+  flex-grow: 2;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+.comm4 {
+  flex-grow: 2;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+.comm5 {
+  flex-grow: 2;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+.comm6 {
+  flex-grow: 2;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+.comm7 {
+  height: 38px;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #53b6e0;
+  font-size: 12px;
+}
+
+.comm1 p {
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding-left: 18px;
+}
+
+.comm2 a {
+  text-decoration: none;
+  color: black;
+  padding-left: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+.comm2 p {
+  padding-left: 18px;
+  margin-top: -5px;
+  font-size: 14px;
+}
+.follow-btn button {
+  height: 22px;
+  border-radius: 15px;
+  border-color: #ff5b39;
+  color: #ff5b39;
+  background-color: white;
+  margin-left: 20em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.follow-x {
+  margin-top: -45px;
+}
+
+.comm3 a {
+  text-decoration: none;
+  color: black;
+  margin-left: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+.comm3 p {
+  margin-left: 18px;
+  margin-top: -5px;
+  font-size: 14px;
+}
+
+.comm4 a {
+  text-decoration: none;
+  color: black;
+  margin-left: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+.comm4 p {
+  margin-left: 18px;
+  margin-top: -5px;
+  font-size: 14px;
+}
+
+.comm5 a {
+  text-decoration: none;
+  color: black;
+  margin-left: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+.comm5 p {
+  margin-left: 18px;
+  margin-top: -5px;
+  font-size: 14px;
+}
+
+.comm6 a {
+  text-decoration: none;
+  color: black;
+  margin-left: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+.comm6 p {
+  margin-left: 18px;
+  margin-top: -5px;
+  font-size: 14px;
+}
+.follow-x a {
+  padding-left: 15px;
+  margin-top: -22px;
+  margin-left: 19.5em;
+  color: #ff5b39;
+}
+
+.comm7 p {
+  margin-left: 10px;
+}
+/* Footer */
+footer {
+  grid-area: footer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #616161;
+  padding-top: 10px;
+  background-color: white;
+}
+footer a {
+  text-decoration: none;
+  color: #616161;
+  margin-left: 8px;
+}
+footer p {
+  margin-left: 8px;
+}
+.mobile_view {
+  display: none;
+}
+#navhor {
+  display: none;
+}
+
+/* Responsiveness for Desktop View*/
+@media screen and (max-width: 1207px) {
+  .mobile_view {
+    display: none;
+  }
+  body {
+    margin: auto;
+    padding: 0;
+    max-width: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Top Home Nav Bar */
+
+  .wrapper {
+    max-width: 70%;
+  }
+  .homesearch {
+    justify-content: space-evenly;
+  }
+  /* Side Nav disappears when screen smaller */
+  #sidenav {
+    display: none;
+  }
+  /* Horizontal Nav */
+  #navhor {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-bottom: 5px;
+  }
+  #navhor img {
+    display: block;
+    margin: 0 auto;
+  }
+  #navhor .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #navhor .icons a {
+    color: black;
+    text-decoration: none;
+    padding-right: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+  }
+  #navhor .icons a:hover {
+    color: #53b6e0;
+  }
+  #navhor .icons a i {
+    margin-right: 5px;
+  }
+  /* User New Comment */
+
+  .iconsbutton {
+    padding-bottom: 10px;
+  }
+  .postbutton {
+    margin-left: 80px;
+  }
+  /* Latest Posts */
+  .lp-icon {
+    padding-left: 200px;
+    padding-bottom: 5px;
+  }
+  /* Communities */
+  .comm2 {
+    height: 42px;
+  }
+  .comm3 {
+    height: 42px;
+  }
+  .comm4 {
+    height: 42px;
+  }
+  .comm5 {
+    height: 42px;
+  }
+  .comm6 {
+    height: 42px;
+  }
+}
+
+/* Mobile Responsiveness */
+@media only screen and (min-width: 560px) {
+  .nav .nav__toggle {
+    display: none;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .container {
+    display: none;
+  }
+  .mobile_view {
+    display: contents;
+  }
+  body #main_mobile {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #cccccc;
+  }
+  /* Logo */
+  .Logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Nav Bar */
+  .nav_mobile {
+    display: flex;
+    background-color: white;
+    max-width: 100%;
+    border-bottom: 2px solid #cccccc;
+  }
+
+  .nav__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    left: 0;
+  }
+  #close {
+    padding-top: 9px;
+    padding-left: 460px;
+    color: #cccccc;
+    position: absolute;
+    z-index: 2;
+    display: none;
+  }
+  .open {
+    margin-top: 10px;
+  }
+  #nav__checkbox {
+    display: none;
+  }
+  .menuitems {
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+  .profilepic {
+    height: 60px;
+    padding-left: 16px;
+    padding-top: 16px;
+  }
+  .menuitems .profile .name_job {
+    padding-left: 16px;
+    padding-bottom: 16px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .menuitems .profile .name_job .name {
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .menuitems .profile .name_job .job {
+    font-weight: 400;
+    font-size: 10px;
+  }
+  .follows {
+    padding-left: 16px;
+    padding-bottom: 16px;
+  }
+  .follows a {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  .follows span {
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .profile {
+    border-bottom: 2px solid #cccccc;
+  }
+  .navlist .nav__menu {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .navlist {
+    border-bottom: 2px solid #cccccc;
+  }
+  .navlist .nav__menu li {
+    list-style: none;
+  }
+  .navlist .nav__menu li i {
+    padding-right: 12px;
+  }
+  .navlist .nav__menu li a {
+    color: black;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .settings_help {
+    border-bottom: 2px solid #cccccc;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    gap: 16px;
+  }
+  .settings_help a {
+    text-decoration: none;
+    color: black;
+  }
+  #nav__checkbox:checked ~ .menuitems {
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    width: 90%;
+    border-bottom: 5px solid #cccccc;
+    border-right: 7px solid #cccccc;
+  }
+  #nav__checkbox:checked ~ label.nav__toggle #close {
+    display: block;
+  }
+  #nav__checkbox:checked ~ label.nav__toggle .open {
+    display: none;
+  }
+  #nav__checkbox:checked ~ .Logo {
+    display: none;
+  }
+  /* Main */
+
+  .friends_tl {
+    position: relative;
+    display: flex;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cccccc;
+    justify-content: space-around;
+  }
+  .friend1 a #add_btn {
+    position: absolute;
+    border: none;
+    height: 20px;
+    top: 35px;
+    left: 41px;
+  }
+  .friends_tl img {
+    height: 35px;
+    border: 1px solid #53b6e0;
+    border-radius: 5px;
+  }
+  .friends_tl a {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+  }
+  .friend1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+  }
+  .friend2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+  }
+  .friend3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+  }
+  .friend4 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+  }
+  .friend5 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+  }
+  .friend6 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+  }
+  .friend7 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+  }
+  /* Feed */
+  .feed {
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+  }
+  .pp-username-time {
+    display: flex;
+  }
+  .feed1pp a img {
+    height: 35.54px;
+    padding-left: 42px;
+    padding-top: 18px;
+  }
+  #main_mobile .feed1 .feed-username-mobile a {
+    display: block;
+    padding-top: 26px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .message-mobile {
+    padding-left: 10px;
+    margin-left: 60px;
+    margin-top: -37px;
+  }
+  .message-mobile p {
+    padding-left: 27px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  /* how to keep time from shifting due to username??? */
+  .timesincepost {
+    padding-left: 77px;
+    padding-top: 30px;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .dbl-ellipsis-mobile {
+    padding-left: 125px;
+    padding-top: 26px;
+    height: 14px;
+  }
+
+  #main_mobile .feedicons {
+    margin-left: 97px;
+    margin-top: 12px;
+    padding-bottom: 8px;
+  }
+  #main_mobile .feedicons a i {
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  #main_mobile .feedicons a {
+    padding-right: 11px;
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  #main_mobile .feedicons_numbers {
+    margin-right: 60px;
+  }
+  #feed1 {
+    border-bottom: 2px solid #cccccc;
+  }
+  #feed2 {
+    border-bottom: 2px solid #cccccc;
+  }
+  #feed3 {
+    border-bottom: 2px solid #cccccc;
+  }
+  #feed4 {
+    border-bottom: 7px solid #cccccc;
+  }
+  /* Add Message Button */
+  .message-mobile a img {
+    position: absolute;
+    right: 28px;
+    bottom: 57px;
+  }
+  /* Bottom Nav */
+  .bottom_nav_icons {
+    list-style: none;
+    display: flex;
+    font-size: 30px;
+    margin-top: -5px;
+    margin-left: 0;
+    padding-top: 10px;
+    padding-left: 0;
+    justify-content: space-around;
+    background-color: white;
+  }
+
+  .bottom_nav_icons li a {
+    color: black;
+  }
+  .bottom_nav_icons li a i:hover {
+    color: #53b6e0;
+  }
+}

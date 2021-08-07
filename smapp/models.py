@@ -78,3 +78,11 @@ class Messages(models.Model):
     class Meta:
         verbose_name_plural = "Messages"
         ordering = ['created_at']
+
+
+class Followers(models.Model):
+    user = models.OneToOneField(Users, on_delete=models.CASCADE)
+    another_user = models.ManyToManyField(Users, related_name='another_user')
+
+    def __str__(self):
+        return self.users.name

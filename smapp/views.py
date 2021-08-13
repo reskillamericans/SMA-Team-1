@@ -4,7 +4,17 @@ from .models import Posts, Categories
 from .forms import PostForm
 
 def index(request):
-    return render(request, 'index.html')
+    if request.user.is_authenticated:
+        return render(request, 'dashboard.html')
+    else:
+        return render(request, 'auth.html')
+
+def dashboard(request):
+    if not request.user.is_authenticated:
+        messages.info(request, "Please login")
+        return redirect("auth")
+    else:
+        return render(request, 'dashboard.html')
 
 def create_post(request):
     if not request.user.is_authenticated:
@@ -20,6 +30,7 @@ def create_post(request):
             post.content = request.POST.get('content')
             post.save()
             messages.success(request, "Your post has been successfully created")
+            return redirect()
         except BaseException as e:
             messages.error(request, type(e).__name__)
             messages.error(request, e)

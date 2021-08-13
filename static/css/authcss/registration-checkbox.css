@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+[type="checkbox"]{
+    opacity: 1; 
+}
+  
+/* Styling the label  */
+
+[type="checkbox"] + label {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+    line-height: 1;
+    margin-left: 0;
+}
+
+ /* Styling the box around the label before it is checked */
+[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 14px;
+    border: 2px solid #CCCCCC;
+    border-radius: 2px;
+    background: #ffffff;
+}
+[type="checkbox"] + label::before {
+    width: 15px;
+    height: 14px;
+}
+/* Outline in checked position */
+
+[type="checkbox"]:checked + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 14px;
+    background: #ffffff;
+    outline: none;
+}
+[type="checkbox"]:checked + label::before {
+    border: 2px solid #CCCCCC;
+}
+
+/* Adding Bg-image "small-check" design once label is checked */
+[type="checkbox"]:checked + label::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 15px;
+    height: 14px;
+    background-image: url(assets/small-check.png);
+    background-size: contain;
+    background-repeat: no-repeat, no-repeat;
+    transform: scale(1);
+    opacity: 1;
+    transition: all .4s ease;
+}
+
+/* Hiding the bg-image "small-check" once when box is not checked*/
+[type="checkbox"]:not(checked) + label::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 15px;
+    height: 14px;
+    background-image: url(assets/small-check.png);
+    background-size: contain;
+    background-repeat: no-repeat, no-repeat;
+    transform:scale(0);
+    opacity:(0);
+}
+
+
+
+
+

@@ -59,6 +59,17 @@
     <!-- Landing Page Window -->
     <section id="landing-page" class="landing-window">
         <div class="landing">
+            {% for message in messages%}
+            <div class="landing_messages" style="
+                padding: 5px;
+                margin-top: 20px;
+                color: white;
+                font-size: 14px;
+                text-transform: lowercase;
+                ">
+                {{ message }}
+            </div>
+            {% endfor %}
             <img class="succeed" src="{% static 'css/authcss/assets/succeed.png' %}">
             <img class="together" src= "{% static 'css/authcss/assets/TOGETHER.png' %}">
             <p class="lp-content">JOIN A COMMUNITY-BASED SPACE WHERE TECH ENTHUSIASTS  

@@ -6,6 +6,7 @@ from django.contrib.auth import get_user_model
 from django.shortcuts import render
 from django.conf import settings
 from django.core.mail import send_mail
+from django.contrib.auth import logout
 from .models import Password_Resets
 from .models import Users, User_Socials
 
@@ -44,7 +45,6 @@ def register(request):
 
     return render(request, "auth.html")
 
-
 def login(request):
     
     if request.method == 'POST': 
@@ -60,7 +60,15 @@ def login(request):
         auth.login(request, user)
         return redirect('index')
 
-    return render(request, 'accounts/login.html')
+    return render(request, 'auth.html')
+
+def logout_user(request):
+    if request.user.is_authenticated:
+        logout(request)
+        messages.info(request, 'Logged out succesfully')
+        return redirect('accounts:login')
+
+    return render(request, 'auth.html')
 
 
 def password_reset(request, token):

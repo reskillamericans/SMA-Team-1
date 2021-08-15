@@ -6,6 +6,7 @@
     <body>
         
         {% if user.is_authenticated %}
+            <li><a href="{% url 'accounts:logout' %}">Log out</a></li>
             <h1>Welcome {{ user.username }}</h1>
         {% else %}
             <li><a href="{% url 'accounts:register' %}">User Registration</a></li>

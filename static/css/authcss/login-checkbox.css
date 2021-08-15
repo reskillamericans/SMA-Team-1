@@ -101,7 +101,7 @@
     margin: 2.5px 3px;
     width: 23px;
     height: 23px;
-    background-image: url(assets/Line\ 17.png), url(assets/Line\ 18.png);
+    background-image: url(assets/Line17.png), url(assets/Line18.png);
     background-size: 18px;
     background-repeat: no-repeat, no-repeat;
     transform: scale(1);
@@ -117,7 +117,7 @@
     top: 0;
     width: 25px;
     height: 25px;
-    background-image: url(assets/Line\ 17.png), url(assets/Line\ 18.png);
+    background-image: url(assets/Line17.png), url(assets/Line18.png);
     background-size: 18px;
     background-repeat: no-repeat, no-repeat;
     transform:scale(0);

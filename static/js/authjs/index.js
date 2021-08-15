@@ -256,6 +256,8 @@ document.addEventListener("DOMContentLoaded", () => {
             showConfirmed();
         };
     };
+    
+    BtnSignup.addEventListener('click', showConfirmed);
 
 
     // Account confirm popup

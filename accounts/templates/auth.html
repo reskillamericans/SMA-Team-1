@@ -1,0 +1,623 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"  content="Pia Torain">
+    <meta name="description"  content="Authentication pages of SMA-T1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/authcss/header-bg-and-X.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/landing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/registration.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/registration-checkbox.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/acct-confirm.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/almost.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/login-checkbox.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/forgot-pwd.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/forgot-pwd-email-sent.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/reset-pwd.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authcss/reset-pwd-success.css' %}">
+
+
+    
+    <title>Social Media App</title>
+</head>
+<body>
+    <!-- HEADER -->
+    
+    <div class="header-layout">
+        <div class="header-left" id="left">
+            <a  class="m-header-link" href="#" alt="homepage-link" >
+                <img  class="mobile-arrow" src="{% static 'css/authcss/assets/coolicon.png' %}" width= 20 height= 20 alt="arrow-icon" />
+            </a>
+            <img class="logo" src="{% static 'css/authcss/assets/logo-SMA.png' %}"  width=170px height=72px alt="SMA-logo" />
+            <div class="title">
+                <span>Social Media App 1</span>
+            </div>
+        </div>
+        
+        <div class="header-right" id="right">
+            <a class="links" id="home" href="#" alt="landing page link">Home</a>
+            <a class="links" id="login-pg" href="#" alt="link to login page">Log in</a>
+            <a class="links" id="registration-pg" href="#" alt="link to registration page">Sign Up</a>
+            <a class="links" href="#">About Us</a>
+        </div>
+    </div>
+ 
+    <!-- /HEADER -->
+    
+    <!-- BACKGROUND IMAGE -->
+    <div id="bg"></div>
+    <div id="pop-up-bg"></div>
+    <!-- /BACKGROUND IMAGE -->
+
+    <!-- Landing Page Window -->
+    <section id="landing-page" class="landing-window">
+        <div class="landing">
+            <img class="succeed" src="{% static 'css/authcss/assets/succeed.png' %}">
+            <img class="together" src= "{% static 'css/authcss/assets/TOGETHER.png' %}">
+            <p class="lp-content">JOIN A COMMUNITY-BASED SPACE WHERE TECH ENTHUSIASTS  
+                OF ALL LEVELS CAN FIND ANSWERS, COLLABORATE, AND 
+                HELP OTHERS ANSWER THEIR QUESTIONS.
+            </p>
+            <div class="top">
+                <input class="lp-signup" id="lp-signup-btn" type="submit" value="Sign up" />
+            </div>
+            <div class="bottom">
+                <input class="lp-login" id="lp-login-btn" type="submit" value="Log in" />
+            </div>
+        </div>
+    </section>
+    <!-- /Landing Page Window -->
+
+
+    <!-- REGISTRATION PROCESS -->
+     <!-- Register Popup Window -->
+     <section class="register-window" id="register">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button id="regClose" class="button-close" type="button">
+                <img src="{% static 'css/authcss/assets/X.svg' %}">
+            </button>
+        </div>
+
+        <div class="registration-form-layout">
+            <div class="registration-left">
+                <div class="registration-details">
+                    <!-- <div class="details-container"> -->
+                        <div class="registration-details-header">
+                            <p class="registration-intro">Join the community</p>
+                            <p class="registration-note"> It's quick and easy</p>
+                        </div>
+
+                        <div class="registration-details-text">
+                            <div class="chat-row">
+                                <img class="chat-icon" src="{% static 'css/authcss/assets/chatting.png' %}" width= 39.39 length= 39 alt="chat" title="chatting"/>
+                                <p class="help-text">Stuck? ---- Ask a question?</p>
+                            </div>
+                            <div class="vote-row">
+                                <div class="votes">
+                                    <div class="up-vote"><img src="{% static 'css/authcss/assets/upvote.png' %}"  alt="vote-up"></div>
+                                    <div class="down-vote"><img src="{% static 'css/authcss/assets/downvote.png' %}" alt="vote-down"></div>
+                                </div>
+                                <p class="vote-text">Vote and comment</p>
+                            </div>
+                            <div class="save-tag">
+                                <img src="{% static 'css/authcss/assets/yellow-tag.png' %}" alt="yellow-tag">
+                                <p class="save-text">Safe your favorite tags, comments, and jobs</p>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="right">
+
+                <div class="reg-other-signin">
+                    <a class="reg-google" 
+                        href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" 
+                        target="_blank"
+                        alt="google-sign-in">
+                            <img src="{% static 'css/authcss/assets/google-g.svg' %}"  alt="google logo"> 
+                            <span>Sign In with Google</span> 
+                    </a>
+                    <a class="reg-github" 
+                        href="https://github.com/login" 
+                        target="_blank" alt="github-signin"
+                        alt="github-sign-in">
+                            <img src="{% static 'css/authcss/assets/git.svg' %}" alt="github logo"> 
+                            <span>Sign In with GitHub </span>
+                    </a>
+                </div>
+                
+                
+                <!-- Registration Form-->
+                <form action="{% url 'accounts:register' %}" method="POST" id="registration-form" class="registration-form-right">
+                    {% csrf_token %}
+                    <!-- Registration -->
+                    <div class="registration-form-container">
+                        <label for="first_name">First Name</label>
+                        <input name="first_name" type="text" id="first_name"  required/>
+                    </div>
+
+                    <div class="registration-form-container">
+                        <label for="last_name">Last Name</label>
+                        <input name="last_name" type="text" id="last_name"  required/>
+                    </div>
+
+                    <div class="registration-form-container">
+                        <label for="username">Username</label>
+                        <input name="username" type="text" id="username"  required/>
+                    </div>
+
+                    <div class="registration-form-container">
+                        <label for="email">Email</label>
+                        <input name="email" type="email" id="email"  required/>
+                    </div>
+
+                    <div class="registration-form-container">
+                        <label for="password" >Password</label>
+                        <input name="password" type="password" id="password" autocomplete="off" required />
+                    </div>
+
+                    <div class="registration-form-container">
+                        <label for="c_password" >Confirm Password</label>
+                        <input name="c_password" type="password" id="c_password" autocomplete="off" required />
+                    </div>
+
+                    <div class="registration-criteria">
+                        
+                    </div>
+                    <!-- /Registration Form-->
+
+                    
+                    
+                    
+                    <div class="opt-in">
+                        
+                        <!-- /Opt-in info -->
+
+                        <!-- Submit and open Email Sent Pop-up? -->
+                        <div class="registration-form-container" style="margin-top: 20px;">
+                            <input type="submit" id="sign-up" class="submit-signup" value="Sign up" />
+                        </div>
+                        <!-- /Submit and open Email Sent Pop-up? -->
+
+                        <!-- Agree to terms -->
+                        <p class="registration-reg-terms">
+                            By clicking "Sign up", you agree to our terms of service, privacy policy
+                            and cookie policy
+                        </p>
+                        <!-- /Agree to terms -->
+                    </div>                  
+                </form>
+                <!-- /Registration Form-->
+
+                <div class="existing-account">
+                    <span class="existing-account-text">Already have an account?<input id="already-btn" class="reg-input" type="submit" value="Log in"/></span>
+                </div>        
+            </div>
+        </div>
+    </section>
+    <!-- /Register Window -->
+    
+    <!-- Opt Info Pop-up -->
+    <section class="opt-window" id="optIn">
+        <div class="pop-up-content">
+            <!-- Opt-in close button -->
+            <div class="close-pop">
+                <button class="close-opt" id="closeOptin" type=>x</button>  
+            </div>
+            <!-- /Opt-in close button -->
+            <br> 
+            <!-- Opt-in information -->
+            <p class="pop-text-one">
+                We know you hate spam, and we do too. That's why we make it easy for you to update 
+                you email preferences or unsubscribe at anytime.
+            </p>
+            <p class="pop-text-two">
+                We neve share your email address with third parties for marketing purposes.
+            </p>
+            <!-- /Opt-in information -->
+        </div>
+    </section>
+    <!-- /Opt Info Pop-up -->
+
+    <!-- Registration Success -->
+    <div id="accountConfirmed" class="acct-confirmed">
+        <div class="acct-confirm-content">
+            <div class="acct-confirm-header">
+                <h2>Account Confirmed</h2>
+            </div>
+            <div class="acct-confirm-p">
+                <p id="acct-confirm-reply"> You have successfully confirmed your account with the email 
+                    <strong>lboehringer@gmail.com</strong>. You will use this email address to log in.
+                </p>
+
+                <!-- Button will close email sent pop-up and return user to login-->
+                <div class="acct-confirm-success">
+                    <button type="submit" id="btn-ok" class="success">OK</button>
+                </div>
+
+                <!-- /Button will close email sent pop-up and return user to login -->
+            </div>
+        </div>
+    </div>
+    <!-- /Registration Success -->
+
+    <!-- Almost There -->
+    <section class="window-almost" id="almostThere">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button id="almostClose" class="button-close" type="button">
+                
+                    <img src="{% static 'css/authcss/assets/X.svg' %}">
+              
+            </button>
+        </div>
+        
+        <!-- FORM  WINDOW-->
+        <div class="almost-form-layout">
+            <div class="almost-left">
+                <div class="almost-details">
+                    <div class="almost-details-container">
+                        <div class="almost-details-header">
+                            <p class="almost-intro">Almost There.</p>
+                        </div>
+                        <div class="almost-details-text">
+                            <div class="almost-holder">
+                                <div class="almost-bulb-holder">
+                                    <img class="almost-bulb" src="{% static 'css/authcss/assets/lightbulb.png' %}" width= 14.58 length= 20.83 />
+                                </div>
+                            </div>
+                            <p class="">
+                                You're almost done. We need a little more information to create your profile.
+                                 We cater experience on this app to your interests.
+                            </p>
+                        
+                        </div>
+            
+                        <div class="almost-details-graphic">
+                            <div class="cylce">
+                                <div>
+                                    <img class="arrow-circle" src="{% static 'css/authcss/assets/arrows.png' %}" width= 146.48 height= 134.53/>  
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="almost-right">
+                
+
+                <form action="almost.html" id="almost-form" method="POST" class="almost-form">
+                    
+                    <div class="account-header">
+                        <div class="account-profile">
+                            <div class="profile-rectangle">
+                                <img class="initial" src="{% static 'css/authcss/assets/initial-L.svg' %}" width= 35 height= 75 alt="initial" />
+                            </div>
+                            <div class="loboeh">
+                                <span class="name">Loboeh</span>
+                            </div>
+                        </div>
+                        <div class="button-holder">
+                            <button class="pick" type="submit">Pick a photo</button>
+                        </div>
+                        <p class="photo-text">Adding a photo can make it easier for others to recognize you.</p>
+                        
+                    </div>
+                    
+                    <!-- Job Title and Interests-->
+                    <div class="almost-form-container">
+                        <label for="job-title">Job Title</label>
+                        <input type="text" id="job-title" name="job-title"  required/>
+                    </div>
+                    <div class="almost-form-container">
+                        <label for="interests">Subjects that interest you</label>
+                        <input type="text" id="interests" name="interests" multiple  required/>
+                    </div>
+                    <!-- /Job Title and Interests-->
+
+                    <!-- Submit Complete Account -->
+                    <div class="almost-form-container">
+                        <input class="complete" id="acct-complete" type="submit" value="Complete Account"/>
+                    </div>
+                    <!-- /Submit Submit Complete Account  -->
+
+                    <!-- Terms and Policy-->
+                    <div class="almost-form-container policy">
+                        <p class="terms">
+                            By clicking "Complete Account", you agree to our terms of service and privacy policy
+                        </p>
+                    </div>
+                    <!-- /Terms and Policy-->
+                    
+                </form>
+            </div>  
+        </div>
+    </section>
+    <!-- /Almost There -->
+    <!-- /REGISTRATION PROCESS -->
+
+    <!-- LOGIN PROCESS -->
+
+    <!--LOGIN  WINDOW-->
+    <section id="login" class="window">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button id="loginClose" class="button-close" type="button">
+                <img src="{% static 'css/authcss/assets/X.svg' %}">
+            </button>
+        </div>
+
+        <!-- Content Layout -->
+        <div class="form-layout">
+            <!-- Sign-in  via Google or Github-->
+            <div class="other-signin">
+                <a class="google" 
+                    href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin" 
+                    target="_blank"
+                    alt="google-sign-in">
+                        <img src="{% static 'css/authcss/assets/google-g.svg' %}"  alt="google logo"> 
+                        <span>Sign In with Google</span> 
+                </a>
+                <a class="github" 
+                    href="https://github.com/login" 
+                    target="_blank" alt="github-signin"
+                    alt="github-sign-in">
+                        <img src="{% static 'css/authcss/assets/git.svg' %}" alt="github logo"> 
+                        <span>Sign In with GitHub </span>
+                </a>
+            </div>
+            <!-- /Sign-in  via Google or Github-->
+
+            <!-- Login Form -->
+            <form action="{% url 'accounts:login' %}" id="login-form" class="form" method="POST">
+                {% csrf_token%}
+                <!-- Email and Password -->
+                <div class="form-container">
+                    <label class="login-label" for="username">Username</label>
+                    <input class="login-input" name="username" type="text" id="username" autocomplete="on" required/>
+                </div>
+                <div class="form-container">
+                    <label class="login-label" for="password">Password</label>
+                    <input class="login-input" name="password" type="password" id="password"  autocomplete="on" required/>
+                </div>
+                <!-- /Email and Password -->
+                
+                <div class="forgot">
+                    <span class="forgot-pwd">Forgot Password? <input class="login-forgot" id="log-forgot" type="submit" value="Click here"></span>
+                </div>
+
+                
+
+
+                <!-- Submit and Go to Home or Profile? -->
+                <div class="form-container" style="margin-top: 20px;">
+                    <input class="login-submit" id="login-btn" type="submit" value="Log in"/> 
+                </div>
+                <!-- /Submit and Go to Home or Profile? -->
+
+                <!-- /Stay signed in  -->
+                <div class="mark">
+                    <div class="container">
+                        <form>
+                            <input type="checkbox" id="keep" name="sign"  hidden>
+                            <label for="keep" >Keep me signed in on this computer</label>
+                        </form>
+                    </div>
+
+                    <!-- Don't Have An Account  for mobile design-->
+                    <p class="register-mobile">Don't have an account? <input class="login-reg" id="log-reg" type="submit" value="Register"></p>
+                     <!-- /Don't Have An Account  for mobile design-->
+                </div>
+                <!-- /Stay signed in  -->
+               
+            </form>
+             <!-- /Login Form -->
+                
+            <!-- Don't Have An Account  for desktop design-->
+            <div class="form-container">
+                <p class="register-desktop">Don't have an account? <input class="login-reg" id="log-reg-dk" type="submit" value="Register"></p>
+            </div>
+            <!-- /Don't Have An Account  for mobile design-->
+        </div> 
+        <!-- /Content Layout --> 
+    </section>
+    <!-- /LOGIN FORM  WINDOW-->
+    <!-- /LOGIN PROCESS -->
+
+    <!-- FORGOT PASSWORD PROCESS -->
+    <!-- Having Trouble Window -->
+    <section class="forgot-window" id="forgot">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button id="forgotClose" class="button-close" type="button">
+                
+                    <img src="{% static 'css/authcss/assets/X.svg' %}">
+               
+            </button>
+        </div>
+
+        <div class="forgot-form-layout">
+            <div class="forgot-left">
+                <div class="forgot-details">
+                    <!-- <div class="details-container"> -->
+                        <div class="forgot-details-header">
+                            <p class="forgot-intro">Having Trouble?</p>
+                        </div>
+                        <div class="forgot-details-text">
+                            
+                            <div class="forgot-bulb-holder">
+                                <img class="forgot-bulb" src="{% static 'css/authcss/assets/lightbulb.png' %}" width= 14.58 length= 20.83 alt="lightbulb" title="light bulb"/>
+                                <!-- <img class="bulb-line" src="{% static 'css/authcss/assets/lightbulb-line.svg' %}" width= 8.33 />  -->  
+                            </div>
+                            
+                            <p class="forgot-pass">
+                                Forgot your account's password or having trouble logging in?
+                            </p>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+            <div class="forgot-right">
+                <form action="/reset-request" method="POST" id="forgot-form" class="forgot-form-right">
+                
+                    <!-- Email -->
+                    <div class="forgot-form-container">
+                        <p class="m-recovery-link">Enter your email address an we'll send you a recovery link.</p>
+                    </div>
+            
+                    <div class="forgot-form-container">
+                        <label class="forgot-label" for="forgot_user_email">Email</label>
+                        <input class="forgot-input" name="forgot_user_email" type="email" id="forgot_user_email" autocomplete="on" required/>
+                    </div>
+
+                    <div class="email-request">
+                        <p class="recovery-link">Enter your email address an we'll send you a recovery link.</p>
+                    </div>
+                    <!-- /Email-->
+
+                    <!-- Submit and open Email Sent Pop-up? -->
+                    <div class="forgot-form-container">
+                        <input  type='submit' id="btn-send" class="forgot-submit-request" value="Send email" />
+                    </div>
+                    <!-- /Submit and open Email Sent Pop-up? -->
+                </form>
+            </div>    
+        </div>  
+    </section>
+    <!-- /Having Trouble Window -->
+
+    <!-- Email Sent Popup-->
+    <div id="emailSent" class="email-window">
+        <div class="email-content">
+            <div class="email-header">
+                <h2>Email Sent</h2>
+            </div>
+            <div class="email-p">
+                <p class="email-reply"> An email has been successfully sent to the email <strong>lboehringer10@gmail.com.</strong>
+                    If you don't see the email from us, make sure to check your spam folder.
+                    Click <a href="#">resend email</a> if it has been over 5 minutes since the 
+                    was sent.
+                </p>
+                <p class="mobile-reply-one"> 
+                    An email has been successfully sent to the email <strong>lboehringer10@gmail.com.</strong>
+                    </p>
+                <p class="mobile-reply-two">
+                    If you don't see the email from us, make sure to check your spam folder. Click <a href="#">resend email</a> if it has been over 5 minutes since the 
+                    was sent.
+                </p>
+                <!-- Button will close email sent pop-up. Link to Reset Password page? -->
+                <div class="btn-email-ok">
+                    <input  type="button"  id="email-btn" class="email-ok" value="Okay"/>
+                </div>
+                <!-- /Button will close email sent pop-up. Link to Reset Password page? -->
+            </div>
+        </div>
+    </div>
+    <!--/ Email Sent PopUp-->
+    <!-- /FORGOT PASSWORD PROCESS -->
+
+    <!-- RESET PASSOWRD PROCESS -->
+    <!-- Reset Password Window  -->
+    <section class="reset-window" id="reset">
+        <!-- X TO CLOSE WINDOW -->
+        <div class="closeout">
+            <button id="resetClose" class="button-close" type="button">
+                <img src="{% static 'css/authcss/assets/X.svg' %}">
+            </button>
+        </div>
+
+        <div class="reset-form-layout">
+            <!-- <div class="left"> -->
+                <div class="reset-details">
+                    <!-- <div class="details-container"> -->
+                        <div class="reset-details-header">
+                            <p class="reset-intro">Reset? You Bet!</p>
+                        </div>
+                        <div class="reset-details-text">
+                            
+                                <div class="bulb-holder">
+                                    <img class="bulb" src="{% static 'css/authcss/assets/lightbulb.png' %}" width= 14.58 length= 20.83 alt="lightbulb" title="light bulb"/>
+                
+                                </div>
+                    
+                            <p class="reset-text">
+                                Reset your password to something unique and memorable.
+                            </p>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            <!-- </div> -->
+
+            <div class="reset-right">
+                <form action="/reset-pwd" method="POST" id="reset-form" class="reset-form-right">
+                    <!--  Password Reset-->
+                    <div class="reset-form-container">
+                        <label class="reset-label" for="new_password">Password</label>
+                        <input class="reset-input" name="new_password" type="password" id="new_password" pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$" autocomplete="on" required/>
+                    </div>
+                    <div class="reset-form-container">
+                        <label class="reset-label" for="conf_password">Re-enter Password</label>
+                        <input class="reset-input" name="conf_password" type="password" id="conf_password" pattern="^(?=.*[A-Za-z])(?=.*\d).{8,}$" autocomplete="on" required/>
+                    </div>   
+                        
+                    <div class="reset-form-container">
+                        <p class="guide">
+                            Passwords must contain at least 8 characters, including 1 letter and 1 number.
+                        </p>
+                    </div>
+                    <!-- /Password Reset-->
+
+                    <!-- Confirm -->
+                    <div class="reset-form-container" >
+                        <input  type="submit"  id="confirmBtn" class="submit-confirm" 
+                            value="Confirm Password" />
+                    </div>
+                    <!-- /Confirm -->
+                </form>    
+            </div>
+        </div>  
+    </section>
+    <!-- /Reset Window  -->
+    
+    <!-- Password Successful Reset Popup-->
+    <div id="successReset" class="password-success">
+        <div class="pwd-success-content">
+            <div class="pwd-success-header">
+                <h2>Password Reset</h2>
+            </div>
+            <div class="pwd-success-p">
+                <p class="pwd-reply"> Your password has been successfully reset.
+                </p>
+
+                <!-- Button will close email sent pop-up and return user to login-->
+                <div class="btn-reset-success">
+                    <input id="successOK" class="reset-success" type="button" value="OK" />
+                </div>
+
+                <!-- /Button will close email sent pop-up and return user to login -->
+            </div>
+        </div>
+    </div>
+    <!-- /Password Successful Reset Popup-->
+    <!-- /RESET PASSOWRD PROCESS -->
+
+
+    <footer id="lp-footer" class="footer">
+        <img class="footer-content" src="{% static 'css/authcss/assets/footer.svg' %}">
+    </footer>
+
+<script src="{% static 'js/authjs/index.js' %}"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@300;@400;500;700&display=swap');
+/* RESET PASSWORD STYLING */
 
 :root {
     --roboto: 'Roboto', sans-serif;
@@ -57,6 +57,7 @@ body {
     font-weight: var(--fw-reg);
     
 }
+
 .reset-window {
     display: block;
     position: fixed;
@@ -77,41 +78,9 @@ body {
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
 }
-.reset-window {
+/* .reset-window {
     display: none;
-}
-.closeout {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-content: flex-end;
-}
-.button-close {
-    margin-top: .75rem;
-    margin-right: .68rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--off-white);
-    border: none;
-}
-.button-close:hover {
-    border: 1px solid var(--error);
-    font-weight: var(--fw-robo-sbold);
-    background-color: var(--error);
-    border-radius: 3px;
-}
-a.close {
-    margin-top: .75rem;
-    font-size: var(--fs-xlarge);
-    border: none;
-    vertical-align: middle;
-    align-self: center;
-    color: var(--dark-blue); 
-}
-.close:hover {
-    color: var(--white);
-    cursor: pointer;
-}
+} */
 .reset-form-layout {
     height: auto;
     width: 904px;
@@ -174,17 +143,17 @@ a.close {
     margin-left: 10px;  
 }
 /* Styling the right side - form */
-.right-reset {
+.reset-right {
     width: 440px;
     height: 340px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: var(--white);
+    background-color: var(--off-white);
     padding-right: auto;
 }
-form,
-.form-right-reset {
+
+.reset-form-right {
     display: flex;
     flex-direction: column;
     align-content: center; 
@@ -197,7 +166,7 @@ form,
     border-radius: 15px;
     box-shadow: 0px 4px 4px 0px rgba(31, 31, 31, 25%);
 }
-.form-container {
+.reset-form-container {
     display: flex;
     flex-direction: colunm;
     max-width: 26.15rem;
@@ -208,12 +177,12 @@ form,
     font-size: var(--fs-large);
     line-height: var(--fs-xlarge);
 }
-.form-container:nth-child(1),
-.form-container:nth-child(2) {
+.reset-form-container:nth-child(1),
+.reset-form-container:nth-child(2) {
     margin-top: 0;
 }
-label[for=user_password],
-label[for=re-enter] { 
+
+.reset-label { 
     width: 26.15rem;
     text-align: left;
     margin-top: .75rem;
@@ -223,19 +192,16 @@ label[for=re-enter] {
     padding-left: 10px;
     font-size: var(--fs-18px);
 }
-label[for=user_password]:hover,
-label[for=re-enter]:hover {
-    color: var(--info);
-}
-input[type=password] {
+.reset-input {
     width: 26.15rem;
     height: 2.46rem;
     border: 1px solid var(--very-lt-gray);
     border-radius: var(--fs-large);  
     margin-bottom: 3px;
     padding-left: var(--fs-xxsmall);
+    outline: none;
 }
-input[type=password]:hover{
+.reset-input:hover {
     border: 1px solid var(--info);
 }
 .instructions {
@@ -288,9 +254,6 @@ p.guide {
         justify-content: center;
         align-content: center;
     }
-    .button-close {
-        margin-right: 0;
-    }
     .reset-form-layout {
         width: 440px;
         max-width: 100%;
@@ -319,37 +282,28 @@ p.guide {
         font-weight: 300;
         margin-left: 10px;
     }
-    .right-reset {
+    .reset-right {
         display: flex;
         max-width: 100%;
         height: 333px;
         border: none;
     }
-    .form-right-reset {
+    .reset-form-right {
         display: flex;
-        max-width: 100%;
-        height: 330px;  
-    }
-    form {
-        max-width: 100%;
-        padding: auto;
-        height: auto;   
-    }
-    .form-right-reset {
         max-width: 100%;
         padding: auto;
         height: auto;   
         padding: 2rem auto;
     }
-    .form-container {
+    .reset-form-container {
         max-width: 100%;
         height: auto;
         padding: auto;
     }
-    label {
+    .reset-label {
         max-width: 100%;
     }
-    input,
+    .reset-input,
     .submit-confirm {
         max-width: 100%;
     }  
@@ -358,7 +312,7 @@ p.guide {
 /* max width 500px */
 @media screen and (max-width: 31.25em) {
     .reset-window {
-        top: 25%;
+        top: 30%;
         height: auto;
         width: 289px;
         border: none;
@@ -372,12 +326,8 @@ p.guide {
         box-shadow: 0px 4px 4px 0px rgba(31, 31, 31, 25%);
         overflow: hidden;
     }
-    .right-reset {
+    .reset-right {
         height: auto;
-    }
-    /* Hiding the close "X" button */
-    .button-close {
-        display: none;
     }
     .bulb,
     .bulb-holder {
@@ -402,21 +352,20 @@ p.guide {
         font-size: .564em;
         line-height: 1.2;
     }
-    .form-right-reset {
+    .reset-form-right {
         padding: 0 1.23rem;
         margin-bottom: 20px;
         border: none;
         filter: none;
         box-shadow: none; 
     }
-    label[for=user_password],
-    label[for=re-enter] {
+    .reset-label {
         font-size: var(--fs-default);
         margin-left: 1.5rem;
         margin-bottom: 0;
         padding-left: 3px;
     }
-    label[for=user_password] {
+    .reset-label[for=user_password] {
         margin-top: 0;
     }
     p.guide {

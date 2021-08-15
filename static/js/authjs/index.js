@@ -218,17 +218,17 @@ document.addEventListener("DOMContentLoaded", () => {
    
 
     // REGISTRATION OPT-IN
-    BtnOpt.addEventListener('click', showOptin);
-    function showOptin(){
-        optin.style.display = "block"; 
-        atWidth();     
-    };
+    // BtnOpt.addEventListener('click', showOptin);
+    // function showOptin(){
+    //     optin.style.display = "block"; 
+    //     atWidth();     
+    // };
 
-    BtnCloseopt.addEventListener('click', hideOptin);
-    function hideOptin(){
-        optin.style.display = "none"; 
-        atWidth();  
-    };
+    // BtnCloseopt.addEventListener('click', hideOptin);
+    // function hideOptin(){
+    //     optin.style.display = "none"; 
+    //     atWidth();  
+    // };
     
     // Link on reg form will clear login form of data
     BtnRegLogin.addEventListener('click', function(e) {

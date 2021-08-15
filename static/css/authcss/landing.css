@@ -80,6 +80,15 @@ body {
     height: 540px;
     margin: 0 auto;
 }
+
+.landing .landing__messages {
+    padding: 5px;
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
 .succeed {
     width: 100%;
     padding-top: 3rem;
@@ -184,3 +193,4 @@ p.lp-content {
         display: none;
     }
 }
+

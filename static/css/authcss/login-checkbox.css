@@ -109,7 +109,7 @@
     transition: all .4s ease;
 }
 
-/* Hiding the bg-image "X" once when box is not checked*/
+/* Hiding the bg-image "X"  when box is not checked*/
     .container > [type="checkbox"]:not(checked) + label::after{
     content: "";
     position: absolute;

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@300;@400;500;700&display=swap');
-
+/* Reset success popup */
 :root {
     --roboto: 'Roboto', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
@@ -62,14 +61,11 @@ body {
 /* Email Sent PopUp styling */
 
 .password-success {
-    display: none;
     position: fixed;
     width: 1004px;
-    min-width: 65rem;
     height: 20.30rem;
-    min-height: 17.30rem;
+    top: 25%;
     left: 50%;
-    top: 30%;
     overflow: auto;
     transform: translate(-50%, -50%);
     background-color: var(--off-white);
@@ -107,11 +103,6 @@ body {
 .pwd-reply {
     height: 87px;
 }
-.pwd-success-p a {
-    text-decoration: underline;
-    font-weight: var(--fw-robo-bold);
-    color: var(--info);
-}
 .btn-reset-success {
     display: flex;
     justify-content: flex-end;
@@ -128,18 +119,12 @@ body {
     color: var(--white);
     background-color: var(--info);
     border: 1px solid var(--info);
-    border-radius: 15px;      
+    border-radius: 15px;
+    padding: 0;    
 }
 
-a.back-to-login {
-    width: 200px;
-    color: var(--white);
-    background-color: var(--info);
-    text-decoration: none;
-    margin: auto; 
-}
-a.reset-success:hover,
-a.reset-success:focus {
+.reset-success:hover,
+.reset-success:focus {
     opacity: 80%;
     cursor: pointer;
 }
@@ -152,6 +137,7 @@ a.reset-success:focus {
         max-width: 90%;
         min-width: 80%;
         margin: 2rem auto;
+        top: 20%;
     }
     .pwd-success-header {
         height: 25%;
@@ -177,12 +163,13 @@ a.reset-success:focus {
 }
 /* max-width 768px */
 @media screen and (max-width: 47.93em) {
-    .modal-1-header {
+
+ 
+    .pwd-success-header {
         height: 57px;
     }
-    #mobile,
-    #mobile-p,
-    #reply-two {
+    .password-success-p,
+    .pwd-reply {
         display: block;
         height: 100%;
         font-size: var(--fs-default);
@@ -190,10 +177,10 @@ a.reset-success:focus {
         padding-bottom: 0;
         height: 60px;
     }
-    #reply-two {
+    .pwd-reply {
         font-size: var(--fs-xlarge);
     }
-    #mobile-p {
+    .password-success-p {
         padding: auto 1rem;
         padding-top: 0; 
     }

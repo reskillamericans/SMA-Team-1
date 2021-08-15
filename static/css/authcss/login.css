@@ -8,7 +8,6 @@
     --fs-18px: 1.38rem;
     --fs-16px: 1.23rem;
     --fs-large: 1.15rem;
-    
     --fs-medium: 1.07rem;
     --fs-default: 1rem;
     --fs-small: .9230rem;
@@ -52,19 +51,19 @@
 
 html,
 body {
+    width: 100%;
+    height: 100%;
     font-family: var(--roboto);
     font-size: 13px;
 }
-.app-bg {
-    opacity: 20%;
-}
+
 /* Main Content */
 .window {
     position: fixed;
     width: 668px;
     height: 770px;
     left: 50%;
-    top: 45%;
+    top: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     text-align: left;
@@ -75,9 +74,7 @@ body {
     border: 2px solid var(--very-lt-gray);
     border-radius: 15px;
     filter: drop-shadow(0 4px 4px rgba(31, 31, 31, 25%));
-
 }
-
 
 /* Layout of the Form */
 .form-layout {
@@ -160,15 +157,15 @@ form {
     line-height: 21px;
     text-align: center;
 }
-label {
+.login-label {
     width: 340px;
     text-align: left;
     margin: .75rem auto;
     margin-bottom: .25rem;
     padding-left: 2px;
 }
-input,
-button {
+.login-input,
+.login-submit{
     width: 340px;
     height: 32px;
     outline: none;
@@ -176,7 +173,7 @@ button {
     border-radius: 15px; 
     padding-left: 10px;
 }
-input:hover {
+.login-input:hover {
     border: 1px solid var(--info);
 }
 .forgot {
@@ -188,9 +185,6 @@ input:hover {
     flex-direction: row;
     align-items: center;  
     font-size: var(--fs-default);
-}
-.forgot a {
-    color: var(--info);
 }
 
 /* reCapcha styling */
@@ -256,18 +250,17 @@ input:hover {
     font-weight: 300;
 }
 /* Sign In button*/
-.submit {
-    
+.login-submit {
     border-radius: 15px;
     background-color: var(--info);
     border: 1px solid var(--info);  
 }
-.submit a {
+.login-submit  {
     color: white;
     font-size: var(--fs-large);
     font-weight: var(--fw-bold);
 }
-.submit:hover {
+.login-submit:hover {
     opacity: 80%;
 }
 .mark {
@@ -286,40 +279,54 @@ input:hover {
     font-size: 13px;
     text-decoration: none;
 }
-.register-desktop a {
+.login-forgot,
+.login-reg  {
+    width: auto;
+    height: auto;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
     color: var(--info);
+    padding-left: 0;
 }
+#log-reg {
+    padding-left: 0;
+}
+.login-forgot:hover,
+.login-reg:hover {
+    border:none;
+    cursor: pointer;
+}
+
 .register-mobile {
     display: none;
 }
 
-/* MOBILE DESIGN - max-width 750px*/
-@media screen and (max-width: 57.69em) {
+/* MOBILE DESIGN - max-width 1040px*/
+@media screen and (max-width: 64em) {
     html,
     body {
         width: 100%;
         height: 100%;
     }
-    #bg img {
-        display: none;
-    }
+    /* #pop-up-bg {
+        opacity: 0;
+    } */
     .window {
-        max-width: 321px;
+        max-width: 90%;
         height: 602px;
         top: 385px;
-        background-color: var(--very-lt-gray);
-        filter: none;
+        
     }
     .form-layout {
+        margin:auto;
         width: 321px;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
-    }
-    .button-close {
-        display: none;
     }
     a.google,
     a.github  {
@@ -337,7 +344,7 @@ input:hover {
         border-radius: 15px;
         filter: drop-shadow(0 4px 4px rgba(2, 2, 2, 0.25));
     }
-    label {
+    .login-label {
         max-width: 255px;
         text-align: left;
         margin: 1rem auto;
@@ -345,16 +352,18 @@ input:hover {
         padding-left: 10px;
         font-size: var(--fs-default);
     }
-    input,
-    button {
+    .login-input,
+    .login-submit {
         width: 255px;
         height: 32px;
         font-size: var(--fs-default);
+        
     }
     .forgot {
         max-width: 255px;
         font-size: var(--fs-xxsmall);
         padding-left: 10px;
+        
     }
     .recaptcha-body {
         max-width: 225px;
@@ -406,13 +415,31 @@ input:hover {
     }
     .register-mobile {
         display: block;
-        /* margin-bottom: .5rem; */
         font-size: var(--fs-xxsmall);
     }
+    .login-forgot,
+    .login-reg  {
+        font-size: var(--fs-xxsmall);
+    
+    }
+    
     p.register-desktop {
         display: none;
     }
 }
+
+/* max-width 500px */
+@media screen and (max-width: 31.25em) {
+    .window {
+        min-width: 345px;
+        filter: none;
+        background-color: var(--very-lt-gray);
+        border: none;
+    }  
+}
+
+
+
 
 
 

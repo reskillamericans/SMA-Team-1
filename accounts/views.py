@@ -7,14 +7,42 @@ from django.shortcuts import render
 from django.conf import settings
 from django.core.mail import send_mail
 from .models import Password_Resets
-
+from .models import Users, User_Socials
 
 User = get_user_model()
 
-
 def register(request):
-    # register function needs to be implemented. Follow logiin method
-    return render(request, 'accounts/register.html')
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        confirmpwd = request.POST.get('c_password')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+       
+
+        if password == confirmpwd:
+            try:
+                user = User.objects.get(email=email)
+                messages.info(request, 'Email is already taken')
+                return redirect('auth')
+
+            except User.DoesNotExist:
+                user = User.objects.create_user(email=email, username=username, first_name=first_name,
+                                                last_name=last_name, password=password)
+                user.save()
+                user_profile = User_Socials.objects.create(user_id=user)
+                auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+                return redirect('dashboard')
+        elif password == "":
+            messages.error(request, 'Password field must be filled')
+            return redirect('auth')
+        else:
+            messages.error(request, 'Password must match')
+            return redirect('auth')
+
+    return render(request, "auth.html")
 
 
 def login(request):

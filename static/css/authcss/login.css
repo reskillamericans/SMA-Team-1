@@ -316,7 +316,7 @@ form {
     .window {
         max-width: 90%;
         height: 602px;
-        top: 385px;
+        /* top: 385px; */
         
     }
     .form-layout {

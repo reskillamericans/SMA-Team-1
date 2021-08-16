@@ -1,0 +1,234 @@
+
+.modal_all{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+position:fixed;
+top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+    z-index: 1000;
+    align-items: center;
+     justify-content: center;
+        
+
+
+}
+
+.red_over{
+    color:  #FF5B39;
+
+}
+
+
+
+.modal_hide{
+display: none
+}
+
+.limit_scroll{
+    overflow-y: hidden
+}
+
+.edit_modal_main_container{
+    position: fixed;
+
+    ;height: 70vh;
+    overflow-y: scroll;
+    width: 32vw;
+justify-self: center;
+min-width: 300px;
+border-radius: 10px;
+background-color: white;
+
+
+
+
+
+}
+.edit_header_container{
+    min-height: 30px;
+    display: flex;
+    padding: 10px 2% 10px 1%;
+    width: 32vw;
+    min-width: 300px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-between
+    ;align-items: center;
+    position: fixed;
+z-index: 1000;
+    height: 50px;
+    border-radius: 15px 15px 0 0;
+    background-color: white;
+    border-bottom: #ccc 1px solid
+    
+  
+}
+.edit_profile_and_close_button_container{
+    display:flex;
+    justify-content: space-between;
+    width: 30%;
+
+}
+
+
+
+.modal_close_button{
+ 
+   width: 20px
+   ;cursor: pointer;
+   border: none;
+   background-color: inherit;
+}
+
+.save_button{
+  background: #53b6e0;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 25px;
+  border-radius: 25px;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+
+border: none;
+  transition: all ease 0.2s;
+  
+}
+
+.save_button:hover {
+  background: #53b6e0;
+  opacity: 0.8;
+}
+.disabled_text{
+    background-color:#cccccc
+    ;color: #fff
+}
+
+.disabled_text:hover{
+    background-color:#cccccc
+    ;color: #fff
+    ;cursor: not-allowed
+}
+
+
+
+.backgrounds_and_input_fields{
+   
+      position: relative;
+      top: 50px;
+      overflow-y: scroll
+      ;z-index: -20;
+
+}
+
+.edit_card_background_and_user_pic_container{
+      
+         height: auto;   
+         padding: 1px 3% 0 10px;
+               margin-bottom: 80px
+
+
+}
+
+.card_background_modal{
+   position: relative;
+   margin-bottom: 60px
+   ;height: 150px;
+}
+
+
+.modal_pic{
+    
+       height: 100%;
+       width: 100%;
+       border-radius: 5px;
+
+}
+
+ .modal_pic_border,    .profile_img_border_modal{
+
+  height: 110px;
+   width: 100px;
+   padding: 6px;
+   border-radius: 5px;
+   background-color: white;
+   position: absolute;
+top:70%;
+left: 4%;
+z-index: 100;
+
+
+}      
+
+.input_container{
+
+padding: 0 5%;
+height: 100%;
+font-family: 'Montserrat', sans-serif;
+font-weight: 500
+
+}
+
+
+.modal_input,  textarea{
+
+width: 95%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+margin-left: 2%;
+outline: none;
+resize:none
+;color: rgb(99, 99, 99)
+
+
+}
+ 
+
+input[type=text]:focus, textarea:focus {
+
+      border: rgb(0, 132, 255) solid 1px;
+      color: black
+
+}
+
+
+.textarea_counter_and_label{
+    display: flex;
+  
+     justify-content: space-between
+     ;padding-right: 5%
+
+}
+
+.input_header{
+ margin: 25px 0px
+}
+
+.word_amount_and_total{
+    color: rgb(94, 94, 94)
+}
+
+.modal_camera_cover{
+    height: 50px;
+    background-color: rgba(255, 255, 255, .3);
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background-image: url(./modal_images/Camera.png)
+    ;background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    
+    ; z-index: 100;
+}
+

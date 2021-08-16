@@ -64,7 +64,7 @@ body {
     width: 1004px;
     height: auto;
     left: 50%;
-    top: 55%;
+    top: 60%;
     z-index: 0;
     transform: translate(-50%, -50%);
     font-size: 1.92rem;
@@ -245,7 +245,7 @@ input:hover {
     margin-top: 1rem;
     font-weight: 300; 
 }
-.registration-criteria-text,
+/* .registration-criteria-text,
 .opt-in-text {
     font-size: var(--fs-xsmall);
 }
@@ -260,8 +260,8 @@ input:hover {
     display: flex;
     flex-direction: column;
     z-index: -1;
-}
-.details-opt-in {
+} */
+/* .details-opt-in {
     width: 280px;
     height: 50px;
     display: flex;
@@ -294,7 +294,7 @@ input:hover {
 .get-opt-info {
     border: none;
     background-color: var(--white);
-}
+} */
 .submit-signup {
     margin: auto;
     width: 255px;
@@ -349,59 +349,6 @@ p.registration-reg-terms {
 #already-btn:hover {
     cursor: pointer;
 }
-/* Opt-in Pop-up Window */
-.opt-window {
-    display: none;
-    position: fixed;
-    width: 1004px;
-    height: 105.5px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    left: 50%;
-    top: 75%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-}
-/* .opt-window {
-    display: none;
-} */
-.pop-up-content {
-    width: 191px;
-    margin-left: 603px;
-    margin-top: 20px;
-    height: auto;
-    padding: .5rem ;
-    padding-top: 0;
-    padding-right: 0;
-    background-color: var(--white);
-    border: 1px solid var(--very-lt-gray);
-    border-radius: 8px;
-    font-size: var(--fs-xxsmall);
-    font-weight: var(--fw-light);
-}
-p.pop-text-one {
-    margin-bottom: .5rem;
-    padding-right: .5rem;
-}
-
-.close-opt {
-    float: right;
-    height: 15px;
-    border: none;
-    background-color: var(--off-white);
-    margin-top: 2px;
-    margin-right: 2px;
-    padding-right: .5rem;
-    color: var(--very-lt-gray);
-}
-.opt-question:hover {
-    cursor: pointer;
-}
-.close-opt:hover{
-    color: var(--error);
-    cursor: pointer;
-}
 
 /* max width 1040 */
 @media screen and (max-width: 65em) {
@@ -413,7 +360,7 @@ p.pop-text-one {
     .register-window {
         width: 90%;
         height: 768px; 
-        top: 57%;
+        /* top: 50%; */
         /* border: none;
         background: none;  
         filter: none; */
@@ -501,18 +448,6 @@ p.pop-text-one {
     p.registration-criteria-text {
         width: 255px;
     }
-    .opt-in {
-        width: 289px;
-    }
-    .details-opt-in {
-        width: 289px;
-    }
-    .opt-in-text {
-        width: 240px;
-        margin-right: 0;
-        margin-top: 0;
-        font-size: var(--fs-xxsmall);
-    }
     .submit-signup {
         width: 255px;
     }
@@ -537,29 +472,6 @@ p.pop-text-one {
         font-size: var(--fs-xxsmall);
         font-weight: var(--fw-robo-bold);
     }
-    .opt-window {
-        width: 321px;
-        /* min-width: 321px; */
-        top: 86.5%;
-        left: 50.4%;
-        
-    }
-    .pop-up-content {
-        width: 191px;
-        margin: auto;
-        height: auto;
-        padding: .5rem ;
-        padding-top: 0;
-        padding-right: 0;
-        background-color: var(--white);
-        border: 1px solid var(--very-lt-gray);
-        border-radius: 8px;
-        font-size: 10px;
-    }
-    p.pop-text-one {
-        margin-bottom: .5rem;
-        padding-right: .5rem;
-    }
 }
 
 @media screen and (max-width: 48em) {
@@ -570,12 +482,8 @@ p.pop-text-one {
 }
 @media screen and (max-width: 31.75em) {
     .register-window {
-        top: 50%;
         border: none;
         background: none;  
         filter: none;
-    }
-    .opt-window {
-        top: 79%; 
     }
 }

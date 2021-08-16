@@ -312,7 +312,7 @@ p.recovery-link {
 /* max width 500px */
 @media screen and (max-width: 31.25em) {
     .forgot-window {
-        top: 25%;
+        top: 45%;
         height: auto;
         width: 289px;
         border: none;
@@ -327,6 +327,7 @@ p.recovery-link {
     }
     .forgot-right {
         height: auto;
+        background: var(--white);
     }
     /* Hiding the light-bulb */
     .forgot-bulb,
@@ -342,6 +343,7 @@ p.recovery-link {
     }
     .forgot-details {
         padding: 0;
+        background: var(--white);
     }
     .forgot-details-header {
         height: 57px;

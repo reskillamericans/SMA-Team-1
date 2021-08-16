@@ -195,9 +195,9 @@ body {
 
 /* max-width 767px */
 @media screen and (max-width: 47.93em) {
-    /* #bg img {
-        display: none;
-    } */
+    .email-window {
+        top: 45%;
+    }
     .email-header {
         height: 57px;
     }

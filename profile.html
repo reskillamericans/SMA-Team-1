@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./right-sec.css" />
     <link rel="stylesheet" href="./mobile-side-bar.css" />
 
+    <link rel="stylesheet" href="/user_update_modal/User-update-modal.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -32,13 +34,13 @@
       "
     >
       <!-- ///////////////left bar end//////////////////-->
-      <div class="left_side_bar" style="display: flex; flex-direction:column">
+      <div class="left_side_bar" style="display: flex; flex-direction: column">
         <!-- //////////// -->
-       
+
         <div class="mobile-profile-pic-sidebar mobile_visible">
- <div class="X_button">
-            <img src="./images/X.svg" alt="">
-        </div>
+          <div class="X_button">
+            <img src="./images/X.svg" alt="" />
+          </div>
 
           <div class="sidebar_picture_username_occupation_container">
             <div class="sidebar_picture_container profile_pic"></div>
@@ -48,12 +50,12 @@
             </div>
           </div>
           <div class="sidebar_followers_following_container">
-              <div class="following">
-                  <span class="following_number">20</span> Following
-              </div>
-              <div class="followers">
-                  <span class="followers_number">25</span> Followers
-              </div>
+            <div class="following">
+              <span class="following_number">20</span> Following
+            </div>
+            <div class="followers">
+              <span class="followers_number">25</span> Followers
+            </div>
           </div>
         </div>
 
@@ -64,44 +66,44 @@
             <img src="./images/sma.png" alt="" />
           </div>
 
-
-
-          
-
           <div class="left_side_links">
             <div class="side_icon_and_links_item blue-links">
-              <img src="./images/home.svg" class="side_icon side_icon_blue" alt="" />
-              <div class="side_link">Home</div>
+              <img
+                src="./images/home.svg"
+                class="side_icon side_icon_blue"
+                alt=""
+              />
+              <a href="#"  class="side_link">Home</a>
             </div>
 
             <div class="side_icon_and_links_item">
               <img src="./images/bell.svg" class="side_icon" alt="" />
-              <div class="side_link">Notifications</div>
+              <a href="#" class="side_link">Notifications</a>
             </div>
 
             <div class="side_icon_and_links_item">
               <img src="./images/env.svg" class="side_icon" alt="" />
-              <div class="side_link">Messages</div>
+              <a href="#"  class="side_link">Messages</a>
             </div>
 
             <div class="side_icon_and_links_item">
               <img src="./images/bookmark.svg" class="side_icon" alt="" />
-              <div class="side_link">Bookmarks</div>
+              <a href="#"  class="side_link">Bookmarks</a>
             </div>
 
             <div class="side_icon_and_links_item">
               <img src="./images/list.svg" class="side_icon" alt="" />
-              <div class="side_link">Lists</div>
+              <a href="#"  class="side_link">Lists</a>
             </div>
 
             <div class="side_icon_and_links_item">
               <img src="./images/user.svg" class="side_icon" alt="" />
-              <div class="side_link">Profile</div>
+              <a href="#"  class="side_link">Profile</a>
             </div>
 
             <div class="side_icon_and_links_item">
               <img src="./images/circle.svg" class="side_icon" alt="" />
-              <div class="side_link">More</div>
+              <a href="#"  class="side_link">More</a>
             </div>
           </div>
           <!-- end left side  links -->
@@ -119,7 +121,7 @@
                 <span>@</span>
                 <div class="left_sidebar_username-text username">Loboeh</div>
               </div>
-              <div class="left_sidebar_occupation">UX designer</div>
+              <div class="left_sidebar_occupation occupation">UX designer</div>
             </div>
 
             <a href=""
@@ -139,9 +141,7 @@
       <div class="top">
         <div class="top_content">
           <div class="headerbar_username_and_followers_container">
-            <a href=""
-              ><img src="./images/Arrow.svg" alt="" class="arrow"
-            /></a>
+            <a href=""><img src="./images/Arrow.svg" alt="" class="arrow" /></a>
             <div class="headerbar_username_info">
               <div class="headerbar_username username">Loboeh</div>
               <div class="headerbar_post_count post_count">25 posts</div>
@@ -149,11 +149,7 @@
           </div>
           <div style="clear: both"></div>
           <div class="headerbar_search_container">
-            <img
-              src="./images/search_glass.svg"
-              class="search_glass"
-              alt=""
-            />
+            <img src="./images/search_glass.svg" class="search_glass" alt="" />
             <input
               type="text"
               class="headerbar_text_field"
@@ -169,9 +165,9 @@
       <div class="middle-section">
         <div class="profile_card">
           <div class="card_background">
-              <div class="hamb_button">
-                  <img src="./images/hamb.png" alt="">
-              </div>
+            <div class="hamb_button">
+              <img src="./images/hamb.png" alt="" />
+            </div>
           </div>
 
           <div class="card_mid_section">
@@ -189,7 +185,7 @@
                 </div>
               </div>
 
-              <a href="">Edit Profile</a>
+              <button class="edit_button">Edit Profile</button>
             </div>
           </div>
 
@@ -203,17 +199,17 @@
             <div class="user_location_joined_website_container">
               <div class="card_links_left">
                 <div class="location_container">
-                  <img src="./images/location.svg" alt="" /> Alberta Canada
+                  <img src="./images/location.svg" alt="" />
+                  <span class="location_text">Alberta Canada</span>
                 </div>
                 <div class="website_container">
                   <img src="./images/link.svg" alt="" />
-                  <a href="#"> www.loboeh.me</a>
+                  <a href="#" class="website"> www.loboeh.me</a>
                 </div>
               </div>
               <div class="card_links_right">
                 <div class="joined_container">
-                  <img src="./images/calender.svg" alt="" /> Joined June
-                  2020
+                  <img src="./images/calender.svg" alt="" /> Joined June 2020
                 </div>
               </div>
             </div>
@@ -347,10 +343,13 @@
                 </div>
                 <div class="structure_right_side">
                   <div class="structuret_username_and_time_posted">
-                    <div class="structure_username username">Loboeh</div>
+                    <div class="structure_username ">PaulT</div>
                     <div class="time_posted">1 hr</div>
                   </div>
-                  <div class="structure_text">Almost done!</div>
+                  <div class="structure_text">
+                    Just Published my first app. It's official! Msg me for
+                    details
+                  </div>
 
                   <div class="structure_stats">
                     <div class="text_bubble_container">
@@ -371,7 +370,77 @@
                 </div>
               </div>
 
-              <div class="reply structure_bottom not_first " >
+              <div class="reply structure_bottom not_first">
+                <div class="structure_profile_image_container">
+                  <div class="profile_pic structure_prof_pic"></div>
+                </div>
+                <div class="structure_right_side">
+                  <div class="structuret_username_and_time_posted">
+                    <div class="structure_username username">Loboeh</div>
+                    <div class="time_posted">1 hr</div>
+                  </div>
+                  <div class="structure_text">Congrats!</div>
+
+                  <div class="structure_stats">
+                    <div class="text_bubble_container">
+                      <img src="./images/text_bubble.svg" alt="" />
+                      <div class="post_number">52</div>
+                    </div>
+
+                    <div class="star_container">
+                      <img src="./images/star.svg" alt="" />
+                      <div class="post_number"></div>
+                    </div>
+
+                    <div class="heart_container">
+                      <img src="./images/heart.svg" class="heart_img" alt="" />
+                      <div class="heart_number">100</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="show_more_replies">
+                <button>Show More replies</button>
+              </div>
+            </div>
+
+            <div class="all_replies">
+              <div class="reply structure_bottom">
+                <div class="structure_profile_image_container">
+                  <div
+                    class="other_profile_pic structure_prof_pic"
+                    style="background-image: url(./images/user1.png)"
+                  ></div>
+                </div>
+                <div class="structure_right_side">
+                  <div class="structuret_username_and_time_posted">
+                    <div class="structure_username">XXThorn</div>
+                    <div class="time_posted">1 hr</div>
+                  </div>
+                  <div class="structure_text">
+                    Just Published my first app. Msg me for details!
+                  </div>
+
+                  <div class="structure_stats">
+                    <div class="text_bubble_container">
+                      <img src="./images/text_bubble.svg" alt="" />
+                      <div class="post_number">52</div>
+                    </div>
+
+                    <div class="star_container">
+                      <img src="./images/star.svg" alt="" />
+                      <div class="post_number"></div>
+                    </div>
+
+                    <div class="heart_container">
+                      <img src="./images/heart.svg" class="heart_img" alt="" />
+                      <div class="heart_number">100</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reply structure_bottom not_first">
                 <div class="structure_profile_image_container">
                   <div class="profile_pic structure_prof_pic"></div>
                 </div>
@@ -399,84 +468,10 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="show_more_replies">
-                     <button> Show More replies</button>
-                </div>
               </div>
-            </div>
-
-            <div class="all_replies">
-              <div class="reply structure_bottom">
-                <div class="structure_profile_image_container">
-                  <div
-                    class="other_profile_pic structure_prof_pic"
-                    style="background-image: url(./images/user1.png)"
-                  ></div>
-                </div>
-                <div class="structure_right_side">
-                  <div class="structuret_username_and_time_posted">
-                    <div class="structure_username username">Loboeh</div>
-                    <div class="time_posted">1 hr</div>
-                  </div>
-                  <div class="structure_text">Almost done!</div>
-
-                  <div class="structure_stats">
-                    <div class="text_bubble_container">
-                      <img src="./images/text_bubble.svg" alt="" />
-                      <div class="post_number">52</div>
-                    </div>
-
-                    <div class="star_container">
-                      <img src="./images/star.svg" alt="" />
-                      <div class="post_number"></div>
-                    </div>
-
-                    <div class="heart_container">
-                      <img src="./images/heart.svg" class="heart_img" alt="" />
-                      <div class="heart_number">100</div>
-                    </div>
-                  </div>
-                </div>
+              <div class="show_more_replies">
+                <button>Show More replies</button>
               </div>
-
-              <div class="reply structure_bottom not_first">
-                <div class="structure_profile_image_container">
-                  <div
-                    class="other_profile_pic structure_prof_pic"
-                    style="background-image: url(./images/user1.png)"
-                  ></div>
-                </div>
-                <div class="structure_right_side">
-                  <div class="structuret_username_and_time_posted">
-                    <div class="structure_username username">Loboeh</div>
-                    <div class="time_posted">1 hr</div>
-                  </div>
-                  <div class="structure_text">Almost done!</div>
-
-                  <div class="structure_stats">
-                    <div class="text_bubble_container">
-                      <img src="./images/text_bubble.svg" alt="" />
-                      <div class="post_number">52</div>
-                    </div>
-
-                    <div class="star_container">
-                      <img src="./images/star.svg" alt="" />
-                      <div class="post_number"></div>
-                    </div>
-
-                    <div class="heart_container">
-                      <img src="./images/heart.svg" class="heart_img" alt="" />
-                      <div class="heart_number">100</div>
-                    </div>
-                  </div>
-                </div>
-                   <div class="show_more_replies">
-                     <button> Show More replies</button>
-                </div>
-              </div>
-
-              
             </div>
           </div>
 
@@ -490,7 +485,7 @@
               </div>
               <div class="structure_right_side">
                 <div class="structuret_username_and_time_posted">
-                  <div class="structure_username username">Loboeh</div>
+                  <div class="structure_username ">XXThorn</div>
                   <div class="time_posted">1 hr</div>
                 </div>
                 <div class="structure_text">Almost done!</div>
@@ -506,8 +501,12 @@
                     <div class="post_number"></div>
                   </div>
 
-                  <div class="heart_container ">
-                    <img src="./images/heart.svg" class="red_heart heart_img" alt="" />
+                  <div class="heart_container">
+                    <img
+                      src="./images/heart.svg"
+                      class="red_heart heart_img"
+                      alt=""
+                    />
                     <div class="heart_number">100</div>
                   </div>
                 </div>
@@ -523,7 +522,7 @@
               </div>
               <div class="structure_right_side">
                 <div class="structuret_username_and_time_posted">
-                  <div class="structure_username username">Loboeh</div>
+                  <div class="structure_username ">XXThorn</div>
                   <div class="time_posted">1 hr</div>
                 </div>
                 <div class="structure_text">Almost done!</div>
@@ -540,7 +539,11 @@
                   </div>
 
                   <div class="heart_container">
-                    <img src="./images/heart.svg" class="red_heart  heart_img" alt="" />
+                    <img
+                      src="./images/heart.svg"
+                      class="red_heart heart_img"
+                      alt=""
+                    />
                     <div class="heart_number">100</div>
                   </div>
                 </div>
@@ -555,7 +558,7 @@
               </div>
               <div class="structure_right_side">
                 <div class="structuret_username_and_time_posted">
-                  <div class="structure_username username">Loboeh</div>
+                  <div class="structure_username ">CherriP</div>
                   <div class="time_posted">1 hr</div>
                 </div>
                 <div class="structure_text">Almost done!</div>
@@ -572,7 +575,11 @@
                   </div>
 
                   <div class="heart_container">
-                    <img src="./images/heart.svg" class="red_heart heart_img" alt="" />
+                    <img
+                      src="./images/heart.svg"
+                      class="red_heart heart_img"
+                      alt=""
+                    />
                     <div class="heart_number">100</div>
                   </div>
                 </div>
@@ -588,7 +595,7 @@
               </div>
               <div class="structure_right_side">
                 <div class="structuret_username_and_time_posted">
-                  <div class="structure_username username">Loboeh</div>
+                  <div class="structure_username ">PaulT</div>
                   <div class="time_posted">1 hr</div>
                 </div>
                 <div class="structure_text">Almost done!</div>
@@ -605,8 +612,12 @@
                   </div>
 
                   <div class="heart_container">
-                    <img src="./images/heart.svg" class="red_heart heart_img" alt="" />
-                    <div class="heart_number ">100</div>
+                    <img
+                      src="./images/heart.svg"
+                      class="red_heart heart_img"
+                      alt=""
+                    />
+                    <div class="heart_number">100</div>
                   </div>
                 </div>
               </div>
@@ -620,7 +631,7 @@
               </div>
               <div class="structure_right_side">
                 <div class="structuret_username_and_time_posted">
-                  <div class="structure_username username">Loboeh</div>
+                  <div class="structure_username ">XXThorn</div>
                   <div class="time_posted">1 hr</div>
                 </div>
                 <div class="structure_text">Almost done!</div>
@@ -637,7 +648,11 @@
                   </div>
 
                   <div class="heart_container">
-                    <img src="./images/heart.svg" class="red_heart heart_img" alt="" />
+                    <img
+                      src="./images/heart.svg"
+                      class="red_heart heart_img"
+                      alt=""
+                    />
                     <div class="heart_number">100</div>
                   </div>
                 </div>
@@ -860,6 +875,98 @@
     </div>
     <!-- end container -->
 
+    <!-- edit profile modal -->
+
+    <div class="modal_all modal_hide">
+      <div class="edit_modal_main_container">
+        <div class="edit_header_container">
+          <div class="edit_profile_and_close_button_container">
+            <button class="modal_close_button">
+              <img
+                src="/user_update_modal/modal_images/modal_close.png"
+                alt=""
+              />
+            </button>
+            <div>Edit Profile</div>
+          </div>
+
+          <button class="save_button">Save</button>
+        </div>
+
+        <div class="backgrounds_and_input_fields">
+          <div class="edit_card_background_and_user_pic_container">
+            <div class="card_background card_background_modal">
+              <div class="modal_camera_cover"></div>
+              <div class="modal_pic_border profile_img_border_modal">
+                <div class="modal_camera_cover"></div>
+                <div class="modal_pic profile_pic"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="input_container">
+            <div class="modal_name input_header">
+              <label for="name_edit red_over" class="">Name</label>
+
+              <input
+                type="text"
+                name="name_edit"
+                id="name_edit"
+                class="modal_input"
+              />
+            </div>
+            <div class="modal_job-title input_header">
+              <label for="job_edit" class="">Job Title</label>
+              <input
+                type="text"
+                name="job_edit"
+                id="job_edit"
+                class="modal_input"
+              />
+            </div>
+
+            <div class="modal_bio input_header">
+              <div class="textarea_counter_and_label">
+                <label for="bio_edit" class="">Bio</label>
+                <div style="font-weight: 400" class="word_amount_and_total">
+                  <span class="wordcount"></span>/50
+                </div>
+              </div>
+
+              <textarea
+                id="bio_edit"
+                name="bio_edit"
+                rows="6"
+                cols="50"
+              ></textarea>
+            </div>
+
+            <div class="modal_location input_header">
+              <label for="location_edit" class="">Location</label>
+              <input
+                type="text"
+                name="location_edit"
+                id="location_edit"
+                class="modal_input"
+              />
+            </div>
+
+            <div class="modal_website input_header">
+              <label for="website_edit" class="">Website</label>
+              <input
+                type="text"
+                name="website_edit"
+                id="website_edit"
+                class="modal_input"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="./script.js"></script>
+
+    <script src="/user_update_modal/modal.js"></script>
   </body>
 </html>

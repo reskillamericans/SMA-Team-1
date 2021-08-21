@@ -64,7 +64,7 @@ body {
     width: 1004px;
     height: auto;
     left: 50%;
-    top: 60%;
+    top: 50%;
     z-index: 0;
     transform: translate(-50%, -50%);
     font-size: 1.92rem;
@@ -360,7 +360,7 @@ p.registration-reg-terms {
     .register-window {
         width: 90%;
         height: 768px; 
-        /* top: 50%; */
+        top: 50%;
         /* border: none;
         background: none;  
         filter: none; */

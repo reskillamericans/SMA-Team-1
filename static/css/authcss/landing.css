@@ -60,7 +60,7 @@ body {
     width: 656px;
     height: 540px;
     left: 50%;
-    top: 45%;
+    top: 50%;
     transform: translate(-50%, -50%);
     font-size: 25px;
     text-align: center;
@@ -161,7 +161,7 @@ p.lp-content {
     .landing-window {
         width: 339px;
         height: 306px;
-        top: 30%;
+        top: 45%;
     }
     .landing {
         width: 244px;
